@@ -1,2 +1,68 @@
-# InvestSmart
- Cadastro de Despesas e Receitas: Desenvolvemos um sistema robusto de gerenciamento financeiro que permite aos usuários registrar todas as suas despesas e receitas, proporcionando uma visão clara de suas finanças pessoais. Relatórios Financeiros e Gráficos: Implementamos recursos visuais, como gráficos interativos, para ajudar os usuários a analisarem seus hábitos de gastos e identificarem áreas para economizar. Definição de Metas e Orçamentos: Criamos ferramentas que permitem aos usuários estabelecer metas financeiras e criar orçamentos personalizados, contribuindo para um planejamento financeiro mais eficaz. Notificações de Vencimento de Contas: O sistema envia lembretes automáticos para os usuários sobre o vencimento de suas contas, ajudando-os a evitar taxas por atrasos. Dicas Financeiras Personalizadas: Integramos um blog de notícias financeiras atualizado diariamente, bem como sugestões personalizadas de investimentos com base no perfil de cada usuário. Como líder de equipe, fui responsável pela coordenação das atividades de desenvolvimento, garantindo a execução eficiente do projeto dentro dos prazos estabelecidos. Também participei ativamente na codificação front-end e back-end, utilizando tecnologias como HTML, CSS, JavaScript, e frameworks modernos para criar uma interface de usuário amigável e responsiva.
+# 💼 InvestSmart - Gestão Financeira Inteligente
+
+[![GitHub license](https://img.shields.io/github/license/seu-usuario/InvestSmart?color=blue)](LICENSE)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
+
+![Banner do Projeto](https://via.placeholder.com/1200x400?text=InvestSmart+-+Controle+Financeiro+Eficiente) <!-- Adicione uma imagem real posteriormente -->
+
+Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes para otimizar suas finanças.
+
+## ✨ Funcionalidades Principais
+
+### 📊 Dashboard Financeiro
+- Registro detalhado de receitas e despesas
+- Categorização automática de transações
+- Visualização interativa com gráficos (barras, pizza e linhas)
+
+### 🎯 Metas e Planejamento
+- Sistema de orçamentos personalizáveis
+- Acompanhamento de metas financeiras em tempo real
+- Alertas de progresso e desvios orçamentários
+
+### 🔔 Sistema de Notificações
+- Lembretes automáticos de vencimentos
+- Alertas de gastos incomuns
+- Notificações personalizadas de oportunidades de investimento
+
+### 💡 Inteligência Financeira
+- Recomendações personalizadas baseadas no perfil do usuário
+- Blog integrado com atualizações do mercado financeiro
+- Calculadora inteligente de investimentos
+
+## 🚀 Como Executar
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/InvestSmart.git 
+```
+2. Instale as dependências:
+```bash
+cd InvestSmart
+npm install
+```
+3. Configure as variáveis de ambiente:
+```bash
+cp .env.example .env
+```
+4. Inicie o servidor:
+```bash
+npm run dev
+```
+Acesse: http://localhost:3000
+
+📝 Contribuição
+Contribuições são bem-vindas! Siga estes passos:
+
+Faça um Fork do projeto
+
+Crie sua Branch (git checkout -b feature/nova-feature)
+
+Commit suas mudanças (git commit -m 'Adiciona nova feature')
+
+Push para a Branch (git push origin feature/nova-feature)
+
+Abra um Pull Request
+
+
+Desenvolvido por [LCodeBase]
