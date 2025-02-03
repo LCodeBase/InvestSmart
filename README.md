@@ -1,6 +1,6 @@
 # 💼 InvestSmart - Gestão Financeira Inteligente
 
-[![GitHub license](https://img.shields.io/github/license/seu-usuario/InvestSmart?color=blue)](LICENSE)
+[![GitHub license](https://img.shields.io/github/license/LcodeBase/InvestSmart?color=blue)](LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
 
@@ -65,4 +65,4 @@ Push para a Branch (git push origin feature/nova-feature)
 Abra um Pull Request
 
 
-Desenvolvido por [LCodeBase]
+Desenvolvido por LCodeBase 😁
