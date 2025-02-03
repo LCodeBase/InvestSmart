@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
+    <link rel="stylesheet" href="css/style-blog-main.css" />
+    <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="" />
+        <div class="logo">InvestSmart</div>
+      </div>
+      <nav>
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-container-page">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="noticias">
+          Notícias do Mundo
+        </button>
+        <button class="tab-btn" data-tab="educacao">Educação Financeira</button>
+      </div>
+
+      <ul class="news-list" id="noticias-tab">
+        <li class="news-item">
+          <a href="noticia01.html" class="news-link">
+            <img
+              src="images/blog04.png"
+              alt="Descrição da imagem 1"
+              class="news-image"
+            />
+            <div class="news-content">
+              <h3 class="news-title">
+                Banco Central do Brasil diz que não hesitará em elevar juros se
+                julgar apropriado, mostra ata
+              </h3>
+              <p class="news-description">
+                O Banco Central do Brasil sinaliza a possibilidade de elevar a
+                taxa de juros para garantir a meta de inflação, conforme a ata
+                divulgada na terça-feira (6). A decisão mantém a Selic em 10,50%
+                e destaca a importância da cautela frente a riscos
+                inflacionários. Descubra mais sobre o impacto e os próximos
+                passos!
+              </p>
+              <div
+                class="news-time"
+                data-post-time="2024-08-12T11:08:00Z"
+              ></div>
+            </div>
+          </a>
+        </li>
+
+        <li class="news-item">
+          <a href="noticia02.html" class="news-link">
+            <img
+              src="images/blog01.png"
+              alt="Descrição da imagem 1"
+              class="news-image"
+            />
+            <div class="news-content">
+              <h3 class="news-title">
+                Mercados globais em crise: Ações despencam e o medo de recessão
+                aumenta
+              </h3>
+              <p class="news-description">
+                Os mercados internacionais enfrentam uma grande queda, com
+                perdas acentuadas em ações de tecnologia e um aumento no índice
+                de volatilidade. A incerteza econômica nos EUA impulsiona
+                apostas em um possível corte emergencial na taxa de juros pelo
+                Federal Reserve, enquanto o dólar enfraquece e o rendimento dos
+                títulos do Tesouro cai. Saiba mais sobre o impacto dessa crise e
+                as previsões para os próximos passos!
+              </p>
+              <div
+                class="news-time"
+                data-post-time="2024-08-10T10:00:00Z"
+              ></div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="noticia03.html" class="news-link">
+            <img
+              src="images/blog02.png"
+              alt="Descrição da imagem 2"
+              class="news-image"
+            />
+            <div class="news-content">
+              <h3 class="news-title">
+                Microsoft perde US$ 340 bilhões em valor de mercado após
+                resultados fracos; Nvidia e AMD se destacam
+              </h3>
+              <p class="news-description">
+                Na terça-feira (31), a Microsoft viu seu valor de mercado
+                despencar em US$ 340 bilhões devido a resultados trimestrais
+                abaixo do esperado, impactando o setor de inteligência
+                artificial. Enquanto isso, Nvidia e AMD brilham com ganhos
+                significativos, destacando uma clara divisão no mercado de chips
+                para IA. Investidores estão em alta expectativa, questionando se
+                o rali de IA pode ter ido longe demais. Confira os detalhes e as
+                reações do mercado!.
+              </p>
+              <div
+                class="news-time"
+                data-post-time="2024-08-10T10:00:00Z"
+              ></div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="noticia04.html" class="news-link"
+            ><img
+              src="images/blog03.png"
+              alt="Descrição da imagem 2"
+              class="news-image"
+            />
+            <div class="news-content">
+              <h3 class="news-title">
+                Ibovespa tem terceira queda seguida, puxada por Vale e Gerdau
+              </h3>
+              <p class="news-description">
+                Descrição da notícia 2. Aqui vai o texto que descreve a notícia.
+              </p>
+              <div
+                class="news-time"
+                data-post-time="2024-08-10T10:00:00Z"
+              ></div>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="news-list" id="educacao-tab" style="display: none">
+        <li class="news-item">
+          <a href="blog-edu01.html" class="news-link">
+            <img
+              src="images/edu01.png"
+              alt="Educação Financeira"
+              class="news-image"
+            />
+            <div class="news-content">
+              <h3 class="news-title">
+                Como começar a investir: Guia para iniciantes
+              </h3>
+              <p class="news-description">
+                Aprenda os conceitos básicos de investimentos e descubra como
+                dar os primeiros passos no mercado financeiro.
+              </p>
+              <div
+                class="news-time"
+                data-post-time="2024-08-12T11:08:00Z"
+              ></div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="blog-edu02.html" class="news-link">
+            <img
+              src="images/edu02.png"
+              alt="Educação Financeira"
+              class="news-image"
+            />
+            <div class="news-content">
+              <h3 class="news-title">
+                Como começar a investir: Guia para iniciantes
+              </h3>
+              <p class="news-description">
+                Aprenda os conceitos básicos de investimentos e descubra como
+                dar os primeiros passos no mercado financeiro.
+              </p>
+              <div
+                class="news-time"
+                data-post-time="2024-08-12T11:08:00Z"
+              ></div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </main>
+
+    <button id="toggleForm" class="floating-button">
+      <i class="fa-solid fa-envelope fa-2x"></i>
+    </button>
+    <div id="registerForm" class="form-container" style="display: none">
+      <form class="form">
+        <div class="header-container">
+          <p class="title">Entre em Contato</p>
+          <button id="close-btn">X</button>
+        </div>
+        <p class="message">
+          Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+          de nossos serviços?
+        </p>
+        <div class="flex">
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="10"
+            />
+            <span>Nome</span>
+          </label>
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="30"
+            />
+            <span>Sobrenome</span>
+          </label>
+        </div>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Email</span>
+        </label>
+        <textarea
+          id="myTextarea"
+          maxlength="1000"
+          rows="5"
+          placeholder="Escreva sua mensagem aqui..."
+        ></textarea>
+        <div id="charCount" class="char-count">1000 caracteres restantes</div>
+        <button class="submit">Enviar</button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blogs-main.html">Blogs</a></li>
+              <li><a href="">Quem somos</a></li>
+              <li><a href="">Serviços</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instragram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#">Calculos de Despesas</a></li>
+              <li><a href="#">Investimentos</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/65f22fe718.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/e1063b7707.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

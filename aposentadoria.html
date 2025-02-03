@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Sobre Nós</title>
+    <link rel="stylesheet" href="css/style-aposentadoria.css" />
+    <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="Logo InvestSmart" />
+        <div class="logo">InvestSmart</div>
+      </div>
+      <nav>
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <h1>Simulador de Aposentadoria</h1>
+        <p>
+          Planeje seu futuro financeiro e descubra quanto você precisa poupar
+          mensalmente
+        </p>
+      </section>
+
+      <div class="calculator-container">
+        <form id="retirement-form" class="retirement-form">
+          <div class="form-section">
+            <h3>Informações Pessoais</h3>
+            <div class="input-group">
+              <label>
+                Idade Atual
+                <input
+                  type="number"
+                  id="currentAge"
+                  required
+                  min="18"
+                  max="70"
+                />
+              </label>
+              <label>
+                Idade para Aposentadoria
+                <input
+                  type="number"
+                  id="retirementAge"
+                  required
+                  min="45"
+                  max="90"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Situação Financeira</h3>
+            <div class="input-group">
+              <label>
+                Valor já Poupado
+                <input type="number" id="currentSavings" required />
+              </label>
+              <label>
+                Renda Mensal Desejada na Aposentadoria
+                <input type="number" id="desiredIncome" required />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Investimentos</h3>
+            <div class="input-group">
+              <label>
+                Contribuição Mensal Atual
+                <input type="number" id="monthlyContribution" required />
+              </label>
+              <label>
+                Rendimento Anual Esperado (%)
+                <input
+                  type="number"
+                  id="expectedReturn"
+                  required
+                  min="1"
+                  max="20"
+                  value="6"
+                />
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="calculate-btn">Calcular</button>
+        </form>
+
+        <div id="results" class="results-container" style="display: none">
+          <h2>Resultados da Simulação</h2>
+          <div class="results-grid">
+            <div class="result-card">
+              <h3>Valor Total Necessário</h3>
+              <p id="totalNeeded">R$ 0,00</p>
+            </div>
+            <div class="result-card">
+              <h3>Contribuição Mensal Sugerida</h3>
+              <p id="suggestedContribution">R$ 0,00</p>
+            </div>
+            <div class="result-card">
+              <h3>Tempo para Aposentadoria</h3>
+              <p id="timeToRetirement">0 anos</p>
+            </div>
+          </div>
+          <canvas id="projectionChart"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blogs-main.html">Blogs</a></li>
+              <li><a href="sobre.html">Quem somos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instragram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="calculo-despesas.html">Calculos de Despesas</a></li>
+              <li><a href="recomendacaoinvestimento.html">Investimentos</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="aposentadoria.js"></script>
+  </body>
+</html>

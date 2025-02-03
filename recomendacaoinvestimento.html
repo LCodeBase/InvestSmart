@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
+    <link rel="stylesheet" href="css/style-recomendacao.css" />
+    <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        h2 {
+            margin-bottom: 20px;
+            color: #2E7D32;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .investment-section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #00a169;
+            font-size: 32px;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .investment-section form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .investment-section form label {
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .investment-section form input,
+        .investment-section form select,
+        .investment-section form button {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .investment-section form input:focus,
+        .investment-section form select:focus {
+            border-color: #00a169;
+            box-shadow: 0 0 0 2px rgba(26, 95, 122, 0.2);
+        }
+
+        .investment-section form button {
+            background-color: #00a169;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .investment-section form button:hover {
+            background-color: #00a169;
+        }
+
+        .investment-section form button:active {
+            transform: scale(0.98);
+        }
+
+        #investment-recommendation {
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        #investment-recommendation h3 {
+            color: #00a169;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #investment-recommendation p {
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        #investment-recommendation strong {
+            color: #00a169;
+            font-weight: 600;
+        }
+
+        .recommendation {
+            background: #f9f9f9;
+            border-left: 4px solid #00a169;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .recommendation h4 {
+            color: #00a169;
+            margin-bottom: 10px;
+        }
+
+        .recommendation ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .recommendation li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .investment-section {
+                padding: 30px 20px;
+                margin: 40px auto;
+            }
+
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+        }
+
+        .info-icon {
+            cursor: pointer;
+            color: #00a169;
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
+
+        .info-icon:hover {
+            color: #00a169;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-LOGO">
+            <img src="images/Camada 1.png" alt="" />
+            <div class="logo">InvestSmart</div>
+        </div>
+        <nav>
+            <ul>
+                <li id="comment-header"><a href="index.html">Home</a></li>
+                <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+                <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+                <li><button class="button-header" onclick="window.location.href='servicos.html'">
+                        Serviços
+
+                        <i class="fa-solid fa-arrow-right" id="seta"></i>
+                    </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button id="toggleForm" class="floating-button">
+        <i class="fa-solid fa-envelope fa-2x"></i>
+    </button>
+    <div id="registerForm" class="form-container" style="display: none">
+        <form class="form">
+            <div class="header-container">
+                <p class="title">Entre em Contato</p>
+                <button id="close-btn">X</button>
+            </div>
+            <p class="message">
+                Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+                de nossos serviços?
+            </p>
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" maxlength="10" />
+                    <span>Nome</span>
+                </label>
+                <label>
+                    <input required="" placeholder="" type="text" class="input" maxlength="30" />
+                    <span>Sobrenome</span>
+                </label>
+            </div>
+            <label>
+                <input required="" placeholder="" type="text" class="input" />
+                <span>Email</span>
+            </label>
+            <textarea id="myTextarea" maxlength="1000" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+            <div id="charCount" class="char-count">1000 caracteres restantes</div>
+            <button class="submit">Enviar</button>
+        </form>
+    </div>
+
+    <main>
+        <section class="investment-section">
+            <h2>Recomendações de Investimento</h2>
+            <form id="investment-form">
+                <label for="investment-amount">Valor Disponível para Investir:</label>
+                <input type="number" id="investment-amount" name="investment-amount" required>
+                <label for="risk-level">Nível de Risco:</label>
+                <select name="risk-level" id="risk-level">
+                    <option value="conservador">Conservador</option>
+                    <option value="moderado">Moderado</option>
+                    <option value="arrojado">Arrojado</option>
+                </select>
+                <button type="submit">Obter Recomendações</button>
+            </form>
+            <div id="investment-recommendation"></div>
+        </section>
+    </main>
+
+    <br><br><br><br>
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Site</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blogs-main.html">Blogs</a></li>
+                        <li><a href="">Quem somos</a></li>
+                        <li><a href="">Serviços</a></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Redes Sociais</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instragram</a></li>
+                        <li><a href="#">Tiktok</a></li>
+                        <li><a href="#">Youtube</a></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#">Calculos de Despesas</a></li>
+                        <li><a href="recomendacaoinvestimento.html">Investimentos</a></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Inscreva-se na Newsletter</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required />
+                            <button>Se inscrever</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/e1063b7707.js" crossorigin="anonymous"></script>
+<script>
+    const investmentForm = document.getElementById('investment-form');
+    const investmentRecommendationDiv = document.getElementById('investment-recommendation');
+
+    const investmentOptions = [
+        { name: 'CDB', riskLevel: 'conservador', minAmount: 100, returnRate: 0.009, example: 'Banco Inter', link: 'https://www.bancointer.com.br/investimentos/cdb/', description: 'Certificado de Depósito Bancário: Empréstimo para o banco com rendimento fixo.' },
+        { name: 'Tesouro Direto', riskLevel: 'conservador', minAmount: 30, returnRate: 0.01, example: 'Tesouro Selic', link: 'https://www.tesourodireto.com.br/titulos/tipos-de-tesouro.htm', description: 'Títulos públicos emitidos pelo governo federal com diferentes prazos e rentabilidades.' },
+        { name: 'LCI/LCA', riskLevel: 'conservador', minAmount: 1000, returnRate: 0.0095, example: 'XP Investimentos', link: 'https://www.xpi.com.br/investimentos/renda-fixa/lci-lca/', description: 'Letras de Crédito Imobiliário/do Agronegócio: Investimentos isentos de IR para pessoa física.' },
+        { name: 'Fundos de Renda Fixa', riskLevel: 'moderado', minAmount: 100, returnRate: 0.011, example: 'BTG Pactual', link: 'https://investimentos.btgpactual.com/renda-fixa', description: 'Carteira diversificada de títulos de renda fixa gerida por profissionais.' },
+        { name: 'Fundos Multimercado', riskLevel: 'moderado', minAmount: 500, returnRate: 0.013, example: 'Órama', link: 'https://www.orama.com.br/investimentos/fundos-de-investimento/lista-fundos/multimercado', description: 'Fundos que investem em diferentes classes de ativos, buscando melhor relação risco-retorno.' },
+        { name: 'ETFs', riskLevel: 'moderado', minAmount: 100, returnRate: 0.012, example: 'iShares BOVA11', link: 'https://www.blackrock.com/br/produtos/251816/ishares-ibovespa-fundo-de-ndice-fund', description: 'Fundos negociados em bolsa que acompanham índices de mercado.' },
+        { name: 'Ações', riskLevel: 'arrojado', minAmount: 100, returnRate: 0.015, example: 'PETR4', link: 'https://www.clear.com.br/site/acoes', description: 'Participação na propriedade de empresas listadas na bolsa de valores.' },
+        { name: 'FIIs', riskLevel: 'arrojado', minAmount: 100, returnRate: 0.014, example: 'KNRI11', link: 'https://www.rico.com.br/fundos-imobiliarios', description: 'Fundos de Investimento Imobiliário: Investimento em imóveis comerciais, shoppings, galpões, etc.' },
+        { name: 'Criptomoedas', riskLevel: 'arrojado', minAmount: 50, returnRate: 0.02, example: 'Bitcoin', link: 'https://www.binance.com/pt-BR/buy-sell-crypto', description: 'Moedas digitais descentralizadas baseadas em tecnologia blockchain.' },
+        { name: 'Debêntures', riskLevel: 'moderado', minAmount: 1000, returnRate: 0.0115, example: 'Debêntures Incentivadas', link: 'https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-fixa/debentures.htm', description: 'Títulos de dívida emitidos por empresas para financiar projetos e operações.' },
+        { name: 'COE', riskLevel: 'moderado', minAmount: 5000, returnRate: 0.0125, example: 'COE Autocall', link: 'https://www.xpi.com.br/investimentos/coe/', description: 'Certificado de Operações Estruturadas: Produto que combina renda fixa e variável.' },
+        { name: 'Fundos de Ações', riskLevel: 'arrojado', minAmount: 100, returnRate: 0.016, example: 'Alaska Black FIC FIA', link: 'https://www.alaska-asset.com.br/', description: 'Fundos que investem principalmente em ações, geridos por profissionais.' }
+    ];
+
+    investmentForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const amount = parseFloat(document.getElementById('investment-amount').value);
+        const riskLevel = document.getElementById('risk-level').value;
+
+        if (isNaN(amount) || amount < 10) {
+            alert('Por favor, insira um valor válido (mínimo R$ 10,00).');
+            return;
+        }
+
+        getInvestmentRecommendations(amount, riskLevel);
+    });
+
+    function calculateReturns(investment, amount) {
+        const monthlyReturn = amount * investment.returnRate;
+        const annualReturn = monthlyReturn * 12;
+        const fiveYearReturn = annualReturn * 5;
+
+        return {
+            monthlyReturn,
+            annualReturn,
+            fiveYearReturn
+        };
+    }
+
+    function getInvestmentRecommendations(amount, riskLevel) {
+        const chosenRecommendations = investmentOptions.filter(option =>
+            option.riskLevel === riskLevel && option.minAmount <= amount
+        );
+
+        investmentRecommendationDiv.innerHTML = `
+        <h3>Recomendações de Investimento</h3>
+        <p>Valor: ${formatCurrency(amount)} | Perfil de Risco: ${riskLevel.charAt(0).toUpperCase() + riskLevel.slice(1)}</p>
+    `;
+
+        if (chosenRecommendations.length === 0) {
+            investmentRecommendationDiv.innerHTML += `<p>Nenhuma recomendação disponível para este valor e nível de risco. Tente aumentar o valor ou ajustar o nível de risco.</p>`;
+        } else {
+            chosenRecommendations.forEach(rec => {
+                const returns = calculateReturns(rec, amount);
+                investmentRecommendationDiv.innerHTML += `
+                <div class="recommendation">
+                    <h4>${rec.name} (${rec.example}) 
+                        <span class="info-icon" title="${rec.description}">&#9432;</span>
+                    </h4>
+                    <p>Valor mínimo: ${formatCurrency(rec.minAmount)}</p>
+                    <ul>
+                        <li>Rendimento Mensal Estimado: ${formatCurrency(returns.monthlyReturn)}</li>
+                        <li>Rendimento Anual Estimado: ${formatCurrency(returns.annualReturn)}</li>
+                        <li>Rendimento em 5 Anos Estimado: ${formatCurrency(returns.fiveYearReturn)}</li>
+                    </ul>
+                    <a href="${rec.link}" target="_blank" rel="noopener noreferrer">Investir agora</a>
+                </div>
+            `;
+            });
+        }
+    }
+
+    function formatCurrency(value) {
+        return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+    }
+
+    document.getElementById('investment-amount').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+        value = (parseInt(value) / 100).toFixed(2);
+        e.target.value = value;
+    });
+
+    investmentRecommendationDiv.addEventListener('mouseover', function (e) {
+        if (e.target.classList.contains('info-icon')) {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            tooltip.textContent = e.target.getAttribute('title');
+            tooltip.style.position = 'absolute';
+            tooltip.style.left = e.pageX + 'px';
+            tooltip.style.top = e.pageY + 'px';
+            tooltip.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            tooltip.style.color = 'white';
+            tooltip.style.padding = '5px';
+            tooltip.style.borderRadius = '3px';
+            tooltip.style.zIndex = '1000';
+            document.body.appendChild(tooltip);
+
+            e.target.addEventListener('mouseout', function () {
+                document.body.removeChild(tooltip);
+            });
+        }
+    });
+</script>
+
+</html>

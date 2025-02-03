@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
+    <link rel="stylesheet" href="css/style-emprestimos.css" />
+    <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <style>
+    .comparador-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    main h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2em;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: #118a5f;
+      box-shadow: 0 0 8px rgba(5, 224, 78, 0.5);
+    }
+
+    main button {
+      background-color: #118a5f;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    main button:hover {
+      background-color: #005e3d;
+      transform: translateY(-2px);
+    }
+
+    #resultados {
+      margin-top: 40px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #resultados h2 {
+      color: #118a5f;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+      border-bottom: 2px solid #118a5f;
+      padding-bottom: 10px;
+    }
+
+    #resultados p {
+      margin-bottom: 15px;
+      color: #34495e;
+      font-size: 1.1em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #resultados p strong {
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    @media (max-width: 600px) {
+      .comparador-container {
+        padding: 20px;
+      }
+
+      input,
+      select,
+      button {
+        font-size: 16px;
+      }
+
+      main h1 {
+        font-size: 1.8em;
+      }
+
+      #resultados h2 {
+        font-size: 1.5em;
+      }
+
+      #resultados p {
+        font-size: 1em;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="" />
+        <div class="logo">InvestSmart</div>
+      </div>
+      <nav>
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <button id="toggleForm" class="floating-button">
+      <i class="fa-solid fa-envelope fa-2x"></i>
+    </button>
+    <div id="registerForm" class="form-container" style="display: none">
+      <form class="form">
+        <div class="header-container">
+          <p class="title">Entre em Contato</p>
+          <button id="close-btn">X</button>
+        </div>
+        <p class="message">
+          Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+          de nossos serviços?
+        </p>
+        <div class="flex">
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="10"
+            />
+            <span>Nome</span>
+          </label>
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="30"
+            />
+            <span>Sobrenome</span>
+          </label>
+        </div>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Email</span>
+        </label>
+        <textarea
+          id="myTextarea"
+          maxlength="1000"
+          rows="5"
+          placeholder="Escreva sua mensagem aqui..."
+        ></textarea>
+        <div id="charCount" class="char-count">1000 caracteres restantes</div>
+        <button class="submit">Enviar</button>
+      </form>
+    </div>
+
+    <main>
+      <div class="comparador-container">
+        <h1>Compare e Simule seu Empréstimo</h1>
+        <form id="emprestimo-form" class="form-grid">
+          <div class="form-group">
+            <label>Valor Desejado</label>
+            <div class="input-wrapper">
+              <input type="number" id="valor" required min="1000" step="100" />
+              <div class="input-prefix">R$</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="prazo">Prazo (meses):</label>
+            <input type="number" id="prazo" required min="1" />
+            <div class="tooltip">
+              <i class="fas fa-info-circle"></i>
+              <span class="tooltip-text">Informações sobre este campo</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tipo">Tipo de empréstimo:</label>
+            <select id="tipo">
+              <option value="pessoal">Empréstimo Pessoal</option>
+              <option value="consignado">Empréstimo Consignado</option>
+              <option value="veiculo">Financiamento de Veículo</option>
+            </select>
+            <div class="tooltip">
+              <i class="fas fa-info-circle"></i>
+              <span class="tooltip-text">Informações sobre este campo</span>
+            </div>
+          </div>
+          <button type="submit">Comparar Opções</button>
+        </form>
+        <div id="resultados" class="results-container">
+          <h2>Sua Simulação</h2>
+          <div class="result-grid">
+            <!-- Results will be injected here -->
+          </div>
+        </div>
+        <div class="chart-container"></div>
+        <div id="amortization-table"></div>
+        <div class="actions">
+          <button onclick="generatePDF()" class="secondary-button">
+            <i class="fas fa-download"></i> Baixar Relatório
+          </button>
+          <button onclick="saveSimulation()" class="secondary-button">
+            <i class="fas fa-save"></i> Salvar Simulação
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <br /><br /><br /><br /><br /><br /><br />
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blogs-main.html">Blogs</a></li>
+              <li><a href="sobre.html">Quem somos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instragram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#">Calculos de Despesas</a></li>
+              <li><a href="#">Investimentos</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/65f22fe718.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/e1063b7707.js"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    document
+      .getElementById("emprestimo-form")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Obter valores do formulário
+        const valor = parseFloat(document.getElementById("valor").value);
+        const prazo = parseInt(document.getElementById("prazo").value);
+        const tipo = document.getElementById("tipo").value;
+
+        // Taxas de juros fictícias para exemplo
+        const taxas = {
+          pessoal: 0.03,
+          consignado: 0.015,
+          veiculo: 0.02,
+        };
+
+        // Cálculos
+        const taxa = taxas[tipo];
+        const parcela = calcularParcela(valor, taxa, prazo);
+        const totalPago = parcela * prazo;
+        const jurosTotal = totalPago - valor;
+
+        // Exibir resultados
+        exibirResultados(valor, prazo, tipo, parcela, totalPago, jurosTotal);
+      });
+
+    function calcularParcela(valor, taxa, prazo) {
+      return (
+        (valor * taxa * Math.pow(1 + taxa, prazo)) /
+        (Math.pow(1 + taxa, prazo) - 1)
+      );
+    }
+
+    function formatarMoeda(valor) {
+      return valor.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+    }
+
+    function exibirResultados(
+      valor,
+      prazo,
+      tipo,
+      parcela,
+      totalPago,
+      jurosTotal
+    ) {
+      const resultadoHTML = `
+            <h2>Resultado da Simulação</h2>
+            <p>Valor do empréstimo: ${formatarMoeda(valor)}</p>
+            <p>Prazo: ${prazo} meses</p>
+            <p>Tipo de empréstimo: ${tipo}</p>
+            <p>Parcela mensal: ${formatarMoeda(parcela)}</p>
+            <p>Total a pagar: ${formatarMoeda(totalPago)}</p>
+            <p>Total de juros: ${formatarMoeda(jurosTotal)}</p>
+        `;
+
+      document.getElementById("resultados").innerHTML = resultadoHTML;
+    }
+  </script>
+  <script src="emprestimos.js"></script>
+</html>
