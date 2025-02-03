@@ -1,10 +1,10 @@
-![image](https://github.com/user-attachments/assets/3efc765d-6c40-453e-9fcc-5075c4a804b3)# 💼 InvestSmart - Gestão Financeira Inteligente
+# 💼 InvestSmart - Gestão Financeira Inteligente
 
 [![GitHub license](https://img.shields.io/github/license/LcodeBase/InvestSmart?color=blue)](LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
 
-![Banner do Projeto](![image](https://github.com/user-attachments/assets/f427757d-779e-4fe5-8959-995748cf197f)) <!-- Adicione uma imagem real posteriormente -->
+![Banner do Projeto](![image](https://github.com/user-attachments/assets/3efc765d-6c40-453e-9fcc-5075c4a804b3)) <!-- Adicione uma imagem real posteriormente -->
 
 Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes para otimizar suas finanças.
 
