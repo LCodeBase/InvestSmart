@@ -4,8 +4,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
 
-![Banner do Projeto](https://github.com/user-attachments/assets/c0afc3eb-e062-4b8e-b78c-38c92ccc6f20)![image]
-
+![Banner do Projeto](https://github.com/user-attachments/assets/c0afc3eb-e062-4b8e-b78c-38c92ccc6f20)
 Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes para otimizar suas finanças.
 
 ## ✨ Funcionalidades Principais
