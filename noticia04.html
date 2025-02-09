@@ -1,157 +1,217 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
     <link rel="stylesheet" href="css/style-noticia01.css" />
     <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container-LOGO">
-            <img src="images/Camada 1.png" alt="" />
-            <div class="logo">InvestSmart</div>
-        </div>
-        <nav>
-            <ul>
-                <li id="comment-header"><a href="index.html">Home</a></li>
-                <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
-                <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
-                <li><button class="button-header" onclick="window.location.href='servicos.html'">
-                        Serviços
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="" />
+        <div class="logo">InvestSmart</div>
+      </div>
+      <nav>
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
 
-                        <i class="fa-solid fa-arrow-right" id="seta"></i>
-                    </button></li>
-            </ul>
-        </nav>
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <button id="toggleForm" class="floating-button">
-        <i class="fa-solid fa-envelope fa-2x"></i>
+      <i class="fa-solid fa-envelope fa-2x"></i>
     </button>
     <div id="registerForm" class="form-container" style="display: none">
-        <form class="form">
-            <div class="header-container">
-                <p class="title">Entre em Contato</p>
-                <button id="close-btn">X</button>
-            </div>
-            <p class="message">
-                Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um de nossos serviços?
-            </p>
-            <div class="flex">
-                <label>
-                    <input required="" placeholder="" type="text" class="input" maxlength="10" />
-                    <span>Nome</span>
-                </label>
-                <label>
-                    <input required="" placeholder="" type="text" class="input" maxlength="30" />
-                    <span>Sobrenome</span>
-                </label>
-            </div>
-            <label>
-                <input required="" placeholder="" type="text" class="input" />
-                <span>Email</span>
-            </label>
-            <textarea id="myTextarea" maxlength="1000" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
-            <div id="charCount" class="char-count">1000 caracteres restantes</div>
-            <button class="submit">Enviar</button>
-        </form>
+      <form class="form">
+        <div class="header-container">
+          <p class="title">Entre em Contato</p>
+          <button id="close-btn">X</button>
+        </div>
+        <p class="message">
+          Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+          de nossos serviços?
+        </p>
+        <div class="flex">
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="10"
+            />
+            <span>Nome</span>
+          </label>
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="30"
+            />
+            <span>Sobrenome</span>
+          </label>
+        </div>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Email</span>
+        </label>
+        <textarea
+          id="myTextarea"
+          maxlength="1000"
+          rows="5"
+          placeholder="Escreva sua mensagem aqui..."
+        ></textarea>
+        <div id="charCount" class="char-count">1000 caracteres restantes</div>
+        <button class="submit">Enviar</button>
+      </form>
     </div>
 
     <main class="main-news-container">
-        <div>
-            <div class="news-header">
-                <h1>Mercados em pânico: ações desabam mundo afora enquanto cresce o medo de recessão nos EUA</h1>
-                <div class="meta">Publicado em: 25 de Julho de 2024 | Autor: <a
-                        href="https://investnews.com.br/autor/reuters/">Reuters</a></div>
-            </div>
-            <div class="news-content">
-                <img src="images/blog03.png" alt="Imagem do Banco Central Brasileiro" />
-
-                <p>O <span class="highlight">Ibovespa</span> fechou em queda, mantendo o viés de realização de lucros,
-                    mas se afastou das mínimas, com suporte da melhora da <span class="highlight">Vale</span>, que
-                    reportará balanço ainda nesta quinta-feira (25), e da alta da <span class="highlight">Gerdau</span>.
-                </p>
-
-                <p>Índice de referência do mercado acionário brasileiro, o Ibovespa caiu 0,37%, fechando a 125.954,09
-                    pontos, marcando a terceira queda consecutiva. O índice registrou mínima de 125.626,28 pontos e
-                    máxima de 126.422,73 pontos no dia. O volume financeiro somou apenas <span class="highlight">R$
-                        17,52 bilhões</span>.</p>
-
-                <p>Após se aproximar dos <span class="highlight">R$ 5,70</span> no início do dia, o <span
-                        class="highlight">dólar à vista</span> perdeu força ante o real e terminou a quinta-feira em
-                    leve baixa. Profissionais atribuíram a queda das cotações a um movimento de realização de lucros, em
-                    um dia marcado por dados de inflação ruins no Brasil e sinais mistos para a moeda norte-americana no
-                    exterior.</p>
-
-                <p>O dólar à vista encerrou o dia cotado a <span class="highlight">R$ 5,6474</span> na venda,
-                    apresentando uma leve baixa de 0,17%. No mês, a moeda acumula alta de 1,01%. Às 17h03, na B3, o
-                    contrato de dólar futuro de primeiro vencimento caía 0,13%, cotado a <span class="highlight">R$
-                        5,6525</span> na venda.</p>
-
-                <p>O <span class="highlight">mercado financeiro</span> continua a monitorar atentamente os indicadores
-                    econômicos, enquanto analistas avaliam o impacto dos recentes resultados das empresas e os próximos
-                    passos das políticas monetárias. O cenário econômico atual segue incerto, com os investidores
-                    buscando sinais de estabilidade tanto no mercado interno quanto externo.</p>
-
-                <p>Adicionalmente, as expectativas de uma possível intervenção do Banco Central podem influenciar o
-                    comportamento do real e do dólar nos próximos dias. O monitoramento das reuniões e decisões do <span
-                        class="highlight">Copom</span> será crucial para entender as próximas tendências do mercado.</p>
-
-
-            </div>
+      <div>
+        <div class="news-header">
+          <h1>
+            Mercados em pânico: ações desabam mundo afora enquanto cresce o medo
+            de recessão nos EUA
+          </h1>
+          <div class="meta">
+            Publicado em: 25 de Julho de 2024 | Autor:
+            <a href="https://investnews.com.br/autor/reuters/">Reuters</a>
+          </div>
         </div>
+        <div class="news-content">
+          <img
+            src="images/blog03.png"
+            alt="Imagem do Banco Central Brasileiro"
+          />
+
+          <p>
+            O <span class="highlight">Ibovespa</span> fechou em queda, mantendo
+            o viés de realização de lucros, mas se afastou das mínimas, com
+            suporte da melhora da <span class="highlight">Vale</span>, que
+            reportará balanço ainda nesta quinta-feira (25), e da alta da
+            <span class="highlight">Gerdau</span>.
+          </p>
+
+          <p>
+            Índice de referência do mercado acionário brasileiro, o Ibovespa
+            caiu 0,37%, fechando a 125.954,09 pontos, marcando a terceira queda
+            consecutiva. O índice registrou mínima de 125.626,28 pontos e máxima
+            de 126.422,73 pontos no dia. O volume financeiro somou apenas
+            <span class="highlight">R$ 17,52 bilhões</span>.
+          </p>
+
+          <p>
+            Após se aproximar dos <span class="highlight">R$ 5,70</span> no
+            início do dia, o <span class="highlight">dólar à vista</span> perdeu
+            força ante o real e terminou a quinta-feira em leve baixa.
+            Profissionais atribuíram a queda das cotações a um movimento de
+            realização de lucros, em um dia marcado por dados de inflação ruins
+            no Brasil e sinais mistos para a moeda norte-americana no exterior.
+          </p>
+
+          <p>
+            O dólar à vista encerrou o dia cotado a
+            <span class="highlight">R$ 5,6474</span> na venda, apresentando uma
+            leve baixa de 0,17%. No mês, a moeda acumula alta de 1,01%. Às
+            17h03, na B3, o contrato de dólar futuro de primeiro vencimento caía
+            0,13%, cotado a <span class="highlight">R$ 5,6525</span> na venda.
+          </p>
+
+          <p>
+            O <span class="highlight">mercado financeiro</span> continua a
+            monitorar atentamente os indicadores econômicos, enquanto analistas
+            avaliam o impacto dos recentes resultados das empresas e os próximos
+            passos das políticas monetárias. O cenário econômico atual segue
+            incerto, com os investidores buscando sinais de estabilidade tanto
+            no mercado interno quanto externo.
+          </p>
+
+          <p>
+            Adicionalmente, as expectativas de uma possível intervenção do Banco
+            Central podem influenciar o comportamento do real e do dólar nos
+            próximos dias. O monitoramento das reuniões e decisões do
+            <span class="highlight">Copom</span> será crucial para entender as
+            próximas tendências do mercado.
+          </p>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <div class="container-footer">
-            <div class="row-footer">
-                <div class="footer-col">
-                    <h4>Site</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="blogs-main.html">Blogs</a></li>
-                        <li><a href="sobre.html">Quem somos</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Redes Sociais</h4>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Tiktok</a></li>
-                        <li><a href="#">Youtube</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Serviços</h4>
-                    <ul>
-                        <li><a href="#">Cálculos de Despesas</a></li>
-                        <li><a href="#">Investimentos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Inscreva-se na Newsletter</h4>
-                    <div class="form-sub">
-                        <form>
-                            <input type="email" placeholder="Digite o seu e-mail" required />
-                            <button>Se inscrever</button>
-                        </form>
-                    </div>
-                </div>
+      <div class="container-footer">
+        <div class="row-footer">
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blogs-main.html">Blogs</a></li>
+              <li><a href="sobre.html">Quem somos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#">Cálculos de Despesas</a></li>
+              <li><a href="#">Investimentos</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
+  </body>
 
-</body>
-
-<script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
-<script src="https://kit.fontawesome.com/e1063b7707.js" crossorigin="anonymous"></script>
-
+  <script
+    src="https://kit.fontawesome.com/65f22fe718.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script/contact.js"></script>
+  <script src="script/script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/e1063b7707.js"
+    crossorigin="anonymous"
+  ></script>
 </html>

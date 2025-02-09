@@ -1,176 +1,252 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
     <link rel="stylesheet" href="css/style-noticia01.css" />
     <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container-LOGO">
-            <img src="images/Camada 1.png" alt="" />
-            <div class="logo">InvestSmart</div>
-        </div>
-        <nav>
-            <ul>
-                <li id="comment-header"><a href="index.html">Home</a></li>
-                <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
-                <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
-                <li><button class="button-header" onclick="window.location.href='servicos.html'">
-                        Serviços
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="" />
+        <div class="logo">InvestSmart</div>
+      </div>
+      <nav>
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
 
-                        <i class="fa-solid fa-arrow-right" id="seta"></i>
-                    </button></li>
-            </ul>
-        </nav>
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <button id="toggleForm" class="floating-button">
-        <i class="fa-solid fa-envelope fa-2x"></i>
+      <i class="fa-solid fa-envelope fa-2x"></i>
     </button>
     <div id="registerForm" class="form-container" style="display: none">
-        <form class="form">
-            <div class="header-container">
-                <p class="title">Entre em Contato</p>
-                <button id="close-btn">X</button>
-            </div>
-            <p class="message">
-                Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um de nossos serviços?
-            </p>
-            <div class="flex">
-                <label>
-                    <input required="" placeholder="" type="text" class="input" maxlength="10" />
-                    <span>Nome</span>
-                </label>
-                <label>
-                    <input required="" placeholder="" type="text" class="input" maxlength="30" />
-                    <span>Sobrenome</span>
-                </label>
-            </div>
-            <label>
-                <input required="" placeholder="" type="text" class="input" />
-                <span>Email</span>
-            </label>
-            <textarea id="myTextarea" maxlength="1000" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
-            <div id="charCount" class="char-count">1000 caracteres restantes</div>
-            <button class="submit">Enviar</button>
-        </form>
+      <form class="form">
+        <div class="header-container">
+          <p class="title">Entre em Contato</p>
+          <button id="close-btn">X</button>
+        </div>
+        <p class="message">
+          Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+          de nossos serviços?
+        </p>
+        <div class="flex">
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="10"
+            />
+            <span>Nome</span>
+          </label>
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="30"
+            />
+            <span>Sobrenome</span>
+          </label>
+        </div>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Email</span>
+        </label>
+        <textarea
+          id="myTextarea"
+          maxlength="1000"
+          rows="5"
+          placeholder="Escreva sua mensagem aqui..."
+        ></textarea>
+        <div id="charCount" class="char-count">1000 caracteres restantes</div>
+        <button class="submit">Enviar</button>
+      </form>
     </div>
 
     <main class="main-news-container">
-        <div>
-            <div class="news-header">
-                <h1>Microsoft perde US$ 340 bilhões em valor de mercado após resultados fracos; Nvidia e AMD se destacam
-                </h1>
-                <div class="meta">Publicado em: 31 de Julho de 2024 | Autor: <a
-                        href="https://investnews.com.br/autor/reuters/">Reuters</a></div>
-            </div>
-            <div class="news-content">
-                <img src="images/blog02.png" alt="Imagem da sede da Microsoft" />
-                <p>Os <span class="highlight">resultados trimestrais decepcionantes</span> da Microsoft derreteram US$
-                    340 bilhões em valor de mercado da companhia na terça-feira (31), afetando tanto a Microsoft quanto
-                    seus rivais que competem para dominar a <span class="highlight">inteligência artificial</span>.</p>
-
-                <p>Enquanto isso, a <span class="highlight">Nvidia</span> e outras fabricantes de chips para IA tinham
-                    alta após a divulgação do relatório de resultados da <span class="highlight">Advanced Micro Devices
-                        (ADM)</span>.</p>
-
-                <p>Os ganhos das fabricantes de chips e as perdas de seus maiores clientes destacaram uma <span
-                        class="highlight">divisão</span> no cenário da IA, com os investidores questionando recentemente
-                    se o rali de IA em Wall Street pode ter se tornado exagerado.</p>
-
-                <p>“A Microsoft reportou certa desaceleração em seu principal negócio de nuvem, mas um enorme aumento no
-                    <span class="highlight">‘capex’</span>. Isso representa uma transferência de patrimônio dos
-                    acionistas da Microsoft para os acionistas da Nvidia,” disse Gil Luria, analista sênior de software
-                    da D.A. Davidson.</p>
-
-                <p>Em seu balanço, divulgado após o fechamento do mercado, a Microsoft informou que a receita de sua
-                    unidade Intelligent Cloud — lar da plataforma de computação em nuvem <span
-                        class="highlight">Azure</span> — subiu 19%, para 28,5 bilhões de dólares no trimestre encerrado
-                    em 30 de junho, mas ficou abaixo das estimativas dos analistas, de US$ 28,7 bilhões, segundo dados
-                    da LSEG.</p>
-
-                <p>O capital investido, incluindo arrendamentos financeiros, saltou 78% no trimestre, para 19 bilhões de
-                    dólares. A Microsoft afirmou que precisa ampliar sua rede global de data centers e superar
-                    restrições de capacidade para atender à demanda por IA.</p>
-
-                <p>A ação da <span class="highlight">Meta</span> caía cerca de 3%, enquanto o papel da <span
-                        class="highlight">Amazon</span> perdia 2,8% após os resultados da Microsoft. <span
-                        class="highlight">Apple</span>, <span class="highlight">Alphabet</span> e <span
-                        class="highlight">Tesla</span> recuavam cerca de 0,5% cada.</p>
-
-                <p>Os investidores estão impacientes para observar mais resultados dos investimentos massivos em IA,
-                    disse Daniel Morgan, gerente sênior de portfólio da Synovus Trust.</p>
-
-                <p>“É isso que está bagunçando tudo. As ações foram negociadas muito acima em antecipação a esses
-                    relatórios,” disse Morgan.</p>
-
-                <p>Enquanto o balanço da Microsoft prejudicava papéis de outras big techs, as ações da AMD subiam mais
-                    de 6% após a companhia prever receita acima das expectativas do mercado para o terceiro trimestre,
-                    apostando em uma forte demanda por seus chips de IA.</p>
-
-                <p>As ações da <span class="highlight">Nvidia</span>, cujos processadores são o padrão ouro em
-                    computação de IA, subiam 2,6%. <span class="highlight">Broadcom</span>, que também vende chips
-                    ligados à IA, avançava 1,4%. <span class="highlight">Intel</span> e <span
-                        class="highlight">Qualcomm</span> subiam quase 1% cada.</p>
-
-                <p>(Por Noel Randewich em San Francisco; reportagem adicional de Anna Tong em San Francisco e Aditya
-                    Soni e Yuvraj Malik em Bengaluru)</p>
-            </div>
-
+      <div>
+        <div class="news-header">
+          <h1>
+            Microsoft perde US$ 340 bilhões em valor de mercado após resultados
+            fracos; Nvidia e AMD se destacam
+          </h1>
+          <div class="meta">
+            Publicado em: 31 de Julho de 2024 | Autor:
+            <a href="https://investnews.com.br/autor/reuters/">Reuters</a>
+          </div>
         </div>
+        <div class="news-content">
+          <img src="images/blog02.png" alt="Imagem da sede da Microsoft" />
+          <p>
+            Os
+            <span class="highlight">resultados trimestrais decepcionantes</span>
+            da Microsoft derreteram US$ 340 bilhões em valor de mercado da
+            companhia na terça-feira (31), afetando tanto a Microsoft quanto
+            seus rivais que competem para dominar a
+            <span class="highlight">inteligência artificial</span>.
+          </p>
+
+          <p>
+            Enquanto isso, a <span class="highlight">Nvidia</span> e outras
+            fabricantes de chips para IA tinham alta após a divulgação do
+            relatório de resultados da
+            <span class="highlight">Advanced Micro Devices (ADM)</span>.
+          </p>
+
+          <p>
+            Os ganhos das fabricantes de chips e as perdas de seus maiores
+            clientes destacaram uma <span class="highlight">divisão</span> no
+            cenário da IA, com os investidores questionando recentemente se o
+            rali de IA em Wall Street pode ter se tornado exagerado.
+          </p>
+
+          <p>
+            “A Microsoft reportou certa desaceleração em seu principal negócio
+            de nuvem, mas um enorme aumento no
+            <span class="highlight">‘capex’</span>. Isso representa uma
+            transferência de patrimônio dos acionistas da Microsoft para os
+            acionistas da Nvidia,” disse Gil Luria, analista sênior de software
+            da D.A. Davidson.
+          </p>
+
+          <p>
+            Em seu balanço, divulgado após o fechamento do mercado, a Microsoft
+            informou que a receita de sua unidade Intelligent Cloud — lar da
+            plataforma de computação em nuvem
+            <span class="highlight">Azure</span> — subiu 19%, para 28,5 bilhões
+            de dólares no trimestre encerrado em 30 de junho, mas ficou abaixo
+            das estimativas dos analistas, de US$ 28,7 bilhões, segundo dados da
+            LSEG.
+          </p>
+
+          <p>
+            O capital investido, incluindo arrendamentos financeiros, saltou 78%
+            no trimestre, para 19 bilhões de dólares. A Microsoft afirmou que
+            precisa ampliar sua rede global de data centers e superar restrições
+            de capacidade para atender à demanda por IA.
+          </p>
+
+          <p>
+            A ação da <span class="highlight">Meta</span> caía cerca de 3%,
+            enquanto o papel da <span class="highlight">Amazon</span> perdia
+            2,8% após os resultados da Microsoft.
+            <span class="highlight">Apple</span>,
+            <span class="highlight">Alphabet</span> e
+            <span class="highlight">Tesla</span> recuavam cerca de 0,5% cada.
+          </p>
+
+          <p>
+            Os investidores estão impacientes para observar mais resultados dos
+            investimentos massivos em IA, disse Daniel Morgan, gerente sênior de
+            portfólio da Synovus Trust.
+          </p>
+
+          <p>
+            “É isso que está bagunçando tudo. As ações foram negociadas muito
+            acima em antecipação a esses relatórios,” disse Morgan.
+          </p>
+
+          <p>
+            Enquanto o balanço da Microsoft prejudicava papéis de outras big
+            techs, as ações da AMD subiam mais de 6% após a companhia prever
+            receita acima das expectativas do mercado para o terceiro trimestre,
+            apostando em uma forte demanda por seus chips de IA.
+          </p>
+
+          <p>
+            As ações da <span class="highlight">Nvidia</span>, cujos
+            processadores são o padrão ouro em computação de IA, subiam 2,6%.
+            <span class="highlight">Broadcom</span>, que também vende chips
+            ligados à IA, avançava 1,4%. <span class="highlight">Intel</span> e
+            <span class="highlight">Qualcomm</span> subiam quase 1% cada.
+          </p>
+
+          <p>
+            (Por Noel Randewich em San Francisco; reportagem adicional de Anna
+            Tong em San Francisco e Aditya Soni e Yuvraj Malik em Bengaluru)
+          </p>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <div class="container-footer">
-            <div class="row-footer">
-                <div class="footer-col">
-                    <h4>Site</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="blogs-main.html">Blogs</a></li>
-                        <li><a href="sobre.html">Quem somos</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Redes Sociais</h4>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Tiktok</a></li>
-                        <li><a href="#">Youtube</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Serviços</h4>
-                    <ul>
-                        <li><a href="#">Cálculos de Despesas</a></li>
-                        <li><a href="#">Investimentos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Inscreva-se na Newsletter</h4>
-                    <div class="form-sub">
-                        <form>
-                            <input type="email" placeholder="Digite o seu e-mail" required />
-                            <button>Se inscrever</button>
-                        </form>
-                    </div>
-                </div>
+      <div class="container-footer">
+        <div class="row-footer">
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blogs-main.html">Blogs</a></li>
+              <li><a href="sobre.html">Quem somos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#">Cálculos de Despesas</a></li>
+              <li><a href="#">Investimentos</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
+  </body>
 
-</body>
-
-<script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
-<script src="https://kit.fontawesome.com/e1063b7707.js" crossorigin="anonymous"></script>
-
+  <script
+    src="https://kit.fontawesome.com/65f22fe718.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script/contact.js"></script>
+  <script src="script/script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/e1063b7707.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
