@@ -1,12 +1,21 @@
 <?php
-// Habilita exibição de erros para debug
+header('Content-Type: application/json');
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 
-header('Content-Type: application/json');
-require_once 'database.php';
-
 try {
+    // Check if database.php exists and include it
+    if (!file_exists('database.php')) {
+        throw new Exception('Arquivo de configuração do banco de dados não encontrado');
+    }
+
+    require_once 'database.php';
+
+    // Verify database connection
+    if (!isset($conn)) {
+        throw new Exception('Conexão com banco de dados não estabelecida');
+    }
+
     $input = file_get_contents('php://input');
     if (!$input) {
         throw new Exception('Dados não recebidos');
@@ -17,7 +26,7 @@ try {
         throw new Exception('Erro ao decodificar JSON: ' . json_last_error_msg());
     }
 
-    // Validação dos dados
+    // Data validation
     if (empty($data['nome']) || empty($data['sobrenome']) || empty($data['email']) || empty($data['mensagem'])) {
         throw new Exception('Todos os campos são obrigatórios');
     }
@@ -34,29 +43,36 @@ try {
         throw new Exception('Sobrenome deve ter no máximo 30 caracteres');
     }
 
+    // Prepare and execute query
     $stmt = $conn->prepare("INSERT INTO contatos (nome, sobrenome, email, mensagem) VALUES (:nome, :sobrenome, :email, :mensagem)");
 
-    $stmt->execute([
+    $result = $stmt->execute([
         ':nome' => trim($data['nome']),
         ':sobrenome' => trim($data['sobrenome']),
         ':email' => trim($data['email']),
         ':mensagem' => trim($data['mensagem'])
     ]);
 
-    echo json_encode(['status' => 'success', 'message' => 'Mensagem enviada com sucesso!']);
+    if (!$result) {
+        throw new Exception('Erro ao inserir dados no banco');
+    }
+
+    echo json_encode([
+        'status' => 'success',
+        'message' => 'Mensagem enviada com sucesso!'
+    ]);
+
 } catch (Exception $e) {
     http_response_code(400);
     echo json_encode([
         'status' => 'error',
-        'message' => $e->getMessage(),
-        'debug' => error_get_last()
+        'message' => $e->getMessage()
     ]);
 } catch (PDOException $e) {
     http_response_code(500);
     echo json_encode([
         'status' => 'error',
-        'message' => 'Erro ao salvar mensagem no banco de dados',
-        'debug' => $e->getMessage()
+        'message' => 'Erro ao conectar com banco de dados'
     ]);
 }
 ?>
