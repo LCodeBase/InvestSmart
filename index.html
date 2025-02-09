@@ -198,7 +198,7 @@
       </button>
 
       <div id="registerForm" class="form-container" style="display: none">
-        <form class="form">
+        <form class="form" id="contactForm" onsubmit="saveToFile(event)">
           <div class="header-container">
             <p class="title">Entre em Contato</p>
             <button id="close-btn">X</button>
@@ -215,6 +215,7 @@
                 type="text"
                 class="input"
                 maxlength="10"
+                name="nome"
               />
               <span>Nome</span>
             </label>
@@ -225,12 +226,19 @@
                 type="text"
                 class="input"
                 maxlength="30"
+                name="sobrenome"
               />
               <span>Sobrenome</span>
             </label>
           </div>
           <label>
-            <input required="" placeholder="" type="text" class="input" />
+            <input
+              required=""
+              placeholder=""
+              type="email"
+              class="input"
+              name="email"
+            />
             <span>Email</span>
           </label>
           <textarea
@@ -238,6 +246,7 @@
             maxlength="1000"
             rows="5"
             placeholder="Escreva sua mensagem aqui..."
+            name="mensagem"
           ></textarea>
           <div id="charCount" class="char-count">1000 caracteres restantes</div>
           <button class="submit">Enviar</button>
@@ -296,6 +305,8 @@
         </div>
       </div>
     </footer>
+    <!-- Adicione antes do fechamento do </body> -->
+    <script src="contact.js"></script>
     <script
       src="https://kit.fontawesome.com/65f22fe718.js"
       crossorigin="anonymous"
