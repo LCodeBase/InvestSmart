@@ -6,28 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
     <link rel="stylesheet" href="css/style-edu01.css" />
+        <link rel="stylesheet" href="css/universal-css.css" />
     <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
     <header>
-        <div class="container-LOGO">
-            <img src="images/Camada 1.png" alt="" />
-            <div class="logo">InvestSmart</div>
-        </div>
-        <nav>
-            <ul>
-                <li id="comment-header"><a href="index.html">Home</a></li>
-                <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
-                <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
-                <li><button class="button-header" onclick="window.location.href='servicos.html'">
-                        Serviços
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="Logo InvestSmart" />
+        <div class="logo">InvestSmart</div>
+      </div>
 
-                        <i class="fa-solid fa-arrow-right" id="seta"></i>
-                    </button></li>
-            </ul>
-        </nav>
+      <div class="menu-toggle" alt="Botão-Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <button id="toggleForm" class="floating-button">
@@ -153,7 +163,7 @@
     </footer>
 
 </body>
-
+    <script src="script/js-universal.js"> </script>
 <script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
 <script src="script/contact.js"></script>
     <script src="script/script.js"></script>

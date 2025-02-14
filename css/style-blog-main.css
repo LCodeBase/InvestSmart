@@ -608,6 +608,7 @@ footer {
 
 /* Responsivo */
 @media (max-width: 800px) {
+
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
@@ -623,6 +624,48 @@ footer {
 
 /* Media Queries para Mobile */
 @media only screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        right: 0;
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .button-header {
+        width: 200px;
+        margin: 10px auto;
+    }
+
     /* Header */
     header {
         flex-direction: column;
@@ -744,6 +787,27 @@ footer {
 
 /* Ajustes para telas muito pequenas */
 @media only screen and (max-width: 480px) {
+.nav-menu {
+        display: none;
+        /* Inicialmente escondido */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        display: block;
+        /* Mostra quando ativo */
+    }
+
     .container-LOGO {
         flex-direction: row;
         align-items: center;
@@ -769,5 +833,18 @@ footer {
     .floating-button {
         width: 50px;
         height: 50px;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .nav-menu {
+        display: block;
+        /* Sempre visível em desktop */
+    }
+
+    .menu-toggle {
+        display: none;
+        /* Esconde o botão em desktop */
     }
 }

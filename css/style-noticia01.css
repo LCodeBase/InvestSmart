@@ -780,6 +780,47 @@ blockquote {
 
 /* Media Queries para Mobile */
 @media only screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        right: 0;
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .button-header {
+        width: 200px;
+        margin: 10px auto;
+    }
 
     /* Header */
     header {
@@ -823,13 +864,37 @@ blockquote {
         width: 100%;
     }
 
-    .button-header {
-        width: 100%;
-        max-width: 300px;
-        margin: 5px auto;
-        padding: 12px;
-        font-size: 16px;
-    }
+ /* Ajustes para as notícias em mobile */
+ .news-item {
+     flex-direction: column;
+ }
+
+ .news-link {
+     flex-direction: column;
+     width: 100%;
+ }
+
+ .news-image {
+     width: 100%;
+     height: 200px;
+     /* Altura fixa para manter proporção */
+     border-radius: 8px 8px 0 0;
+     /* Arredonda apenas cantos superiores */
+ }
+
+ .news-content {
+     width: 100%;
+     padding: 15px;
+ }
+
+ .news-title {
+     font-size: 1.4em;
+ }
+
+ .news-description {
+     font-size: 0.95em;
+ }
+
 
     /* Hero Section */
     .hero {
@@ -868,6 +933,12 @@ blockquote {
     }
 }
 
+
+/* Adicione isso fora da media query */
+.menu-toggle {
+    display: none;
+}
+
 /* Ajustes para telas muito pequenas */
 @media only screen and (max-width: 480px) {
     .container-LOGO {
@@ -897,3 +968,4 @@ blockquote {
         height: 50px;
     }
 }
+

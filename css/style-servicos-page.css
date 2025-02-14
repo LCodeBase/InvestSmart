@@ -563,6 +563,27 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .nav-menu {
+            display: none;
+            /* Inicialmente escondido */
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 250px;
+            height: 100vh;
+            background-color: white;
+            padding-top: 60px;
+            transition: 0.3s ease;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .nav-menu.active {
+            right: 0;
+            display: block;
+            /* Mostra quando ativo */
+        }
+
     .servico-btn {
         width: 150px;
         height: 150px;
@@ -638,8 +659,16 @@ footer {
 
 
 /* Media Queries para Mobile */
-@media only screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+    .nav-menu {
+        display: block;
+        /* Sempre visível em desktop */
+    }
 
+    .menu-toggle {
+        display: none;
+        /* Esconde o botão em desktop */
+    }
     /* Header */
     header {
         flex-direction: column;
@@ -729,6 +758,27 @@ footer {
 
 /* Ajustes para telas muito pequenas */
 @media only screen and (max-width: 480px) {
+    .nav-menu {
+            display: none;
+            /* Inicialmente escondido */
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 250px;
+            height: 100vh;
+            background-color: white;
+            padding-top: 60px;
+            transition: 0.3s ease;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .nav-menu.active {
+            right: 0;
+            display: block;
+            /* Mostra quando ativo */
+        }
+
     .container-LOGO {
         flex-direction: row;
         align-items: center;
