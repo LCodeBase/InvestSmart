@@ -118,3 +118,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+function sortNewsByDate() {
+  const newsLists = document.querySelectorAll(".news-list");
+
+  newsLists.forEach((list) => {
+    const newsItems = Array.from(list.getElementsByClassName("news-item"));
+
+    newsItems.sort((a, b) => {
+      const dateA = new Date(a.querySelector(".news-time").dataset.postTime);
+      const dateB = new Date(b.querySelector(".news-time").dataset.postTime);
+      return dateB - dateA; // Sort in descending order (newest first)
+    });
+
+    // Clear the list and append sorted items
+    newsItems.forEach((item) => list.appendChild(item));
+  });
+}
+
+// Call the function when the page loads
+document.addEventListener("DOMContentLoaded", sortNewsByDate);
