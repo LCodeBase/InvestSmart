@@ -723,27 +723,81 @@ footer {
     color: #118a5f;
 }
 
-@media (max-width: 768px) {
-    .servico-card {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    .hero-section h1 {
-        font-size: 2rem;
-    }
+/* Primeiro, adicione estas regras fora da media query */
+.menu-toggle {
+    display: none;
+    /* Esconde o botão em telas grandes */
+    cursor: pointer;
+    font-size: 24px;
+    color: #118a5f;
 }
 
+.nav-menu {
+    display: block;
+    /* Menu visível em telas grandes */
+}
+
+/* Regras base para o menu toggle */
+.menu-toggle {
+    display: none;
+    /* Escondido por padrão em desktop */
+    font-size: 24px;
+    cursor: pointer;
+    color: #118a5f;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.menu-toggle i {
+    font-size: 28px;
+    /* Aumenta o tamanho do ícone */
+}
 
 /* Media Queries para Mobile */
 @media only screen and (max-width: 768px) {
 
     /* Header */
     header {
-        flex-direction: column;
+        flex-direction: row;
+        /* Mudamos para row para manter logo e menu toggle na mesma linha */
+        justify-content: space-between;
         padding: 15px;
         position: relative;
         background-color: #fff;
+    }
+
+    .container-LOGO {
+        width: auto;
+        /* Alterado de 100% para auto */
+        margin-bottom: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Mostra o botão em telas pequenas */
+        position: relative;
+        /* Alterado de absolute para relative */
+        top: auto;
+        right: auto;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        display: block;
     }
 
     .container-LOGO {
@@ -853,4 +907,41 @@ footer {
         width: 50px;
         height: 50px;
     }
+}
+
+/* Media query para mobile */
+@media only screen and (max-width: 768px) {
+    header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        /* Força a exibição do botão */
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        display: block;
+    }
+
+    /* ... resto do seu CSS mobile ... */
 }
