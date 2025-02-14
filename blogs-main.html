@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
-    <!-- CSS não crítico com preload -->
+    <!-- Font Awesome - apenas ícones necessários -->
     <link
-      rel="preload"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- CSS não crítico com lazy loading -->
+    <link
+      rel="stylesheet"
       href="css/universal-css.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      media="print"
+      onload="this.media='all'"
     />
     <link
-      rel="preload"
+      rel="stylesheet"
       href="css/style-blog-main.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      media="print"
+      onload="this.media='all'"
     />
     <noscript>
       <link rel="stylesheet" href="css/universal-css.css" />
@@ -356,9 +364,11 @@
       </div>
     </footer>
     <!-- Scripts não críticos no final do body -->
+    <script type="module" src="script/js-universal.js"></script>
+    <script type="module" src="script/contact.js"></script>
+    <script type="module" src="script/script.js"></script>
+
+    <!-- Carregamento assíncrono do Font Awesome -->
     <script defer src="https://kit.fontawesome.com/65f22fe718.js"></script>
-    <script defer src="script/js-universal.js"></script>
-    <script defer src="script/contact.js"></script>
-    <script defer src="script/script.js"></script>
   </body>
 </html>
