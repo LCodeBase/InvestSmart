@@ -16,9 +16,11 @@
     <link rel="stylesheet" href="css/universal-css.css" />
     <link rel="stylesheet" href="css/style-blog-main.css" />
     <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      async
     />
   </head>
 
@@ -64,6 +66,8 @@
           <a href="noticia01.html" class="news-link">
             <img
               src="images/blog04.webp"
+              srcset="images/blog04-small.webp 480w, images/blog04-medium.webp 800w, images/blog04-large.webp 1200w"
+              sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px"
               alt="Descrição da imagem 1"
               class="news-image"
               loading="lazy"
@@ -351,19 +355,11 @@
       </div>
     </footer>
   </body>
-  <script src="script/js-universal.js" async></script>
-  <script
-    src="https://kit.fontawesome.com/65f22fe718.js"
-    crossorigin="anonymous"
-    async
-  ></script>
-  <script src="script/contact.js" async></script>
-  <script src="script/script.js" async></script>
-  <script
-    src="https://kit.fontawesome.com/e1063b7707.js"
-    crossorigin="anonymous"
-    async
-  ></script>
+  <script src="script/js-universal.js" defer></script>
+  <script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous" defer></script>
+  <script src="script/contact.js" defer></script>
+  <script src="script/script.js" defer></script>
+  <script src="https://kit.fontawesome.com/e1063b7707.js" crossorigin="anonymous" defer></script>
   <FilesMatch "\.(html|css|js|png|jpg|jpeg|gif|ico|webp)$">
     ExpiresActive On
     ExpiresDefault "access plus 1 month"
