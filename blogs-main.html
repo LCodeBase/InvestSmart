@@ -4,8 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
-    <link rel="stylesheet" href="css/universal-css.css" />
-    <link rel="stylesheet" href="css/style-blog-main.css" />
+    <!-- CSS não crítico com preload -->
+    <link
+      rel="preload"
+      href="css/universal-css.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="css/style-blog-main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/universal-css.css" />
+      <link rel="stylesheet" href="css/style-blog-main.css" />
+    </noscript>
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -57,6 +74,10 @@
               src="images/blog04.png"
               alt="Descrição da imagem 1"
               class="news-image"
+              width="800"
+              height="600"
+              alt="Descrição da imagem"
+              loading="lazy"
             />
             <div class="news-content">
               <h3 class="news-title">
@@ -334,16 +355,10 @@
         </div>
       </div>
     </footer>
+    <!-- Scripts não críticos no final do body -->
+    <script defer src="https://kit.fontawesome.com/65f22fe718.js"></script>
+    <script defer src="script/js-universal.js"></script>
+    <script defer src="script/contact.js"></script>
+    <script defer src="script/script.js"></script>
   </body>
-  <script src="script/js-universal.js"></script>
-  <script
-    src="https://kit.fontawesome.com/65f22fe718.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="script/contact.js"></script>
-  <script src="script/script.js"></script>
-  <script
-    src="https://kit.fontawesome.com/e1063b7707.js"
-    crossorigin="anonymous"
-  ></script>
 </html>
