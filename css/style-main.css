@@ -9,121 +9,67 @@ body {
     font-family: Arial, sans-serif;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
 
+.container-LOGO {
+    display: flex;
+    align-items: center;
+}
 
-/* header section start */
+.container-LOGO img {
+    width: 50px;
+    margin-right: 10px;
+}
 
-.header_section {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #118a5f;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+nav li a:hover::after {
     width: 100%;
-    float: left;
-    background-color: #ffffff;
-    height: auto;
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
 
-.navbar-brand {
-    width: 21%;
+.button-header {
+    padding: 6px 12px;
+    background-color: #118a5f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.3s;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 15px;
-    padding-left: 15px;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+.button-header:hover {
+    background-color: #0d6b48;
 }
-
-.navbar-light .navbar-nav .nav-link {
-    color: #4f4f4f;
-}
-
-.navbar-light .navbar-nav .active>.nav-link,
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show>.nav-link {
-    color: #fa7e64;
-}
-
-.bg-light {
-    background-color: transparent !important;
-}
-
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #fa7e64;
-}
-
-.user_icon {
-    width: 80px;
-    float: right;
-    font-size: 20px;
-    color: #000;
-}
-
-.user_icon a {
-    color: #000;
-}
-
-.user_icon a:hover {
-    color: #fa7e64;
-}
-
-.call_btn {
-    flex: 1;
-}
-
-.call_btn a {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #fa7e65;
-    border-radius: 40px;
-    text-align: center;
-    padding: 8px 20px;
-}
-
-.call_btn a:hover {
-    color: #000;
-    background-color: #fa7e65;
-}
-
-.padding_left10 {
-    padding-left: 10px;
-}
-
-.my-lg-0 {
-    margin-right: 30px;
-}
-
-.mr-auto,
-.mx-auto {
-    flex: 3;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Hero Section */
 .hero {

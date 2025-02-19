@@ -25,61 +25,36 @@
   </head>
 
   <body>
-    <!-- Início da HEADER-->
-    <div class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="index.html"
-            ><img src="images/logo.png"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="client.html">Client</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Contact.html">Contact Us</a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <div class="user_icon">
-                <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
-              </div>
-              <div class="user_icon">
-                <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-              </div>
-            </form>
-            <div class="call_btn">
-              <a href="#"
-                ><i class="fa fa-phone" aria-hidden="true"></i
-                ><span class="padding_left10">Call : +1234567890</span></a
-              >
-            </div>
-          </div>
-        </nav>
+    <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="Logo InvestSmart" />
+        <div class="logo">InvestSmart</div>
       </div>
-    </div>
-    <!-- Fim da HEADER-->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <a href="login.html"
+              ><i class="fa fa-user" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <!-- Menu Toggle Button for Mobile -->
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
 
     <main>
       <section class="hero">
