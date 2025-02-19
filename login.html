@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Login</title>
+    <link rel="stylesheet" href="css/universal-css.css" />
+    <link rel="stylesheet" href="css/style-auth.css" />
+    <link rel="stylesheet" href="css/style-main.css">
+    <style>
+        .auth-form input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+    </style>
+  </head>
+  <body>
+     <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="Logo InvestSmart" />
+        <div class="logo">InvestSmart</div>
+      </div>
+
+      <!-- Menu Toggle Button -->
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+        <div class="login">
+          <a href="login.html"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+      </nav>
+    </header>
+    <div class="auth-container">
+      <form id="loginForm" class="auth-form">
+        <h2>Login</h2>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Entrar</button>
+        <p>Não tem uma conta? <a href="register.html">Registre-se</a></p>
+      </form>
+    </div>
+    <script src="script/auth.js"></script>
+    <script>
+      document
+        .getElementById("loginForm")
+        ?.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const formData = {
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+          };
+
+          try {
+            const response = await fetch("php/login.php", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+              window.location.href = "index.php"; // Update this line
+            } else {
+              alert(data.message || "Login failed");
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred during login");
+          }
+        });
+    </script>
+  </body>
+</html>
