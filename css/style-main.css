@@ -61,6 +61,7 @@ nav li a::after {
   /* Animação da largura */
 }
 
+
 /* Linha animada ao passar o mouse */
 nav li a:hover::after {
   width: 100%;
@@ -186,6 +187,15 @@ nav a {
 }
 
 @media (max-width: 768px) {
+    .login-item {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .login-link {
+            justify-content: center;
+        }
+
   .feature-item {
     max-width: 100%;
     text-align: center;
