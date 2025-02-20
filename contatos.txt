@@ -1,0 +1,1 @@
+# No Windows, você precisa garantir que a pasta tenha permissões de escrita para o usuário do servidor web

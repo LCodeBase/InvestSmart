@@ -941,3 +941,9 @@ footer {
 
     /* ... resto do seu CSS mobile ... */
 }
+
+.reduced-size {
+    margin-left: 50%;
+  width: 50%; /* Adjust the percentage as needed */
+  height: auto;
+}
