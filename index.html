@@ -11,8 +11,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyB2LqFBob9YGUkYUYoA-56ltb3wb_ozoZ8",
+        authDomain: "investsmart-3be7f.firebaseapp.com",
+        projectId: "investsmart-3be7f",
+        storageBucket: "investsmart-3be7f.firebasestorage.app",
+        messagingSenderId: "283457890092",
+        appId: "1:283457890092:web:e04515b0abc76721fd2e89",
+        measurementId: "G-4EEPBJQ4RB",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </head>
-
   <body>
     <header>
       <div class="container-LOGO">
@@ -29,8 +43,8 @@
           <li id="comment-header"><a href="index.html">Home</a></li>
           <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
           <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
-          <li id="comment-header"><a href="servicos.html"> Serviços </a></li>
-          <li>
+          <li id="comment-header"><a href="servicos.html">Serviços</a></li>
+          <li id="login-button">
             <button
               class="button-header"
               onclick="window.location.href='login.html'"
@@ -38,6 +52,15 @@
               Login
               <i class="fa-solid fa-arrow-right" id="seta"></i>
             </button>
+          </li>
+          <li id="profile-icon" style="display: none">
+            <a href="#" onclick="toggleProfileMenu()">
+              <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+            </a>
+            <div id="profile-menu" style="display: none">
+              <a href="profile.html">Editar Perfil</a>
+              <a href="#" onclick="logout()">Logout</a>
+            </div>
           </li>
         </ul>
       </nav>
@@ -313,17 +336,7 @@
       </div>
     </footer>
     <script src="script/js-universal.js"></script>
-    <script src="contact.js"></script>
-    <script
-      src="https://kit.fontawesome.com/65f22fe718.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/e1063b7707.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="enviar-email.js"></script>
+    <script src="script/contact.js"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>

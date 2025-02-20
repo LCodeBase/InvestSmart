@@ -20,7 +20,7 @@
     </style>
   </head>
   <body>
-     <header>
+    <header>
       <div class="container-LOGO">
         <img src="images/Camada 1.png" alt="Logo InvestSmart" />
         <div class="logo">InvestSmart</div>
@@ -130,6 +130,27 @@
         </div>
       </div>
     </footer>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+    <!-- Your Firebase configuration -->
+    <script>
+      // Initialize Firebase
+     const firebaseConfig = {
+  apiKey: "AIzaSyB2LqFBob9YGUkYUYoA-56ltb3wb_ozoZ8",
+  authDomain: "investsmart-3be7f.firebaseapp.com",
+  projectId: "investsmart-3be7f",
+  storageBucket: "investsmart-3be7f.firebasestorage.app",
+  messagingSenderId: "283457890092",
+  appId: "1:283457890092:web:e04515b0abc76721fd2e89",
+  measurementId: "G-4EEPBJQ4RB"
+};
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Script to handle form submission -->
     <script>
       document
         .getElementById("registerForm")
@@ -145,32 +166,19 @@
             return;
           }
 
-          const formData = {
-            username: document.getElementById("username").value,
-            email: document.getElementById("email").value,
-            password: password,
-          };
+          const email = document.getElementById("email").value;
 
           try {
-            const response = await fetch("php/register.php", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(formData),
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-              alert("Registro realizado com sucesso!");
-              window.location.href = "login.html";
-            } else {
-              alert(data.message || "Erro no registro");
-            }
+            const auth = firebase.auth();
+            const userCredential = await auth.createUserWithEmailAndPassword(
+              email,
+              password
+            );
+            alert("Registro realizado com sucesso!");
+            window.location.href = "login.html";
           } catch (error) {
             console.error("Error:", error);
-            alert("Ocorreu um erro durante o registro");
+            alert(error.message || "Ocorreu um erro durante o registro");
           }
         });
     </script>
