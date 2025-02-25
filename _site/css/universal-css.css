@@ -1,0 +1,184 @@
+@media only screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        right: 0;
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .button-header {
+        width: 200px;
+        margin: 10px auto;
+    }
+
+    header {
+        flex-direction: row;
+        /* Mudamos para row para manter logo e menu toggle na mesma linha */
+        justify-content: space-between;
+        padding: 15px;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .container-LOGO {
+        width: auto;
+        /* Alterado de 100% para auto */
+        margin-bottom: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Mostra o botão em telas pequenas */
+        position: relative;
+        /* Alterado de absolute para relative */
+        top: auto;
+        right: auto;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        /* Força a exibição do botão */
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        display: block;
+    }
+
+    /* ... resto do seu CSS mobile ... */
+}
+
+.menu-toggle {
+    display: none;
+    /* Esconde o botão em telas grandes */
+    cursor: pointer;
+    font-size: 24px;
+    color: #118a5f;
+}
+
+.nav-menu {
+    display: block;
+    /* Menu visível em telas grandes */
+}
+
+/* Primeiro, adicione estas regras fora da media query */
+.menu-toggle {
+    display: none;
+    /* Esconde o botão em telas grandes */
+    cursor: pointer;
+    font-size: 24px;
+    color: #118a5f;
+}
+
+.nav-menu {
+    display: block;
+    /* Menu visível em telas grandes */
+}
+
+/* Regras base para o menu toggle */
+.menu-toggle {
+    display: none;
+    /* Escondido por padrão em desktop */
+    font-size: 24px;
+    cursor: pointer;
+    color: #118a5f;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.menu-toggle i {
+    font-size: 28px;
+    /* Aumenta o tamanho do ícone */
+}

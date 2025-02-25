@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
+    <link rel="stylesheet" href="css/style-calculo-despesas.css" />
+    <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/universal-css.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .form-section,
+      .list-section {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      #expense-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #expense-form input,
+      #expense-form select {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      #expense-form button {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #expense-form button:hover {
+        background-color: #45a049;
+      }
+
+      #expenses-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .expense-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .expense-item button {
+        background-color: #ff4444;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .expense-item button:hover {
+        background-color: #cc0000;
+      }
+
+      #total-expenses {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-top: 20px;
+        text-align: right;
+      }
+
+      @media (max-width: 600px) {
+        .form-section,
+        .list-section {
+          padding: 15px;
+        }
+
+        .expense-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .expense-item button {
+          margin-top: 10px;
+        }
+      }
+
+      #export-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+        font-size: 16px;
+      }
+
+      #export-btn:hover {
+        background-color: #0056b3;
+      }
+
+      #expense-chart {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .summary-section {
+        margin-top: 20px;
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      .summary-section h3 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="Logo InvestSmart" />
+        <div class="logo">InvestSmart</div>
+      </div>
+
+      <div class="menu-toggle" alt="Botão-Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <button id="toggleForm" class="floating-button">
+      <i class="fa-solid fa-envelope fa-2x"></i>
+    </button>
+    <div id="registerForm" class="form-container" style="display: none">
+      <form class="form">
+        <div class="header-container">
+          <p class="title">Entre em Contato</p>
+          <button id="close-btn">X</button>
+        </div>
+        <p class="message">
+          Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+          de nossos serviços?
+        </p>
+        <div class="flex">
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="10"
+            />
+            <span>Nome</span>
+          </label>
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="30"
+            />
+            <span>Sobrenome</span>
+          </label>
+        </div>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Email</span>
+        </label>
+        <textarea
+          id="myTextarea"
+          maxlength="1000"
+          rows="5"
+          placeholder="Escreva sua mensagem aqui..."
+        ></textarea>
+        <div id="charCount" class="char-count">1000 caracteres restantes</div>
+        <button class="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="form-section">
+      <h2>Calculadora de Despesas</h2>
+      <form id="expense-form">
+        <label for="expense-name">Nome da Despesa:</label>
+        <input type="text" id="expense-name" required />
+
+        <label for="expense-amount">Valor (R$):</label>
+        <input type="number" id="expense-amount" step="0.01" min="0" required />
+
+        <label for="expense-category">Categoria:</label>
+        <select id="expense-category">
+          <option value="Alimentação">Alimentação</option>
+          <option value="Transporte">Transporte</option>
+          <option value="Moradia">Moradia</option>
+          <option value="Saúde">Saúde</option>
+          <option value="Lazer">Lazer</option>
+          <option value="Contas">Contas</option>
+          <option value="Outros">Outros</option>
+        </select>
+
+        <label for="expense-frequency">Frequência:</label>
+        <select id="expense-frequency">
+          <option value="unico">Única</option>
+          <option value="semanal">Semanal</option>
+          <option value="mensal">Mensal</option>
+          <option value="anual">Anual</option>
+        </select>
+
+        <label for="expense-date">Data:</label>
+        <input type="date" id="expense-date" required />
+
+        <button type="submit">Adicionar Despesa</button>
+      </form>
+    </div>
+
+    <div class="list-section">
+      <h2>Lista de Despesas</h2>
+      <input type="text" id="search-bar" placeholder="Buscar despesas..." />
+      <ul id="expenses-list"></ul>
+      <div id="total-expenses">Total: R$ 0.00</div>
+      <canvas id="expense-chart"></canvas>
+      <button id="export-btn">Exportar Despesas</button>
+    </div>
+
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blogs-main.html">Blogs</a></li>
+              <li><a href="sobre.html">Quem somos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instragram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="calculo-despesas.html">Calculos de Despesas</a></li>
+              <li><a href="recomendacaoinvestimento.html">Investimentos</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/65f22fe718.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script/contact.js"></script>
+  <script src="script/script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/e1063b7707.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("expense-form");
+      const expensesList = document.getElementById("expenses-list");
+      const totalExpenses = document.getElementById("total-expenses");
+      const searchBar = document.getElementById("search-bar");
+      let expenses = [];
+
+      const ctx = document.getElementById("expense-chart").getContext("2d");
+      let chart;
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("expense-name").value;
+        const amount = parseFloat(
+          document.getElementById("expense-amount").value
+        );
+        const category = document.getElementById("expense-category").value;
+        const frequency = document.getElementById("expense-frequency").value;
+        const date = document.getElementById("expense-date").value;
+
+        expenses.push({ name, amount, category, frequency, date });
+        updateExpensesList();
+        form.reset();
+      });
+
+      searchBar.addEventListener("input", function () {
+        updateExpensesList();
+      });
+
+      function updateExpensesList() {
+        expensesList.innerHTML = "";
+        let total = 0;
+        const searchTerm = searchBar.value.toLowerCase();
+
+        expenses
+          .filter((expense) => expense.name.toLowerCase().includes(searchTerm))
+          .forEach((expense, index) => {
+            const li = document.createElement("li");
+            li.className = "expense-item";
+            li.innerHTML = `
+                        <span>${expense.name} - R$ ${expense.amount.toFixed(
+              2
+            )} (${expense.category}) - ${expense.frequency} - ${
+              expense.date
+            }</span>
+                        <button onclick="removeExpense(${index})">Remover</button>
+                    `;
+            expensesList.appendChild(li);
+            total += expense.amount;
+          });
+
+        totalExpenses.textContent = `Total: R$ ${total.toFixed(2)}`;
+        updateChart();
+        updateSummary();
+      }
+
+      function updateChart() {
+        const categories = {};
+        expenses.forEach((expense) => {
+          if (categories[expense.category]) {
+            categories[expense.category] += expense.amount;
+          } else {
+            categories[expense.category] = expense.amount;
+          }
+        });
+
+        if (chart) {
+          chart.destroy();
+        }
+
+        chart = new Chart(ctx, {
+          type: "pie",
+          data: {
+            labels: Object.keys(categories),
+            datasets: [
+              {
+                data: Object.values(categories),
+                backgroundColor: [
+                  "#FF6384",
+                  "#36A2EB",
+                  "#FFCE56",
+                  "#4BC0C0",
+                  "#9966FF",
+                  "#FF9F40",
+                ],
+              },
+            ],
+          },
+        });
+      }
+
+      function updateSummary() {
+        const summarySection = document.createElement("div");
+        summarySection.className = "summary-section";
+        summarySection.innerHTML = `
+                <h3>Resumo de Despesas</h3>
+                <p>Total de despesas: R$ ${calculateTotal().toFixed(2)}</p>
+                <p>Maior despesa: ${findHighestExpense()}</p>
+                <p>Categoria mais cara: ${findMostExpensiveCategory()}</p>
+            `;
+
+        const existingSummary = document.querySelector(".summary-section");
+        if (existingSummary) {
+          existingSummary.replaceWith(summarySection);
+        } else {
+          document.querySelector(".list-section").appendChild(summarySection);
+        }
+      }
+
+      function calculateTotal() {
+        return expenses.reduce((total, expense) => total + expense.amount, 0);
+      }
+
+      function findHighestExpense() {
+        if (expenses.length === 0) return "Nenhuma despesa registrada";
+        const highest = expenses.reduce((max, expense) =>
+          expense.amount > max.amount ? expense : max
+        );
+        return `${highest.name} (R$ ${highest.amount.toFixed(2)})`;
+      }
+
+      function findMostExpensiveCategory() {
+        if (expenses.length === 0) return "Nenhuma despesa registrada";
+        const categoryTotals = expenses.reduce((totals, expense) => {
+          totals[expense.category] =
+            (totals[expense.category] || 0) + expense.amount;
+          return totals;
+        }, {});
+        const mostExpensive = Object.entries(categoryTotals).reduce(
+          (max, [category, total]) =>
+            total > max.total ? { category, total } : max,
+          { total: 0 }
+        );
+        return `${
+          mostExpensive.category
+        } (R$ ${mostExpensive.total.toFixed(2)})`;
+      }
+
+      window.removeExpense = function (index) {
+        expenses.splice(index, 1);
+        updateExpensesList();
+      };
+
+      document
+        .getElementById("export-btn")
+        .addEventListener("click", function () {
+          let csvContent = "data:text/csv;charset=utf-8,";
+          csvContent += "Nome,Valor,Categoria,Frequência,Data\n";
+          expenses.forEach(function (expense) {
+            csvContent += `${expense.name},${expense.amount},${expense.category},${expense.frequency},${expense.date}\n`;
+          });
+          var encodedUri = encodeURI(csvContent);
+          var link = document.createElement("a");
+          link.setAttribute("href", encodedUri);
+          link.setAttribute("download", "despesas.csv");
+          document.body.appendChild(link);
+          link.click();
+        });
+    });
+  </script>
+  <script src="script/js-universal.js"></script>
+</html>

@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Blog - InvestSmart"
+---
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -60,202 +65,27 @@
       </div>
 
       <ul class="news-list" id="noticias-tab">
+        {% for post in site.posts %}
         <li class="news-item">
-          <a href="noticia01.html" class="news-link">
+          <a href="{{ post.url }}" class="news-link">
             <img
-              src="images/blog01.png"
-              alt="Público brasileiro fazendo compras em lojas"
+              src="{{ post.image }}"
+              alt="{{ post.title }}"
               class="news-image"
             />
             <div class="news-content">
-              <h3 class="news-title">
-                Confiança do consumidor brasileiro recua para menor nível desde
-                agosto de 2022
-              </h3>
-              <p class="news-description">
-                A confiança dos consumidores brasileiros despencou em fevereiro,
-                atingindo o menor nível desde agosto de 2022, devido ao aumento
-                da inflação e das taxas de juros. O Índice de Confiança do
-                Consumidor caiu para 83,6 pontos, refletindo um crescente
-                pessimismo, especialmente entre as famílias de menor poder
-                aquisitivo.
-              </p>
+              <h3 class="news-title">{{ post.title }}</h3>
+              <p class="news-description">{{ post.excerpt }}</p>
               <div
                 class="news-time"
-                data-post-time="2025-02-24T23:58:00Z"
-              ></div>
+                data-post-time="{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}"
+              >
+                Carregando...
+              </div>
             </div>
           </a>
         </li>
-
-        <li class="news-item">
-          <a href="noticia02.html" class="news-link">
-            <img
-              src="images/blog02.png"
-              alt="Imagem do presidente americano Donald Trump"
-              class="news-image"
-            />
-            <div class="news-content">
-              <h3 class="news-title">
-                Trump diz que tarifas sobre México e Canadá “avançarão” no
-                próximo mês
-              </h3>
-              <p class="news-description">
-                Trump confirma que tarifas sobre Canadá e México devem entrar em
-                vigor em 4 de março, apesar do adiamento inicial. Segundo ele,
-                as medidas visam conter migração ilegal e tráfico de drogas.
-              </p>
-              <div
-                class="news-time"
-                data-post-time="2025-02-24T15:00:00Z"
-              ></div>
-            </div>
-          </a>
-        </li>
-        <li class="news-item">
-          <a href="noticia03.html" class="news-link">
-            <img
-              src="images/blog03.png"
-              alt="Imagem do novo chanceler alemão Friedrich Merz"
-              class="news-image"
-            />
-            <div class="news-content">
-              <h3 class="news-title">
-                Discussão na Alemanha sobre Fundo de Defesa Emergencial de €200
-                Bilhões
-              </h3>
-              <p class="news-description">
-                O novo chanceler da Alemanha, Friedrich Merz, busca aprovar €200
-                bilhões para modernizar as forças armadas, contornando
-                restrições fiscais. O investimento responde a pressões da OTAN e
-                tensões na Europa.
-              </p>
-              <div
-                class="news-time"
-                data-post-time="2025-02-25T03:00:00Z"
-              ></div>
-            </div>
-          </a>
-        </li>
-        <li class="news-item">
-          <a href="noticia04.html" class="news-link"
-            ><img
-              src="images/blog04.png"
-              alt="Cédulas da moeda chinesa"
-              class="news-image"
-            />
-            <div class="news-content">
-              <h3 class="news-title">
-                China Reforça Moeda, mas Penaliza Bancos e Fundos de Obrigações
-              </h3>
-              <p class="news-description">
-                A China restringe a liquidez para fortalecer o yuan, mas gera
-                crise nos bancos e perdas em fundos de obrigações. A escassez de
-                dinheiro eleva custos e pode afetar a economia.
-              </p>
-              <div
-                class="news-time"
-                data-post-time="2025-02-24T20:30:00Z"
-              ></div>
-            </div>
-          </a>
-        </li>
-        <li class="news-item">
-          <a href="noticia05.html" class="news-link"
-            ><img
-              src="images/blog05.png"
-              alt="Cédulas da moeda chinesa"
-              class="news-image"
-            />
-            <div class="news-content">
-              <h3 class="news-title">
-                Elon Musk e os Limites do DOGE na Política Pública
-              </h3>
-              <p class="news-description">
-                Musk enfrenta resistência ao tentar cortar burocracia federal,
-                com departamentos ignorando sua ordem. Demissões revertidas e
-                processos judiciais aumentam o impasse.
-              </p>
-              <div
-                class="news-time"
-                data-post-time="2025-02-24T19:00:00Z"
-              ></div>
-            </div>
-          </a>
-        </li>
-      </ul>
-
-      <ul class="news-list" id="educacao-tab" style="display: none">
-        <li class="news-item">
-          <a href="blog-edu01.html" class="news-link">
-            <img
-              src="images/edu01.png"
-              alt="Educação Financeira"
-              class="news-image"
-            />
-            <div class="news-content">
-              <h3 class="news-title">
-                Como começar a investir: Guia para iniciantes
-              </h3>
-              <p class="news-description">
-                Aprenda os conceitos básicos de investimentos e descubra como
-                dar os primeiros passos no mercado financeiro.
-              </p>
-              <div
-                class="news-time"
-                data-post-time="2025-02-05T17:08:00Z"
-              ></div>
-            </div>
-          </a>
-        </li>
-        <li class="news-item">
-          <a href="blog-edu02.html" class="news-link">
-            <img
-              src="images/edu02.png"
-              alt="Educação Financeira"
-              class="news-image"
-            />
-            <div class="news-content">
-              <h3 class="news-title">
-                A importância de criar uma reserva de emergência antes de
-                investir
-              </h3>
-              <p class="news-description">
-                Antes de começar a investir, é fundamental ter uma reserva de
-                emergência para lidar com imprevistos financeiros sem
-                comprometer seus investimentos.
-              </p>
-              <div
-                class="news-time"
-                data-post-time="2025-02-05T20:50:00Z"
-              ></div>
-            </div>
-          </a>
-        </li>
-        <li class="news-item">
-          <a href="blog-edu03.html" class="news-link">
-            <img
-              src="images/edu03.png"
-              alt="Educação Financeira"
-              class="news-image"
-            />
-            <div class="news-content">
-              <h3 class="news-title">
-                A Volatilidade do Câmbio: Impactos nas Importações, Exportações
-                e na Inflação
-              </h3>
-              <p class="news-description">
-                A volatilidade cambial afeta diretamente as importações,
-                exportações e a inflação, alterando os custos e a
-                competitividade das empresas e os preços para os consumidores.
-              </p>
-              <div
-                class="news-time"
-                data-post-time="2025-02-05T11:08:00Z"
-              ></div>
-            </div>
-          </a>
-        </li>
+        {% endfor %}
       </ul>
     </main>
 
@@ -365,13 +195,14 @@
       </div>
     </footer>
   </body>
-  <script src="script/js-universal.js"></script>
+  <script src="/script/notice-time.js"></script>
+  <script src="/script/js-universal.js"></script>
   <script
     src="https://kit.fontawesome.com/65f22fe718.js"
     crossorigin="anonymous"
   ></script>
-  <script src="script/contact.js"></script>
-  <script src="script/script.js"></script>
+  <script src="/script/contact.js"></script>
+  <script src="/script/script.js"></script>
   <script
     src="https://kit.fontawesome.com/e1063b7707.js"
     crossorigin="anonymous"

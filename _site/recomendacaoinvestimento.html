@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
+    <link rel="stylesheet" href="css/style-recomendacao.css" />
+    <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/universal-css.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      h2 {
+        margin-bottom: 20px;
+        color: #2e7d32;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .investment-section {
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 40px;
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-bottom: 30px;
+        color: #00a169;
+        font-size: 32px;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      .investment-section form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .investment-section form label {
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .investment-section form input,
+      .investment-section form select,
+      .investment-section form button {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .investment-section form input:focus,
+      .investment-section form select:focus {
+        border-color: #00a169;
+        box-shadow: 0 0 0 2px rgba(26, 95, 122, 0.2);
+      }
+
+      .investment-section form button {
+        background-color: #00a169;
+        color: white;
+        cursor: pointer;
+        border: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s, transform 0.1s;
+      }
+
+      .investment-section form button:hover {
+        background-color: #00a169;
+      }
+
+      .investment-section form button:active {
+        transform: scale(0.98);
+      }
+
+      #investment-recommendation {
+        margin-top: 40px;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      #investment-recommendation h3 {
+        color: #00a169;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      #investment-recommendation p {
+        margin-bottom: 20px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      #investment-recommendation strong {
+        color: #00a169;
+        font-weight: 600;
+      }
+
+      .recommendation {
+        background: #f9f9f9;
+        border-left: 4px solid #00a169;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .recommendation h4 {
+        color: #00a169;
+        margin-bottom: 10px;
+      }
+
+      .recommendation ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .recommendation li {
+        margin-bottom: 8px;
+        color: #555;
+      }
+
+      @media (max-width: 768px) {
+        .investment-section {
+          padding: 30px 20px;
+          margin: 40px auto;
+        }
+
+        form {
+          grid-template-columns: 1fr;
+        }
+
+        h2 {
+          font-size: 28px;
+        }
+      }
+
+      .info-icon {
+        cursor: pointer;
+        color: #00a169;
+        font-size: 0.8em;
+        margin-left: 5px;
+      }
+
+      .info-icon:hover {
+        color: #00a169;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="Logo InvestSmart" />
+        <div class="logo">InvestSmart</div>
+      </div>
+
+      <div class="menu-toggle" alt="Botão-Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <button id="toggleForm" class="floating-button">
+      <i class="fa-solid fa-envelope fa-2x"></i>
+    </button>
+    <div id="registerForm" class="form-container" style="display: none">
+      <form class="form">
+        <div class="header-container">
+          <p class="title">Entre em Contato</p>
+          <button id="close-btn">X</button>
+        </div>
+        <p class="message">
+          Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+          de nossos serviços?
+        </p>
+        <div class="flex">
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="10"
+            />
+            <span>Nome</span>
+          </label>
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="30"
+            />
+            <span>Sobrenome</span>
+          </label>
+        </div>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Email</span>
+        </label>
+        <textarea
+          id="myTextarea"
+          maxlength="1000"
+          rows="5"
+          placeholder="Escreva sua mensagem aqui..."
+        ></textarea>
+        <div id="charCount" class="char-count">1000 caracteres restantes</div>
+        <button class="submit">Enviar</button>
+      </form>
+    </div>
+
+    <main>
+      <section class="investment-section">
+        <h2>Recomendações de Investimento</h2>
+        <form id="investment-form">
+          <label for="investment-amount">Valor Disponível para Investir:</label>
+          <input
+            type="number"
+            id="investment-amount"
+            name="investment-amount"
+            required
+          />
+          <label for="risk-level">Nível de Risco:</label>
+          <select name="risk-level" id="risk-level">
+            <option value="conservador">Conservador</option>
+            <option value="moderado">Moderado</option>
+            <option value="arrojado">Arrojado</option>
+          </select>
+          <button type="submit">Obter Recomendações</button>
+        </form>
+        <div id="investment-recommendation"></div>
+      </section>
+    </main>
+
+    <br /><br /><br /><br />
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blogs-main.html">Blogs</a></li>
+              <li><a href="">Quem somos</a></li>
+              <li><a href="">Serviços</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instragram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#">Calculos de Despesas</a></li>
+              <li><a href="recomendacaoinvestimento.html">Investimentos</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/65f22fe718.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script/contact.js"></script>
+  <script src="script/script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/e1063b7707.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script/recomandacaodeinsvestimentos.js"></script>
+  <script src="script/js-universal.js"></script>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
+    <link rel="stylesheet" href="css/universal-css.css" />
+    <link rel="stylesheet" href="css/style-main.css" />
+    <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyB2LqFBob9YGUkYUYoA-56ltb3wb_ozoZ8",
+        authDomain: "investsmart-3be7f.firebaseapp.com",
+        projectId: "investsmart-3be7f",
+        storageBucket: "investsmart-3be7f.firebasestorage.app",
+        messagingSenderId: "283457890092",
+        appId: "1:283457890092:web:e04515b0abc76721fd2e89",
+        measurementId: "G-4EEPBJQ4RB",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </head>
+
+  <body>
+     <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="Logo InvestSmart" />
+        <div class="logo">InvestSmart</div>
+      </div>
+
+      <div class="menu-toggle" alt="Botão-Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1 style="font-size: 64px">Melhorando a vida dos nossos clientes</h1>
+          <p style="max-width: 900px">
+            Quer melhorar sua vida financeira e não sabe como? Aqui na
+            InvestSmart você descobre!
+          </p>
+          <a href="servicos.html"
+            ><button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i></button
+          ></a>
+        </div>
+        <div class="hero-image">
+          <img
+            src="images/01.png"
+            alt="Imagem ilustrativa"
+            class="reduced-size"
+          />
+        </div>
+      </section>
+
+      <section class="features">
+        <h2>Gerencie todas suas finanças em um só lugar!</h2>
+        <p>O que oferecemos?</p>
+        <div class="features-grid">
+          <div class="feature-item">
+            <img src="images/blog.svg" alt="Blog de finanças" />
+            <h3>Blog de finanças</h3>
+            <p>
+              Aqui temos blogs de notícias financeiras atualizadas diariamente
+              por nossa equipe, nos blogs tem ensinamentos de finanças e
+              notícias diárias sobre o mercado financeiro.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img
+              src="images/recommendations.svg"
+              alt="Recomendações de investimentos"
+            />
+            <h3>Recomendações de investimentos</h3>
+            <p>
+              Em um de nossos serviços possuímos ferramentas para auxiliá-los
+              para o que fazer com seu dinheiro e quais riscos quer e pode
+              correr.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img src="images/analytics.svg" alt="Análise das suas finanças" />
+            <h3>Análise das suas finanças</h3>
+            <p>
+              Aqui na InvestSmart você pode listar todos os seus gastos,
+              oferecemos um gráfico sobre e também recomendamos onde pode ou não
+              economizar mais para investir seu dinheiro.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="clientes-lista">
+        <div class="clientes-content">
+          <h2>Já ajudamos milhares de pessoas pelo mundo.</h2>
+          <p>Nós da InvestSmart estamos a cada dia maior!</p>
+        </div>
+        <div class="clientes-stats">
+          <div class="stat-item">
+            <i
+              class="fa-solid fa-envelope fa-3x"
+              aria-hidden="true"
+              title="Assinantes Newsletter"
+            ></i>
+            <h3>545,341</h3>
+            <p>Assinantes <br />Newsletter</p>
+          </div>
+          <div class="stat-item">
+            <i
+              class="fa-solid fa-eye fa-3x"
+              aria-hidden="true"
+              title="Visualizações no Blog"
+            ></i>
+            <h3>1,232,381</h3>
+            <p>
+              Visualizações no<br />
+              Blog
+            </p>
+          </div>
+          <div class="stat-item">
+            <i
+              class="fa-solid fa-users fa-3x"
+              aria-hidden="true"
+              title="Seguidores nas Redes Sociais"
+            ></i>
+            <h3>128,867</h3>
+            <p>
+              Seguidores nas <br />
+              Redes Sociais
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-container">
+        <h2>
+          Algumas de Nossas Principais Notícias sobre o Mercado Financeiro
+        </h2>
+        <p class="description">
+          Mantenha-se informado com as últimas atualizações e análises sobre o
+          mercado financeiro. Nesta seção, destacamos as notícias mais
+          relevantes e impactantes que estão moldando o cenário econômico global
+          e local.
+        </p>
+        <div class="blog-cards">
+          <article class="card">
+            <img src="images/blog01.png" alt="Mercados em pânico" />
+            <div class="card-content">
+              <a href="noticia01.html" class="read-more">
+                <h3>
+                  Mercados em pânico: ações desabam mundo afora enquanto cresce
+                  o medo de recessão nos EUA
+                </h3>
+                Ler Sobre →
+              </a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/blog02.png" alt="Ação da Microsoft afunda" />
+            <div class="card-content">
+              <a href="noticia02.html" class="read-more">
+                <h3>
+                  Ação da Microsoft afunda, mas papéis de fabricantes de chips
+                  sobem conforme rali de IA enfrenta divisão
+                </h3>
+                Ler Sobre →
+              </a>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              src="images/blog03.png"
+              alt="Ibovespa tem terceira queda seguida"
+            />
+            <div class="card-content">
+              <a href="noticia03.html" class="read-more">
+                <h3>
+                  Ibovespa tem terceira queda seguida, puxada por Vale e Gerdau
+                </h3>
+                Ler Sobre →
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <button id="toggleForm" class="floating-button">
+        <i class="fa-solid fa-envelope fa-2x"></i>
+      </button>
+
+      <div id="registerForm" class="form-container" style="display: none">
+        <form class="form" id="contactForm" onsubmit="saveToFile(event)">
+          <div class="header-container">
+            <p class="title">Entre em Contato</p>
+            <button id="close-btn">X</button>
+          </div>
+          <p class="message">
+            Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+            de nossos serviços?
+          </p>
+          <div class="flex">
+            <label>
+              <input
+                required=""
+                placeholder=""
+                type="text"
+                class="input"
+                maxlength="10"
+                name="nome"
+              />
+              <span>Nome</span>
+            </label>
+            <label>
+              <input
+                required=""
+                placeholder=""
+                type="text"
+                class="input"
+                maxlength="30"
+                name="sobrenome"
+              />
+              <span>Sobrenome</span>
+            </label>
+          </div>
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="email"
+              class="input"
+              name="email"
+            />
+            <span>Email</span>
+          </label>
+          <textarea
+            id="myTextarea"
+            maxlength="1000"
+            rows="5"
+            placeholder="Escreva sua mensagem aqui..."
+            name="mensagem"
+          ></textarea>
+          <div id="charCount" class="char-count">1000 caracteres restantes</div>
+          <button class="submit">Enviar</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blogs-main.html">Blogs</a></li>
+              <li><a href="sobre.html">Quem somos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instragram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="calculo-despesas.html">Calculos de Despesas</a></li>
+              <li><a href="recomendacaoinvestimento.html">Investimentos</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script/js-universal.js"></script>
+    <script src="script/contact.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>
