@@ -79,8 +79,10 @@ title: "Noticias da economia no mundo - InvestSmart"
       </div>
 
       <!-- ... in the news list section ... -->
+      <!-- News tab content -->
       <ul class="news-list" id="noticias-tab">
-        {% for post in site.posts %}
+        {% for post in site.posts %} {% if post.categories contains 'notícias'
+        %}
         <li class="news-item">
           <a href="{{ site.baseurl }}{{ post.url }}" class="news-link">
             <img
@@ -100,8 +102,9 @@ title: "Noticias da economia no mundo - InvestSmart"
             </div>
           </a>
         </li>
-        {% endfor %}
+        {% endif %} {% endfor %}
       </ul>
+      <!-- Education tab content -->
       <ul class="news-list" id="educacao-tab" style="display: none">
         {% for post in site.posts %} {% if post.categories contains 'educacao'
         %}

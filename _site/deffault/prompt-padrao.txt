@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Como Começar a Investir: Guia para Iniciantes</title>
+    <link rel="stylesheet" href="/InvestSmart/css/style-noticia01.css" />
+    <link rel="stylesheet" href="/InvestSmart/css/universal-css.css" />
+    <link
+      rel="shortcut icon"
+      href="/InvestSmart/images/Camada 1.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-LOGO">
+        <img
+          src="/InvestSmart/images/Camada 1.png"
+          alt="Logo InvestSmart"
+        />
+        <div class="logo">InvestSmart</div>
+      </div>
+
+      <div class="menu-toggle" alt="Botão-Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li id="comment-header">
+            <a href="/InvestSmart/index.html">Home</a>
+          </li>
+          <li id="comment-header">
+            <a href="/InvestSmart/sobre.html">Sobre Nós</a>
+          </li>
+          <li id="comment-header">
+            <a href="/InvestSmart/blogs-main.html">Blogs</a>
+          </li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='/InvestSmart/servicos.html'"
+            >
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <button id="toggleForm" class="floating-button">
+      <i class="fa-solid fa-envelope fa-2x"></i>
+    </button>
+    <div id="registerForm" class="form-container" style="display: none">
+      <form class="form">
+        <div class="header-container">
+          <p class="title">Entre em Contato</p>
+          <button id="close-btn">X</button>
+        </div>
+        <p class="message">
+          Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+          de nossos serviços?
+        </p>
+        <div class="flex">
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="10"
+            />
+            <span>Nome</span>
+          </label>
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="30"
+            />
+            <span>Sobrenome</span>
+          </label>
+        </div>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Email</span>
+        </label>
+        <textarea
+          id="myTextarea"
+          maxlength="1000"
+          rows="5"
+          placeholder="Escreva sua mensagem aqui..."
+        ></textarea>
+        <div id="charCount" class="char-count">1000 caracteres restantes</div>
+        <button class="submit">Enviar</button>
+      </form>
+    </div>
+
+    <main class="main-news-container">
+      <div>
+        <div class="news-header">
+          <h1>Como Começar a Investir: Guia para Iniciantes</h1>
+          <div class="meta">
+            Publicado em: 25-02-2025 | Autor:
+            <a href="https://www.linkedin.com/">Leonardo</a>
+          </div>
+        </div>
+        <div class="news-content">
+          <img
+            src="/InvestSmart/images/edu01.png"
+            alt="Imagem ilustrativa sobre educação financeira"
+            class="news-image"
+          />
+          Seu conteúdo de educação financeira aqui...
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="/InvestSmart/index.html">Home</a></li>
+              <li><a href="/InvestSmart/blogs-main.html">Blogs</a></li>
+              <li><a href="/InvestSmart/sobre.html">Quem somos</a></li>
+              <li><a href="/InvestSmart/servicos.html">Serviços</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instragram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#">Calculos de Despesas</a></li>
+              <li><a href="#">Investimentos</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/InvestSmart/script/js-universal.js"></script>
+  <script src="/InvestSmart/script/contact.js"></script>
+  <script src="/InvestSmart/script/script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/e1063b7707.js"
+    crossorigin="anonymous"
+    async
+  ></script>
+</html>
