@@ -1,5 +1,5 @@
 ---
-layout: noticia # Certifique-se de que este layout existe
+layout: default # Certifique-se de que este layout existe
 title: "Confiança do consumidor brasileiro recua para menor nível desde agosto de 2022"
 date: "2025-02-24T23:47:00-03:00"
 categories: [notícias]

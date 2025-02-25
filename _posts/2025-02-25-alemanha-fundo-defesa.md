@@ -1,5 +1,5 @@
 ---
-layout: noticia # Certifique-se de que este layout existe
+layout: default # Certifique-se de que este layout existe
 title: "Discussão na Alemanha sobre Fundo de Defesa Emergencial de €200 Bilhões"
 date: "2025-02-25T18:43:00-03:00"
 categories: [notícias]
