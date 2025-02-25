@@ -1,12 +1,13 @@
 ---
-layout: default # Certifique-se de que este layout existe
+layout: noticia
 title: "Confiança do consumidor brasileiro recua para menor nível desde agosto de 2022"
 date: "2025-02-24T23:47:00-03:00"
 categories: [notícias]
-image: images/blog04.png # O caminho da imagem deve ser absoluto ou relativo à pasta do site
-excerpt: "A confiança dos consumidores brasileiros despencou em fevereiro, atingindo o menor nível desde agosto de 2022, devido ao aumento da inflação e das taxas de juros."
-author: "Leonardo" # Adicione o nome do autor
-author_link: "https://www.google.com" # Adicione o link para o perfil do autor
+image: /images/blog04.png
+excerpt: "A confiança dos consumidores brasileiros despencou em fevereiro..."
+author: "Leonardo"
+author_link: "https://www.google.com"
+alt_image: "Imagem ilustrativa sobre confiança do consumidor"
 ---
 
 A confiança dos consumidores brasileiros caiu pelo terceiro mês seguido em fevereiro, atingindo o menor nível desde agosto de 2022, segundo dados divulgados nesta segunda-feira pela Fundação Getulio Vargas (FGV). O resultado reflete um pessimismo crescente entre os consumidores neste início de ano, influenciado por fatores como a piora da inflação e o aumento das taxas de juros.

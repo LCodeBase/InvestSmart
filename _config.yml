@@ -1,3 +1,26 @@
-baseurl: "/InvestSmart/"
-url: "https://lcodebase.github.io/"
-permalink: /:categories/:year/:month/:day/:title.html
+# Site settings
+title: InvestSmart
+baseurl: "/InvestSmart"
+url: "https://lcodebase.github.io"
+
+# Build settings
+markdown: kramdown
+
+# Disable GitHub edit links
+github: false
+show_edit_on_github: false
+github_editme_path: false
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title.html
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "noticia"
