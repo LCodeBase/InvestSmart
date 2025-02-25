@@ -94,11 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Página de notícias - InvestSmart/blogs-main.html
 
+// Tab switching functionality
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".tab-btn");
   const noticiasTab = document.getElementById("noticias-tab");
   const educacaoTab = document.getElementById("educacao-tab");
-
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       // Remove active class from all tabs
@@ -107,18 +107,17 @@ document.addEventListener("DOMContentLoaded", function () {
       // Add active class to clicked tab
       tab.classList.add("active");
 
-      // Show/hide content based on selected tab
+      // Show/hide content based on tab
       if (tab.dataset.tab === "noticias") {
-        noticiasTab.style.display = "block";
+        noticiasTab.style.display = "grid";
         educacaoTab.style.display = "none";
-      } else {
+      } else if (tab.dataset.tab === "educacao") {
         noticiasTab.style.display = "none";
-        educacaoTab.style.display = "block";
+        educacaoTab.style.display = "grid";
       }
     });
   });
 });
-
 function sortNewsByDate() {
   const newsLists = document.querySelectorAll(".news-list");
 

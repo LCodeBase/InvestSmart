@@ -102,6 +102,30 @@ title: "Noticias da economia no mundo - InvestSmart"
         </li>
         {% endfor %}
       </ul>
+      <ul class="news-list" id="educacao-tab" style="display: none">
+        {% for post in site.posts %} {% if post.categories contains 'educacao'
+        %}
+        <li class="news-item">
+          <a href="{{ site.baseurl }}{{ post.url }}" class="news-link">
+            <img
+              src="{{ site.baseurl }}{{ post.image }}"
+              alt="{{ post.title }}"
+              class="news-image"
+            />
+            <div class="news-content">
+              <h3 class="news-title">{{ post.title }}</h3>
+              <p class="news-description">{{ post.excerpt }}</p>
+              <div
+                class="news-time"
+                data-post-time="{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}"
+              >
+                Carregando...
+              </div>
+            </div>
+          </a>
+        </li>
+        {% endif %} {% endfor %}
+      </ul>
     </main>
 
     <button
