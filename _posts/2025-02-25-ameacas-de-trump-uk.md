@@ -3,10 +3,11 @@ layout: noticia # Certifique-se de que este layout existe
 title: "Reino Unido Reforça Defesa em Resposta à Nova Ordem Global"
 date: "2025-02-25T18:30:00-03:00"
 categories: [notícias]
-image: images/blog06.png # O caminho da imagem deve ser absoluto ou relativo à pasta do site
+image: /images/blog06.png
 excerpt: "O Reino Unido aumenta seus gastos militares em resposta à pressão de Trump e à incerteza global, marcando uma mudança estratégica na liderança de Starmer."
 author: "Bloomberg" # Adicione o nome do autor
 author_link: "https://www.bloomberg.com" # Adicione o link para o perfil do autor
+alt_image: "Imagem ilustrativa do presidente Trump e o  primeiro-ministro da uk  Keir Starmer"
 ---
 
 # Reino Unido Reforça Defesa em Resposta à Nova Ordem Global
