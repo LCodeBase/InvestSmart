@@ -93,10 +93,10 @@ alt_image: "Imagem do Elon Musk"
   </li>
 </ul>
 
-<p>
-  <span class="highlight">© 2025 Bloomberg L.P.</span>
-</p>
-
 "O resultado confirma um maior pessimismo entre os consumidores neste início de ano, disseminado entre as faixas de renda e mais intenso entre aqueles com menor poder aquisitivo", afirmou Gouveia. Ela destacou que o mal-estar econômico é impulsionado pela alta da inflação de alimentos, que reduz o poder de compra das famílias para bens essenciais, e pela elevação da taxa de juros, que compromete ainda mais a situação financeira.
 
 Em janeiro, o Banco Central aumentou a taxa Selic em 1 ponto percentual, para 13,25% ao ano, repetindo o ajuste feito em dezembro. A autarquia também sinalizou uma nova alta da mesma magnitude para a reunião de março, o que pressiona ainda mais as condições econômicas das famílias brasileiras.
+
+<p>
+  <span class="highlight">© 2025 Bloomberg L.P.</span>
+</p>
