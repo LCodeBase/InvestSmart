@@ -1,4 +1,211 @@
 ---
-layout: default
-title: "Blog - InvestSmart"
+title: "Noticias da economia no mundo - InvestSmart"
 ---
+
+<!DOCTYPE html>
+<!-- rest of your HTML code -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="blog de noticias de finanças no mundo" />
+    <meta
+      name="keywords"
+      content="finanças, tecnologia, estudos-financeiros, conteúdo financeiro, investimentos, notícias, economia,   mercado financeiro"
+    />
+    <meta name="author" content="LcodeBase" />
+    <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
+    <link rel="preload" href="css/universal-css.css" as="style" />
+    <link rel="preload" href="css/style-blog-main.css" as="style" />
+    <link rel="preload" href="images/Camada 1.png" as="image" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/universal-css.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style-blog-main.css" />
+    <link
+      rel="shortcut icon"
+      href="{{ site.baseurl }}/images/Camada 1.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="Logo InvestSmart" />
+        <div class="logo">InvestSmart</div>
+      </div>
+
+      <div class="menu-toggle" alt="Botão-Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button
+              class="button-header"
+              onclick="window.location.href='servicos.html'"
+            >
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-container-page">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="noticias">
+          Notícias do Mundo
+        </button>
+        <button class="tab-btn" data-tab="educacao">Educação Financeira</button>
+      </div>
+
+      <ul class="news-list" id="noticias-tab">
+        {% for post in site.posts %}
+        <li class="news-item">
+          <a href="{{ site.baseurl }}{{ post.url }}" class="news-link">
+            <img
+              src="{{ site.baseurl }}{{ post.image }}"
+              alt="{{ post.title }}"
+              class="news-image"
+            />
+            <div class="news-content">
+              <h3 class="news-title">{{ post.title }}</h3>
+              <p class="news-description">{{ post.excerpt }}</p>
+              <div
+                class="news-time"
+                data-post-time="{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}"
+              >
+                Carregando...
+              </div>
+            </div>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </main>
+
+    <button
+      id="toggleForm"
+      class="floating-button"
+      aria-label="Abrir formulário de contato"
+    >
+      <i class="fa-solid fa-envelope fa-2x"></i>
+    </button>
+    <div id="registerForm" class="form-container" style="display: none">
+      <form class="form">
+        <div class="header-container">
+          <p class="title">Entre em Contato</p>
+          <button id="close-btn">X</button>
+        </div>
+        <p class="message">
+          Ficou com alguma dúvida ou está enfrentando alguma dificuldade em um
+          de nossos serviços?
+        </p>
+        <div class="flex">
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="10"
+            />
+            <span>Nome</span>
+          </label>
+          <label>
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              maxlength="30"
+            />
+            <span>Sobrenome</span>
+          </label>
+        </div>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Email</span>
+        </label>
+        <textarea
+          id="myTextarea"
+          maxlength="1000"
+          rows="5"
+          placeholder="Escreva sua mensagem aqui..."
+        ></textarea>
+        <div id="charCount" class="char-count">1000 caracteres restantes</div>
+        <button class="submit">Enviar</button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Site</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blogs-main.html">Blogs</a></li>
+              <li><a href="">Quem somos</a></li>
+              <li><a href="">Serviços</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instragram</a></li>
+              <li><a href="#">Tiktok</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#">Calculos de Despesas</a></li>
+              <li><a href="#">Investimentos</a></li>
+            </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+            <h4>Inscreva-se na Newsletter</h4>
+            <div class="form-sub">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Digite o seu e-mail"
+                  required
+                />
+                <button>Se inscrever</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="{{ site.baseurl }}/script/notice-time.js"></script>
+  <script src="{{ site.baseurl }}/script/js-universal.js"></script>
+  <script src="{{ site.baseurl }}/script/contact.js"></script>
+  <script src="{{ site.baseurl }}/script/script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/e1063b7707.js"
+    crossorigin="anonymous"
+    async
+  ></script>
+</html>

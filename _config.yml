@@ -1,2 +1,3 @@
-title: "InvestSmart"
-locale: "pt-BR"
+baseurl: "/InvestSmart"
+url: "https://LCodeBase.github.io"
+permalink: /:categories/:year/:month/:day/:title.html
