@@ -3,10 +3,11 @@ layout: noticia # Certifique-se de que este layout existe
 title: "Elon Musk e os Limites do DOGE na Política Pública"
 date: "2025-02-25T00:21:00-03:00"
 categories: [notícias]
-image: images/blog05.png # O caminho da imagem deve ser absoluto ou relativo à pasta do site
+image: /images/blog05.png
 excerpt: "Musk enfrenta resistência ao tentar cortar burocracia federal, com departamentos ignorando sua ordem. Demissões revertidas e processos judiciais aumentam o impasse."
 author: "Bloomberg" # Adicione o nome do autor
 author_link: "https://www.bloomberg.com" # Adicione o link para o perfil do autor
+alt_image: "Imagem do Elon Musk"
 ---
 
 <h2>Encontrando Limites</h2>
