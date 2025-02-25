@@ -109,7 +109,11 @@ layout: noticia
           </div>
         </div>
         <div class="news-content">
-          <img src="/{{ page.image }}" alt="{{ page.alt_image }}" />
+          <img
+            src="{{ site.baseurl }}{{ page.image }}"
+            alt="{{ page.alt_image }}"
+            class="news-image"
+          />
           {{ content }}
         </div>
       </div>

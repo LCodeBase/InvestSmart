@@ -1,12 +1,13 @@
 ---
-layout: default # Certifique-se de que este layout existe
+layout: noticia
 title: "Discussão na Alemanha sobre Fundo de Defesa Emergencial de €200 Bilhões"
 date: "2025-02-25T18:43:00-03:00"
 categories: [notícias]
-image: images/blog03.png # O caminho da imagem deve ser absoluto ou relativo à pasta do site
-excerpt: "O novo chanceler da Alemanha, Friedrich Merz, busca aprovar €200 bilhões para modernizar as forças armadas, contornando restrições fiscais. O investimento responde a pressões da OTAN e tensões na Europa."
-author: "Bloomberg" # Adicione o nome do autor
-author_link: "https://www.bloomberg.com" # Adicione o link para o perfil do autor
+image: /images/blog03.png
+excerpt: "O novo chanceler da Alemanha..."
+author: "Bloomberg"
+author_link: "https://www.bloomberg.com"
+alt_image: "Imagem ilustrativa sobre defesa alemã"
 ---
 
 O chanceler eleito da Alemanha, <span class="highlight">Friedrich Merz</span>, iniciou conversas com os <span class="highlight">Social-Democratas</span> para aprovar rapidamente até €200 bilhões (doze trilhões de reais na cotação atual) em gastos especiais com defesa, de acordo com fontes próximas às discussões.
