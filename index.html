@@ -212,7 +212,15 @@
         </div>
       </section>
 
-      <section class="blog-container">
+      <section class="blog-container" style="--card-img-height: 200px">
+        <style>
+          .blog-container .card img {
+            width: 100%;
+            height: var(--card-img-height);
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+          }
+        </style>
         <h2>
           Algumas de Nossas Principais Notícias sobre o Mercado Financeiro
         </h2>
