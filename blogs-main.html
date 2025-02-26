@@ -54,13 +54,19 @@ title: "Noticias da economia no mundo - InvestSmart"
 
       <nav class="nav-menu">
         <ul>
-          <li id="comment-header"><a href="../index.html">Home</a></li>
-          <li id="comment-header"><a href="../sobre.html">Sobre Nós</a></li>
-          <li id="comment-header"><a href="../blogs-main.html">Blogs</a></li>
+          <li id="comment-header">
+            <a href="{{ site.baseurl }}/index.html">Home</a>
+          </li>
+          <li id="comment-header">
+            <a href="{{ site.baseurl }}/sobre.html">Sobre Nós</a>
+          </li>
+          <li id="comment-header">
+            <a href="{{ site.baseurl }}/blogs-main.html">Blogs</a>
+          </li>
           <li>
             <button
               class="button-header"
-              onclick="window.location.href='/servicos.html'"
+              onclick="window.location.href='{{ site.baseurl }}/servicos.html'"
             >
               Serviços
               <i class="fa-solid fa-arrow-right" id="seta"></i>
