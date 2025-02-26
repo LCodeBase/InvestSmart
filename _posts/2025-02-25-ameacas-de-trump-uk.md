@@ -30,8 +30,6 @@ Por sua parte, Starmer espera usar as negociações com Trump para trazê-lo de 
 
 O Reino Unido aumenta o financiamento para <span class="highlight">2,5%</span> antes de estagnar pelo restante do mandato.
 
-<img src="/images/blog-06-graphic.png">
-
 “Este é um momento crítico, dado o forte sinal dos EUA sobre não querer mais desempenhar o mesmo papel na segurança europeia”, disse <span class="highlight">Olivia O’Sullivan</span>, diretora do programa <span class="highlight">Reino Unido no Mundo</span> do <span class="highlight">Chatham House</span>. “O primeiro-ministro não tem escolhas fáceis.”
 
 O foco em defesa e manutenção da paz europeia representa uma mudança para Starmer, que anteriormente baseava seu governo na melhoria da vida dos trabalhadores e no crescimento da economia britânica por meio de investimentos em infraestrutura e energia limpa. Essa agenda foi desviada pelas rupturas geopolíticas causadas por Trump, levando o Reino Unido a gastar mais com as forças armadas em um momento de finanças públicas frágeis e crescimento econômico anêmico.
