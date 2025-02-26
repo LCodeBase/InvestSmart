@@ -5,14 +5,12 @@ function sendNewsletter(e) {
 
   // Send email using EmailJS
   emailjs
-    .send(
-      "service_at26rze", // Replace with your EmailJS service ID
-      "template_fhojz9z", // Replace with your EmailJS template ID
-      {
-        to_email: email,
-        // Add any other template parameters you want to send
-      }
-    )
+    .send("service_at26rze", "template_fhojz9z", {
+      to_email: email,
+      to_name: email.split("@")[0], // Gets the part before @ as name
+      from_name: "InvestSmart",
+      reply_to: "noreply@investsmart.com",
+    })
     .then(
       function (response) {
         alert("Inscrição realizada com sucesso!");
