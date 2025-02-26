@@ -6,8 +6,8 @@ function sendNewsletter(e) {
   // Send email using EmailJS
   emailjs
     .send(
-      "service_at26rze", // Add your EmailJS service ID
-      "template_fhojz9z", // Add your EmailJS template ID
+      "service_at26rze", // Replace with your EmailJS service ID
+      "template_fhojz9z", // Replace with your EmailJS template ID
       {
         to_email: email,
         // Add any other template parameters you want to send

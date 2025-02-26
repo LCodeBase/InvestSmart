@@ -76,6 +76,13 @@
       };
       firebase.initializeApp(firebaseConfig);
     </script>
+    <!-- ... existing head content ... -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("N5APdsvA2fYBgENZ_"); // Replace with your EmailJS public key
+      })();
+    </script>
   </head>
 
   <body>
