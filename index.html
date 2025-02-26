@@ -221,9 +221,7 @@
             border-radius: 8px 8px 0 0;
           }
         </style>
-        <h2>
-          Algumas de Nossas Principais Notícias sobre o Mercado Financeiro
-        </h2>
+        <h2>Algumas de Nossas Principais Notícias sobre o Mercado Econômico</h2>
         <p class="description">
           Mantenha-se informado com as últimas atualizações e análises sobre o
           mercado financeiro. Nesta seção, destacamos as notícias mais
@@ -380,19 +378,21 @@
           <div class="footer-col">
             <h4>Inscreva-se na Newsletter</h4>
             <div class="form-sub">
-              <form>
+              <form id="newsletter-form" onsubmit="sendNewsletter(event)">
                 <input
                   type="email"
+                  id="newsletter-email"
                   placeholder="Digite o seu e-mail"
                   required
                 />
-                <button>Se inscrever</button>
+                <button type="submit">Se inscrever</button>
               </form>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="script/newsletter.js"></script>
     <script src="script/js-universal.js"></script>
     <script src="script/contact.js"></script>
     <script src="script/script.js"></script>
