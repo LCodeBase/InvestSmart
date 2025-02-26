@@ -1,15 +1,25 @@
 # Site settings
 title: InvestSmart
+description: "Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes para otimizar suas finanças."
 baseurl: "/InvestSmart"
 url: "https://lcodebase.github.io"
 
+# SEO settings
+lang: pt-BR
+author: LCodeBase
+twitter:
+  username: your-twitter-handle
+  card: summary_large_image
+social:
+  name: InvestSmart
+  links:
+    - https://github.com/LcodeBase/InvestSmart
+
 # Build settings
 markdown: kramdown
-
-# Disable GitHub edit links
-github: false
-show_edit_on_github: false
-github_editme_path: false
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Collections
 collections:
@@ -24,3 +34,4 @@ defaults:
       type: "posts"
     values:
       layout: "noticia"
+      image: /images/default-post-image.png

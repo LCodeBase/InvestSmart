@@ -5,6 +5,8 @@ date: "2025-02-25T18:43:00-03:00"
 categories: [notícias]
 image: /images/blog03.png
 excerpt: "O novo chanceler da Alemanha negocia com os Social-Democratas a criação de um fundo emergencial de defesa de €200 bilhões para modernizar as forças armadas, enfrentando desafios políticos e restrições orçamentárias."
+categories: [notícias, economia, defesa]
+tags: [alemanha, defesa, economia, europa]
 author: "Bloomberg"
 author_link: "https://www.bloomberg.com"
 alt_image: "Imagem ilustrativa sobre defesa alemã"
