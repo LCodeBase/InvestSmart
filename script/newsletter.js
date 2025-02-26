@@ -9,7 +9,7 @@ function sendNewsletter(e) {
       to_email: email,
       to_name: email.split("@")[0], // Gets the part before @ as name
       from_name: "InvestSmart",
-      reply_to: "noreply@investsmart.com",
+      reply_to: "invest.smart.sup.braslandia@gmail.com",
     })
     .then(
       function (response) {
