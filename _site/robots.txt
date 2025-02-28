@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lcodebase.github.io/InvestSmart/sitemap.xml

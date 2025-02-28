@@ -1,4 +1,4 @@
-"source 'https://rubygems.org'" 
-"gem 'jekyll'" 
-
+source "https://rubygems.org"
 gem "jekyll", "~> 4.4"
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"

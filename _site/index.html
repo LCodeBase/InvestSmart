@@ -3,6 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="InvestSmart - Sua plataforma de educação financeira e investimentos. Oferecemos ferramentas para gestão financeira, recomendações de investimentos e conteúdo educacional."
+    />
+    <meta
+      name="keywords"
+      content="investimentos, finanças pessoais, educação financeira, gestão financeira, investsmart"
+    />
+    <meta name="author" content="InvestSmart" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://lcodebase.github.io/InvestSmart/"
+    />
+    <meta
+      property="og:title"
+      content="InvestSmart - Gestão Financeira Inteligente"
+    />
+    <meta
+      property="og:description"
+      content="Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes."
+    />
+    <meta
+      property="og:image"
+      content="https://lcodebase.github.io/InvestSmart/images/og-image.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://lcodebase.github.io/InvestSmart/"
+    />
+    <meta
+      property="twitter:title"
+      content="InvestSmart - Gestão Financeira Inteligente"
+    />
+    <meta
+      property="twitter:description"
+      content="Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes."
+    />
+    <meta
+      property="twitter:image"
+      content="https://lcodebase.github.io/InvestSmart/images/og-image.png"
+    />
+
+    <title>InvestSmart - Gestão Financeira Inteligente</title>
+
     <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
     <link rel="stylesheet" href="css/universal-css.css" />
     <link rel="stylesheet" href="css/style-main.css" />
@@ -26,10 +76,17 @@
       };
       firebase.initializeApp(firebaseConfig);
     </script>
+    <!-- ... existing head content ... -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("N5APdsvA2fYBgENZ_"); // Replace with your EmailJS public key
+      })();
+    </script>
   </head>
 
   <body>
-     <header>
+    <header>
       <div class="container-LOGO">
         <img src="images/Camada 1.png" alt="Logo InvestSmart" />
         <div class="logo">InvestSmart</div>
@@ -132,7 +189,7 @@
               aria-hidden="true"
               title="Assinantes Newsletter"
             ></i>
-            <h3>545,341</h3>
+            <h3>341</h3>
             <p>Assinantes <br />Newsletter</p>
           </div>
           <div class="stat-item">
@@ -141,7 +198,7 @@
               aria-hidden="true"
               title="Visualizações no Blog"
             ></i>
-            <h3>1,232,381</h3>
+            <h3>1,381</h3>
             <p>
               Visualizações no<br />
               Blog
@@ -153,7 +210,7 @@
               aria-hidden="true"
               title="Seguidores nas Redes Sociais"
             ></i>
-            <h3>128,867</h3>
+            <h3>5,867</h3>
             <p>
               Seguidores nas <br />
               Redes Sociais
@@ -163,9 +220,15 @@
       </section>
 
       <section class="blog-container">
-        <h2>
-          Algumas de Nossas Principais Notícias sobre o Mercado Financeiro
-        </h2>
+        <style>
+          .blog-container .card img {
+            width: 100%;
+            height: 90%;
+            max-width: 100%;
+            border-radius: 8px 8px 0 0;
+          }
+        </style>
+        <h2>Algumas de Nossas Principais Notícias sobre o Mercado Econômico</h2>
         <p class="description">
           Mantenha-se informado com as últimas atualizações e análises sobre o
           mercado financeiro. Nesta seção, destacamos as notícias mais
@@ -174,24 +237,15 @@
         </p>
         <div class="blog-cards">
           <article class="card">
-            <img src="images/blog01.png" alt="Mercados em pânico" />
+            <img src="images/blog01.png" alt="Presidente do FED" />
             <div class="card-content">
-              <a href="noticia01.html" class="read-more">
+              <a
+                href="/InvestSmart/notícias/2025/02/25/fed.html"
+                class="read-more"
+              >
                 <h3>
-                  Mercados em pânico: ações desabam mundo afora enquanto cresce
-                  o medo de recessão nos EUA
-                </h3>
-                Ler Sobre →
-              </a>
-            </div>
-          </article>
-          <article class="card">
-            <img src="images/blog02.png" alt="Ação da Microsoft afunda" />
-            <div class="card-content">
-              <a href="noticia02.html" class="read-more">
-                <h3>
-                  Ação da Microsoft afunda, mas papéis de fabricantes de chips
-                  sobem conforme rali de IA enfrenta divisão
+                  Barkin Diz que É Apropriado para o Fed Permanecer
+                  'Moderadamente Restritivo'
                 </h3>
                 Ler Sobre →
               </a>
@@ -199,13 +253,31 @@
           </article>
           <article class="card">
             <img
-              src="images/blog03.png"
-              alt="Ibovespa tem terceira queda seguida"
+              src="images/blog06.png"
+              alt="presidente americano e primeiro ministro do reino unido"
             />
             <div class="card-content">
-              <a href="noticia03.html" class="read-more">
+              <a
+                href="/InvestSmart/notícias/2025/02/25/ameacas-de-trump-uk.html"
+                class="read-more"
+              >
                 <h3>
-                  Ibovespa tem terceira queda seguida, puxada por Vale e Gerdau
+                  Reino Unido Reforça Defesa em Resposta à Nova Ordem Global
+                </h3>
+                Ler Sobre →
+              </a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/blog03.png" alt="Novo eleito chanceler alemão" />
+            <div class="card-content">
+              <a
+                href="/InvestSmart/notícias/2025/02/25/alemanha-fundo-defesa.html"
+                class="read-more"
+              >
+                <h3>
+                  Discussão na Alemanha sobre Fundo de Defesa Emergencial de
+                  €200 Bilhões
                 </h3>
                 Ler Sobre →
               </a>
@@ -313,19 +385,21 @@
           <div class="footer-col">
             <h4>Inscreva-se na Newsletter</h4>
             <div class="form-sub">
-              <form>
+              <form id="newsletter-form" onsubmit="sendNewsletter(event)">
                 <input
                   type="email"
+                  id="newsletter-email"
                   placeholder="Digite o seu e-mail"
                   required
                 />
-                <button>Se inscrever</button>
+                <button type="submit">Se inscrever</button>
               </form>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="script/newsletter.js"></script>
     <script src="script/js-universal.js"></script>
     <script src="script/contact.js"></script>
     <script src="script/script.js"></script>
