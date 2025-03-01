@@ -804,154 +804,155 @@
             case 'Moradia':
               tips += 'Revise seus contratos de serviços básicos (internet, luz, água) e busque planos mais econômicos.';
               break;
-            case 'Lazer':
-              tips += 'Procure opções gratuitas ou de baixo custo para entretenimento, como parques, eventos comunitários ou promoções.';
-              break;
-            case 'Contas':
-              tips += 'Verifique se há serviços que você não utiliza e pode cancelar, como assinaturas ou membros.';
-              break;
-            case 'Saúde':
-              tips += 'Pesquise planos de saúde mais adequados ao seu perfil e considere medicamentos genéricos quando possível.';
-              break;
-            case 'Educação':
-              tips += 'Busque bolsas de estudo, cursos online gratuitos ou materiais de biblioteca para reduzir custos.';
-              break;
-            case 'Investimentos':
-              tips += 'Continue investindo, mas compare taxas entre diferentes instituições financeiras.';
-              break;
-            default:
-              tips += 'Analise se há gastos desnecessários que podem ser reduzidos ou eliminados.';
-          }
+      case 'Lazer':
+        tips += 'Procure opções gratuitas ou de baixo custo para entretenimento, como parques, eventos comunitários ou promoções.';
+        break;
+      case 'Contas':
+        tips += 'Verifique se há serviços que você não utiliza e pode cancelar, como assinaturas ou membros.';
+        break;
+      case 'Saúde':
+        tips += 'Pesquise planos de saúde mais adequados ao seu perfil e considere medicamentos genéricos quando possível.';
+        break;
+      case 'Educação':
+        tips += 'Busque bolsas de estudo, cursos online gratuitos ou materiais de biblioteca para reduzir custos.';
+        break;
+      case 'Investimentos':
+        tips += 'Continue investindo, mas compare taxas entre diferentes instituições financeiras.';
+        break;
+      default:
+        tips += 'Analise se há gastos desnecessários que podem ser reduzidos ou eliminados.';
+      }
 
-          tips += '</li>';
-        });
+      tips += '</li>';
+    });
 
-        tips += `</ul>
+    tips += `</ul>
       <p><strong>Dica geral:</strong> Tente seguir a regra 50-30-20: 50% para necessidades básicas, 30% para desejos e 20% para poupança e investimentos.</p>`;
 
-        tipsContent.innerHTML = tips;
-      }
+    tipsContent.innerHTML = tips;
+  }
 
-      // Salvar despesas no localStorage
-      function saveExpenses() {
-        localStorage.setItem('expenses', JSON.stringify(expenses));
-      }
+  // Salvar despesas no localStorage
+  function saveExpenses() {
+    localStorage.setItem('expenses', JSON.stringify(expenses));
+  }
 
-      // Formatar data para exibição
-      function formatDisplayDate(dateString) {
-        const date = new Date(dateString);
-        return date.toLocaleDateString('pt-BR');
-      }
+  // Formatar data para exibição
+  function formatDisplayDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('pt-BR');
+  }
 
-      // Formatar data para nome de arquivo
-      function formatDate(date) {
-        return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
-      }
+  // Formatar data para nome de arquivo
+  function formatDate(date) {
+    return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
+  }
 
-      // Gerar cores para o gráfico
-      function generateColors(count) {
-        const baseColors = [
-          '#4caf50', '#2196f3', '#ff9800', '#f44336', '#9c27b0',
-          '#3f51b5', '#e91e63', '#009688', '#673ab7', '#ffc107'
-        ];
+  // Gerar cores para o gráfico
+  function generateColors(count) {
+    const baseColors = [
+      '#4caf50', '#2196f3', '#ff9800', '#f44336', '#9c27b0',
+      '#3f51b5', '#e91e63', '#009688', '#673ab7', '#ffc107'
+    ];
 
-        const colors = [];
-        for (let i = 0; i < count; i++) {
-          colors.push(baseColors[i % baseColors.length]);
-        }
-        return colors;
-      }
+    const colors = [];
+    for (let i = 0; i < count; i++) {
+      colors.push(baseColors[i % baseColors.length]);
+    }
+    return colors;
+  }
 
-      // Obter ícone para categoria
-      function getCategoryIcon(category) {
-        const icons = {
-          'Alimentação': 'fas fa-utensils',
-          'Transporte': 'fas fa-car',
-          'Moradia': 'fas fa-home',
-          'Saúde': 'fas fa-heartbeat',
-          'Lazer': 'fas fa-gamepad',
-          'Contas': 'fas fa-file-invoice-dollar',
-          'Educação': 'fas fa-graduation-cap',
-          'Investimentos': 'fas fa-chart-line',
-          'Outros': 'fas fa-shopping-bag'
-        };
-        return icons[category] || 'fas fa-tag';
-      }
+  // Obter ícone para categoria
+  function getCategoryIcon(category) {
+    const icons = {
+      'Alimentação': 'fas fa-utensils',
+      'Transporte': 'fas fa-car',
+      'Moradia': 'fas fa-home',
+      'Saúde': 'fas fa-heartbeat',
+      'Lazer': 'fas fa-gamepad',
+      'Contas': 'fas fa-file-invoice-dollar',
+      'Educação': 'fas fa-graduation-cap',
+      'Investimentos': 'fas fa-chart-line',
+      'Outros': 'fas fa-shopping-bag'
+    };
+    return icons[category] || 'fas fa-tag';
+  }
 
-      // Obter label para frequência
-      function getFrequencyLabel(frequency) {
-        const labels = {
-          'unico': 'Única',
-          'semanal': 'Semanal',
-          'mensal': 'Mensal',
-          'anual': 'Anual'
-        };
-        return labels[frequency] || frequency;
-      }
+  // Obter label para frequência
+  function getFrequencyLabel(frequency) {
+    const labels = {
+      'unico': 'Única',
+      'semanal': 'Semanal',
+      'mensal': 'Mensal',
+      'anual': 'Anual'
+    };
+    return labels[frequency] || frequency;
+  }
 
-      // Mostrar notificação
-      function showNotification(message) {
-        // Criar elemento de notificação
-        const notification = document.createElement('div');
-        notification.className = 'notification';
-        notification.innerHTML = `
+  // Mostrar notificação
+  function showNotification(message) {
+    // Criar elemento de notificação
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.innerHTML = `
       <div class="notification-content">
         <i class="fas fa-check-circle"></i>
         <span>${message}</span>
       </div>
     `;
 
-        // Adicionar ao corpo do documento
-        document.body.appendChild(notification);
+    // Adicionar ao corpo do documento
+    document.body.appendChild(notification);
 
-        // Mostrar com animação
-        setTimeout(() => {
-          notification.classList.add('show');
-        }, 10);
+    // Mostrar com animação
+    setTimeout(() => {
+      notification.classList.add('show');
+    }, 10);
 
-        // Remover após 3 segundos
-        setTimeout(() => {
-          notification.classList.remove('show');
-          setTimeout(() => {
-            document.body.removeChild(notification);
-          }, 300);
-        }, 3000);
-      }
+    // Remover após 3 segundos
+    setTimeout(() => {
+      notification.classList.remove('show');
+      setTimeout(() => {
+        document.body.removeChild(notification);
+      }, 300);
+    }, 3000);
+  }
 
-      window.editExpense = function (id) {
-        const expense = expenses.find(e => e.id === id);
-        if (!expense) return;
+  // Funções globais para editar e remover despesas
+  window.editExpense = function(id) {
+    const expense = expenses.find(e => e.id === id);
+    if (!expense) return;
 
-        // Preencher o formulário com os dados da despesa
-        document.getElementById('expense-name').value = expense.name;
-        document.getElementById('expense-amount').value = expense.amount;
-        document.getElementById('expense-category').value = expense.category;
-        document.getElementById('expense-frequency').value = expense.frequency;
-        document.getElementById('expense-date').value = expense.date;
-        document.getElementById('expense-priority').value = expense.priority || 'media';
+    // Preencher o formulário com os dados da despesa
+    document.getElementById('expense-name').value = expense.name;
+    document.getElementById('expense-amount').value = expense.amount;
+    document.getElementById('expense-category').value = expense.category;
+    document.getElementById('expense-frequency').value = expense.frequency;
+    document.getElementById('expense-date').value = expense.date;
+    document.getElementById('expense-priority').value = expense.priority || 'media';
 
-        // Remover a despesa atual
-        expenses = expenses.filter(e => e.id !== id);
+    // Remover a despesa atual
+    expenses = expenses.filter(e => e.id !== id);
 
-        // Rolar para o formulário
-        document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
+    // Rolar para o formulário
+    document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
 
-        // Atualizar a interface
-        saveExpenses();
-        updateExpensesList();
-        showNotification(`Editando despesa "${expense.name}"`);
-      };
+    // Atualizar a interface
+    saveExpenses();
+    updateExpensesList();
+    showNotification(`Editando despesa "${expense.name}"`);
+  };
 
-      window.removeExpense = function (id) {
-        const expense = expenses.find(e => e.id === id);
-        if (!expense) return;
+  window.removeExpense = function(id) {
+    const expense = expenses.find(e => e.id === id);
+    if (!expense) return;
 
-        if (confirm(`Tem certeza que deseja excluir a despesa "${expense.name}"?`)) {
-          expenses = expenses.filter(e => e.id !== id);
-          saveExpenses();
-          updateExpensesList();
-          showNotification(`Despesa "${expense.name}" removida com sucesso!`);
-        }
-      };
-    });
-      </script>
+    if (confirm(`Tem certeza que deseja excluir a despesa "${expense.name}"?`)) {
+      expenses = expenses.filter(e => e.id !== id);
+      saveExpenses();
+      updateExpensesList();
+      showNotification(`Despesa "${expense.name}" removida com sucesso!`);
+    }
+  };
+});
+</script>
