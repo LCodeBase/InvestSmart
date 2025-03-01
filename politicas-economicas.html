@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
-    <link rel="stylesheet" href="css/style-emprestimos.css" />
+    <link rel="stylesheet" href="css/style-politicas-economicas.css" />
     <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/universal-css.css" />
     <link
@@ -12,98 +12,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-  <style>
-    .comparador-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px;
-      background-color: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    main h1 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2.2em;
-    }
-
-    .form-group {
-      margin-bottom: 25px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: 600;
-      color: #2c3e50;
-    }
-
-    input,
-    select {
-      width: 100%;
-      padding: 14px;
-      border: 2px solid #ddd;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    input:focus,
-    select:focus {
-      outline: none;
-      border-color: #118a5f;
-      box-shadow: 0 0 8px rgba(5, 224, 78, 0.5);
-    }
-
-    main button {
-      background-color: #118a5f;
-      color: white;
-      padding: 14px 24px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      width: 100%;
-    }
-
-    main button:hover {
-      background-color: #005e3d;
-      transform: translateY(-2px);
-    }
-
-    #resultados {
-      margin-top: 40px;
-      padding: 30px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
-
-    #resultados h2 {
-      color: #118a5f;
-      margin-bottom: 25px;
-      font-size: 1.8em;
-      border-bottom: 2px solid #118a5f;
-      padding-bottom: 10px;
-    }
-
-    #resultados p {
-      margin-bottom: 15px;
-      color: #34495e;
-      font-size: 1.1em;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    #resultados p strong {
-      font-weight: 600;
-      color: #2c3e50;
-    }
-
+<style>
     @media (max-width: 600px) {
       .comparador-container {
         padding: 20px;
@@ -157,9 +66,7 @@
       </nav>
     </header>
 
-    <button id="toggleForm" class="floating-button">
-      <i class="fa-solid fa-envelope fa-2x"></i>
-    </button>
+
     <div id="registerForm" class="form-container" style="display: none">
       <form class="form">
         <div class="header-container">
@@ -206,60 +113,101 @@
         <button class="submit">Enviar</button>
       </form>
     </div>
+<main>
+  <!-- Home Section -->
+  <section id="home" class="section active">
+    <h2>Simulador de Políticas Econômicas</h2>
 
-    <main>
-      <div class="comparador-container">
-        <h1>Compare e Simule seu Empréstimo</h1>
-        <form id="emprestimo-form" class="form-grid">
-          <div class="form-group">
-            <label>Valor Desejado</label>
-            <div class="input-wrapper">
-              <input type="number" id="valor" required min="1000" step="100" />
-              <div class="input-prefix">R$</div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="prazo">Prazo (meses):</label>
-            <input type="number" id="prazo" required min="1" />
-            <div class="tooltip">
-              <i class="fas fa-info-circle"></i>
-              <span class="tooltip-text">Informações sobre este campo</span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="tipo">Tipo de empréstimo:</label>
-            <select id="tipo">
-              <option value="pessoal">Empréstimo Pessoal</option>
-              <option value="consignado">Empréstimo Consignado</option>
-              <option value="veiculo">Financiamento de Veículo</option>
-            </select>
-            <div class="tooltip">
-              <i class="fas fa-info-circle"></i>
-              <span class="tooltip-text">Informações sobre este campo</span>
-            </div>
-          </div>
-          <button type="submit">Comparar Opções</button>
-        </form>
-        <div id="resultados" class="results-container">
-          <h2>Sua Simulação</h2>
-          <div class="result-grid">
-            <!-- Results will be injected here -->
-          </div>
+
+    <!-- Indicadores econômicos atuais -->
+    <div class="indicators">
+      <div class="indicator-card">
+        <h3>PIB Atual</h3>
+        <p id="currentGDP">
+          <span class="loading-spinner"></span>
+          Carregando...
+        </p>
+      </div>
+      <div class="indicator-card">
+        <h3>Inflação</h3>
+        <p id="currentInflation">
+          <span class="loading-spinner"></span>
+          Carregando...
+        </p>
+      </div>
+      <div class="indicator-card">
+        <h3>Taxa de Desemprego</h3>
+        <p id="currentUnemployment">
+          <span class="loading-spinner"></span>
+          Carregando...
+        </p>
+      </div>
+      <div class="indicator-card">
+        <h3>Taxa de Juros (Selic)</h3>
+        <p id="currentInterestRate">
+          <span class="loading-spinner"></span>
+          Carregando...
+        </p>
+      </div>
+    </div>
+
+
+  <!-- Simulator Section -->
+  <section id="simulator" class="section">
+    <h2>Simulador Econômico</h2>
+    <p class="section-description">
+      Ajuste os parâmetros abaixo para simular diferentes cenários econômicos e ver como
+      eles afetam indicadores como PIB, inflação e desemprego.
+    </p>
+
+    <div class="simulator-container">
+      <div class="controls">
+        <div class="control-group">
+          <label for="taxRate">Taxa de Juros (%)</label>
+          <input type="range" id="taxRate" min="2" max="20" step="0.5" value="13.25">
+          <span id="taxRateValue">13.25%</span>
+          <p class="control-description">A taxa Selic influencia o custo do crédito e o controle da inflação.</p>
         </div>
-        <div class="chart-container"></div>
-        <div id="amortization-table"></div>
-        <div class="actions">
-          <button onclick="generatePDF()" class="secondary-button">
-            <i class="fas fa-download"></i> Baixar Relatório
-          </button>
-          <button onclick="saveSimulation()" class="secondary-button">
-            <i class="fas fa-save"></i> Salvar Simulação
-          </button>
+        <div class="control-group">
+          <label for="publicSpending">Gastos Públicos (% do PIB)</label>
+          <input type="range" id="publicSpending" min="20" max="50" step="1" value="33">
+          <span id="publicSpendingValue">33%</span>
+          <p class="control-description">Os gastos públicos impactam o crescimento econômico e o déficit fiscal.</p>
+        </div>
+        <div class="control-group">
+          <label for="taxBurden">Carga Tributária (% do PIB)</label>
+          <input type="range" id="taxBurden" min="20" max="45" step="1" value="33">
+          <span id="taxBurdenValue">33%</span>
+          <p class="control-description">A carga tributária afeta o consumo, investimentos e competitividade.</p>
         </div>
       </div>
-    </main>
+
+      <button id="resetSimulation" class="reset-button">Resetar para valores atuais</button>
+
+      <div class="charts-grid">
+        <div class="chart-container">
+          <canvas id="gdpChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="inflationChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="unemploymentChart"></canvas>
+        </div>
+      </div>
+
+      <div class="simulation-summary">
+        <h3>Análise do Cenário</h3>
+        <p id="simulationAnalysis">Ajuste os parâmetros para ver a análise do cenário econômico.</p>
+      </div>
+    </div>
+  </section>
+</main>
+    <!-- Other sections will be added as needed -->
+      </main>
 
     <br /><br /><br /><br /><br /><br /><br />
+
     <footer>
       <div class="container-footer">
         <div class="row-footer">
@@ -312,6 +260,8 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script/politicas-economicas.js"></script>
   <script
     src="https://kit.fontawesome.com/65f22fe718.js"
     crossorigin="anonymous"
