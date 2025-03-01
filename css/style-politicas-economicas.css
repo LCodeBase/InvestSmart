@@ -241,7 +241,7 @@ nav a {
     -webkit-appearance: none;
     width: 22px;
     height: 22px;
-    background: #3498db;
+    background: #118a5f;
     border-radius: 50%;
     cursor: pointer;
     border: 2px solid white;
@@ -250,7 +250,7 @@ nav a {
 
 .control-group span {
     font-weight: bold;
-    color: #3498db;
+    color: #118a5f;
     align-self: flex-end;
     font-size: 1.2em;
 }
@@ -266,7 +266,7 @@ nav a {
 
 /* Botão de reset melhorado */
 .reset-button {
-    background-color: #3498db;
+    background-color: #118a5f;
     color: white;
     border: none;
     border-radius: 8px;
@@ -281,7 +281,7 @@ nav a {
 }
 
 .reset-button:hover {
-    background-color: #2980b9;
+    background-color: #063d2a;
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
@@ -293,7 +293,7 @@ nav a {
     height: 20px;
     border: 3px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    border-top-color: #3498db;
+    border-top-color: #118a5f;
     animation: spin 1s ease-in-out infinite;
     margin-right: 10px;
 }
