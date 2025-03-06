@@ -252,12 +252,31 @@
             name="investment-amount"
             required
           />
+
+          <label for="investment-period">Período de Investimento (meses):<i class="fas fa-info-circle info-icon" title="Por quanto tempo você pretende manter o investimento"></i></label>
+          <input
+            type="number"
+            id="investment-period"
+            name="investment-period"
+            min="1"
+            required
+          />
+
           <label for="risk-level">Nível de Risco:</label>
           <select name="risk-level" id="risk-level">
             <option value="conservador">Conservador</option>
             <option value="moderado">Moderado</option>
             <option value="arrojado">Arrojado</option>
           </select>
+
+          <label for="investment-goal">Objetivo do Investimento:</label>
+          <select name="investment-goal" id="investment-goal">
+            <option value="reserva">Reserva de Emergência</option>
+            <option value="aposentadoria">Aposentadoria</option>
+            <option value="curto-prazo">Objetivos de Curto Prazo</option>
+            <option value="longo-prazo">Objetivos de Longo Prazo</option>
+          </select>
+
           <button type="submit">Obter Recomendações</button>
         </form>
         <div id="investment-recommendation"></div>
