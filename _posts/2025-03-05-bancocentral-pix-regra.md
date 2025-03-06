@@ -1,6 +1,6 @@
 ---
 layout: noticia
-title: 'Banco Central Anuncia Regras para Impedir Fraudes no Pix: "Não Queremos Mortos Fazendo Transações'
+title: 'Banco Central Anuncia Regras para Impedir Fraudes no Pix: "Não Queremos Mortos Fazendo Transações" '
 date: '2025-03-06T18:10:00-03:00'
 categories: [notícias]
 image: /images/blog12.png
