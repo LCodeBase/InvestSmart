@@ -1,16 +1,14 @@
 ---
 layout: noticia
-title: 'As possíveis medidas em discussão pelo governo para frear a inflação dos alimentos'
+title: 'Inflação dos Alimentos no Brasil: Governo e Setor Agro Buscam Soluções em Meio a Pressões Econômicas'
 date: '2025-03-06T18:00:00-03:00'
 categories: [notícias]
 image: /images/blog11.png
 excerpt: 'Inflação alimentar subiu consistentemente em 2024, encerrando o ano em 8%, à frente da inflação geral (IPCA em 4,8%).'
-author: 'InfoMoney'
+author: 'InfoMoney & Leonardo F. Figueiredo'
 author_link: 'https://www.infomoney.com.br'
 alt_image: 'Imagem mostrando o setor de produtos de um supermercado brasileiro.'
 ---
-
-# Inflação dos Alimentos no Brasil: Governo e Setor Agro Buscam Soluções em Meio a Pressões Econômicas
 
 Com a <span class="highlight">inflação dos alimentos</span> corroendo o orçamento das famílias brasileiras e elevando o custo de vida, o governo federal e as associações do setor agropecuário intensificaram discussões para encontrar medidas que controlem essa escalada de preços. A alta persistente nos custos de itens básicos tem colocado o tema no centro do debate econômico em 2025, pressionando tanto o poder de compra dos consumidores quanto as estratégias das empresas do varejo alimentar.
 
@@ -64,7 +62,6 @@ Enquanto isso, no mercado financeiro, as empresas do setor alimentar enfrentam u
 
 h1, h2 {
     color: #2c3e50;
-    border-bottom: 2px solid #3498db;
     padding-bottom: 5px;
 }
 </style>
