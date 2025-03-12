@@ -1,10 +1,10 @@
 ---
 layout: noticia
 title: 'Banco Central Anuncia Regras para Impedir Fraudes no Pix: "Não Queremos Mortos Fazendo Transações" '
-date: '2025-03-06T18:10:00-03:00'
+date: '2025-03-11T18:10:00-03:00'
 categories: [notícias]
 image: /images/blog12.png
-excerpt: 'O Pix será bloqueado para CPFs "cancelados", "suspensos", "nulos" ou "falecidos", mas funcionará normalmente para CPFs "pendentes de regularização", diz o Banco Central.'
+excerpt: 'O Pix será bloqueado para CPFs cancelados, suspensos, nulos ou falecidos, mas funcionará normalmente para CPFs "pendentes de regularização", diz o Banco Central.'
 author: 'Leonardo F. Figueiredo'
 author_link: ''
 alt_image: 'Imagem mostrando o banco central brasileiro.'

@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'Como a China Planeja Proteger Sua Economia de Trump na Reunião dos Principais Legisladores'
-date: '2025-03-05T19:15:00-03:00'
+date: '2025-03-11T20:45:00-03:00'
 categories: [notícias]
 image: /images/blog10.png
 excerpt: 'China define plano econômico em março de 2025, priorizando consumo interno contra deflação e tarifas de 20% de Trump, com meta de 5% de crescimento e inflação a 2%.'
