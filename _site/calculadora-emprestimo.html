@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InvestSmart - Calculadora de Empréstimos</title>
+    <link rel="stylesheet" href="css/style-servicos.css">
     <link rel="stylesheet" href="css/universal-css.css" />
-    <link rel="stylesheet" href="css/style-servicos.css" />
+    <link rel="stylesheet" href="css/style-calculadora-emprestimo.css" />
     <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
@@ -38,65 +40,142 @@
 
     <main class="calculator-container">
       <h1>Calculadora de Empréstimos</h1>
+
+      <div class="loan-type-selector">
+        <button class="loan-type-btn active" data-type="personal">Empréstimo Pessoal</button>
+        <button class="loan-type-btn" data-type="auto">Financiamento de Veículo</button>
+        <button class="loan-type-btn" data-type="mortgage">Financiamento Imobiliário</button>
+        <button class="loan-type-btn" data-type="business">Empréstimo Empresarial</button>
+      </div>
+
       <div class="calculator-form">
-        <div class="input-group">
-          <label for="loan-amount">Valor do Empréstimo (R$):</label>
-          <input type="number" id="loan-amount" min="0" step="100" required />
+        <div class="input-section">
+          <div class="input-group">
+            <label for="loan-amount">Valor do Empréstimo (R$):</label>
+            <input type="number" id="loan-amount" min="0" step="100" value="10000" required />
+          </div>
+
+          <div class="input-group">
+            <label for="interest-rate">Taxa de Juros Anual (%):
+              <span class="tooltip"><i class="fas fa-info-circle"></i>
+                <span class="tooltip-text">Taxa de juros anual aplicada ao empréstimo.</span>
+              </span>
+            </label>
+            <input type="number" id="interest-rate" min="0" step="0.1" value="12.0" required />
+          </div>
+
+          <div class="input-group">
+            <label for="loan-term">Prazo (anos):</label>
+            <input type="number" id="loan-term" min="1" max="30" value="5" required />
+          </div>
+
+          <div class="input-group">
+            <label for="payment-frequency">Frequência de Pagamento:
+              <span class="tooltip"><i class="fas fa-info-circle"></i>
+                <span class="tooltip-text">A frequência com que os pagamentos serão realizados.</span>
+              </span>
+            </label>
+            <select id="payment-frequency">
+              <option value="monthly">Mensal</option>
+              <option value="biweekly">Quinzenal</option>
+              <option value="weekly">Semanal</option>
+            </select>
+          </div>
+
+          <button onclick="calculateLoan()" class="calculate-btn">Calcular</button>
+
+          <div class="loan-tips">
+            <h3>Dicas para Empréstimos</h3>
+            <ul>
+              <li>Compare as taxas de diferentes instituições financeiras</li>
+              <li>Verifique todas as taxas e encargos adicionais</li>
+              <li>Considere sua capacidade de pagamento mensal</li>
+              <li>Leia atentamente o contrato antes de assinar</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="input-group">
-          <label for="interest-rate">Taxa de Juros Anual (%):</label>
-          <input type="number" id="interest-rate" min="0" step="0.1" required />
+        <div class="results-section">
+          <div id="results" class="results-container">
+            <h2>Resultados</h2>
+            <p>Pagamento Mensal: <span id="monthly-payment">R$ 0,00</span></p>
+            <p>Total de Juros: <span id="total-interest">R$ 0,00</span></p>
+            <p>Custo Total: <span id="total-cost">R$ 0,00</span></p>
+
+            <div class="chart-container">
+              <canvas id="payment-chart"></canvas>
+            </div>
+          </div>
+
+          <div class="bank-comparison">
+            <h3>Comparação de Taxas entre Bancos</h3>
+            <p>Taxas médias para este tipo de empréstimo:</p>
+
+            <div class="bank-rates">
+              <div class="bank-card">
+                <h4>Banco do Brasil</h4>
+                <p>Taxa: <span class="rate">11.5</span>% a.a.</p>
+                <p>Prazo máximo: 60 meses</p>
+              </div>
+
+              <div class="bank-card">
+                <h4>Caixa Econômica</h4>
+                <p>Taxa: <span class="rate">12.8</span>% a.a.</p>
+                <p>Prazo máximo: 72 meses</p>
+              </div>
+
+              <div class="bank-card">
+                <h4>Itaú</h4>
+                <p>Taxa: <span class="rate">13.2</span>% a.a.</p>
+                <p>Prazo máximo: 60 meses</p>
+              </div>
+
+              <div class="bank-card">
+                <h4>Nubank</h4>
+                <p>Taxa: <span class="rate">10.9</span>% a.a.</p>
+                <p>Prazo máximo: 48 meses</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="input-group">
-          <label for="loan-term">Prazo (anos):</label>
-          <input type="number" id="loan-term" min="1" max="30" required />
-        </div>
-
-        <button onclick="calculateLoan()" class="calculate-btn">Calcular</button>
-
-        <div id="results" class="results-container">
-          <h2>Resultados</h2>
-          <p>Pagamento Mensal: <span id="monthly-payment">R$ 0,00</span></p>
-          <p>Total de Juros: <span id="total-interest">R$ 0,00</span></p>
-          <p>Custo Total: <span id="total-cost">R$ 0,00</span></p>
-        </div>
-
-        <div class="loan-tips">
-          <h3>Dicas para Empréstimos</h3>
-          <ul>
-            <li>Compare as taxas de diferentes instituições financeiras</li>
-            <li>Verifique todas as taxas e encargos adicionais</li>
-            <li>Considere sua capacidade de pagamento mensal</li>
-            <li>Leia atentamente o contrato antes de assinar</li>
-          </ul>
+      <div class="amortization-section">
+        <h3>Tabela de Amortização</h3>
+        <div class="table-container">
+          <table class="amortization-table">
+            <thead>
+              <tr>
+                <th>Período</th>
+                <th>Pagamento</th>
+                <th>Principal</th>
+                <th>Juros</th>
+                <th>Saldo Devedor</th>
+              </tr>
+            </thead>
+            <tbody id="amortization-body">
+              <!-- Preenchido via JavaScript -->
+            </tbody>
+          </table>
         </div>
       </div>
     </main>
 
+    <script src="script/calculadora-emprestimo.js"></script>
     <script>
-      function calculateLoan() {
-        const loanAmount = parseFloat(document.getElementById('loan-amount').value);
-        const annualRate = parseFloat(document.getElementById('interest-rate').value) / 100;
-        const years = parseInt(document.getElementById('loan-term').value);
+      // Inicializar a calculadora quando a página carregar
+      document.addEventListener('DOMContentLoaded', function() {
+        // Definir valores iniciais
+        document.getElementById('loan-amount').value = 0;
+        document.getElementById('interest-rate').value = 12.0;
+        document.getElementById('loan-term').value = 1;
 
-        const monthlyRate = annualRate / 12;
-        const numberOfPayments = years * 12;
+        // Calcular o empréstimo com os valores padrão
+        calculateLoan();
 
-        const monthlyPayment = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) /
-          (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
-
-        const totalCost = monthlyPayment * numberOfPayments;
-        const totalInterest = totalCost - loanAmount;
-
-        document.getElementById('monthly-payment').textContent =
-          `R$ ${monthlyPayment.toFixed(2)}`;
-        document.getElementById('total-interest').textContent =
-          `R$ ${totalInterest.toFixed(2)}`;
-        document.getElementById('total-cost').textContent =
-          `R$ ${totalCost.toFixed(2)}`;
-      }
+        // Atualizar a comparação de bancos
+        updateBankComparison();
+      });
     </script>
   </body>
 </html>
