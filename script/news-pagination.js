@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   let currentNewsPage = 1
   let currentEduPage = 1
-  const postsPerPage = 5 // Ajustado para 6 posts por página para corresponder ao slice no HTML
+  const postsPerPage = 6 // Ajustado para 6 posts por página para corresponder ao slice no HTML
 
   const loadMoreNewsBtn = document.getElementById('loadMoreNews')
   const loadMoreEduBtn = document.getElementById('loadMoreEdu')
