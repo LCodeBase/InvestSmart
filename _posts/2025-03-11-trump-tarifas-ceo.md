@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'Tarifas de Trump Geram Incerteza e Impactam Economia dos EUA, Alertam Empresas e Mercados'
-date: '2025-03-11T20:55:00-03:00'
+date: '2025-03-15T20:55:00-03:00'
 categories: [notícias]
 image: /images/blog13.png
 excerpt: 'As tarifas estão tendo um impacto tremendamente positivo", disse Trump em evento da Business Roundtable, ignorando a reação do mercado de ações.'

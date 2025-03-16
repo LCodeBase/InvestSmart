@@ -1,66 +1,116 @@
 ---
 layout: noticia
-title: 'Como a China Planeja Proteger Sua Economia de Trump na Reunião dos Principais Legisladores'
-date: '2025-03-11T20:45:00-03:00'
+title: 'China Anuncia Medidas Ambiciosas para Reativar o Consumo e Combater a Deflação'
+date: '2025-03-16T18:40:00-03:00'
 categories: [notícias]
-image: /images/blog10.png
-excerpt: 'China define plano econômico em março de 2025, priorizando consumo interno contra deflação e tarifas de 20% de Trump, com meta de 5% de crescimento e inflação a 2%.'
-author: 'Bloomberg'
-author_link: 'https://www.Bloomberg.com'
-alt_image: 'Imagem mostrando o partido comunista chinês'
+image: /images/blog15.png
+excerpt: 'Outras ações incluem a estabilização dos mercados de ações e do setor imobiliário'
+author: 'InfoMoney & Leonardo F. Figueiredo'
+author_link: '/InvestSmart/sobre.html'
+alt_image: 'Imagem mostrando Pequim busca revitalizar a economia com foco no consumo interno '
 ---
 
-## O que acontece agora?
+A agência estatal Xinhua anunciou no domingo, 16 de março de 2025, que a China implementará um pacote robusto de medidas para estimular o consumo interno, elevando a renda da população e enfrentando as <span class="highlight">pressões deflacionárias</span> que ameaçam a segunda maior economia do mundo. A decisão, detalhada em uma declaração do Conselho de Estado, reflete uma mudança estratégica para fortalecer a demanda doméstica em meio a desafios econômicos persistentes.
 
-O Congresso Nacional do Povo da China reúne-se entre 5 e 11 de março de 2025, oferecendo aos líderes a oportunidade de definir o rumo econômico do país e detalhar os planos de gastos para o ano seguinte. Medidas para estimular o consumo interno ganham destaque em um momento em que a economia chinesa enfrenta deflação, uma crise prolongada no setor imobiliário e o impacto da decisão do presidente americano Donald Trump de elevar as tarifas sobre importações chinesas de 10% para <span class="highlight">20%</span>.
+Além de impulsionar os salários, o plano inclui a estabilização dos mercados de ações e do setor imobiliário, incentivos para aumentar a taxa de natalidade e uma série de ações estruturais para reanimar o consumo, que segue fragilizado desde o fim da pandemia de Covid-19.
 
-Investidores estão atentos à força do novo pacote de estímulos e aos sinais de política mais amplos, especialmente após o recente boom nas ações de tecnologia chinesas, impulsionado pelo entusiasmo com a startup de inteligência artificial DeepSeek. Eles buscam pistas sobre a sustentabilidade desse crescimento no mercado de ações.
+## Um Novo Foco no Consumo
 
-## O que está na pauta?
+Nas reuniões parlamentares anuais deste mês, conhecidas como as "Duas Sessões", a liderança chinesa, sob o comando do presidente Xi Jinping, priorizou o aumento do consumo pela <span class="highlight">primeira vez em mais de uma década</span>. Essa guinada marca um afastamento das tradicionais estratégias centradas em exportações e investimentos em infraestrutura, evidenciando a gravidade da situação econômica atual.
 
-Cerca de 3.000 representantes de todo o país se reuniram no Grande Salão do Povo, em Pequim, para a sessão parlamentar. O primeiro-ministro Li Qiang abriu o evento com um relatório de trabalho, complementado por um relatório orçamentário do Ministério das Finanças. Esses documentos trouxeram dados cruciais, como a meta oficial de crescimento econômico para 2025, mantida em cerca de <span class="highlight">5%</span> pelo terceiro ano consecutivo, e o déficit fiscal, que mostra o quanto Pequim está disposta a investir para atingir essa meta.
+Os dados mais recentes são alarmantes: as vendas no varejo continuam mornas, e os preços ao consumidor entraram em <span class="highlight">deflação em fevereiro de 2025</span>, com uma queda de 0,1% — a primeira em mais de um ano. Esse cenário reflete a cautela das famílias chinesas, que, diante de incertezas econômicas e um mercado imobiliário em crise, optam por poupar em vez de gastar.
 
-Pela primeira vez em mais de 20 anos, o governo reduziu a meta de inflação para <span class="highlight">2%</span>, abaixo dos 3% anteriores, indicando uma resposta clara aos riscos de deflação persistente. Historicamente, essa meta funciona como um teto, não como uma obrigação fixa.
+> "Revitalizar o consumo é essencial para evitar uma espiral deflacionária que poderia travar a economia", afirmou um porta-voz do Conselho de Estado à Xinhua.
 
-Um foco central deste ano é incentivar o consumo das famílias. As autoridades ampliaram o programa de troca de bens de consumo, como eletrodomésticos, e lançaram iniciativas para restaurar a confiança dos cidadãos e liberar o potencial de gastos de longo prazo. Entre as medidas estão o aumento das pensões para aposentados, pequenos ajustes nos subsídios de seguro social básico e apoio financeiro a famílias com crianças.
+## Principais Medidas do Pacote
 
-Ao final da sessão, espera-se que o parlamento aprove esses planos.
+O governo chinês detalhou uma série de iniciativas para reverter essa tendência. Aqui estão os pontos centrais do plano, que serão aprofundados em uma coletiva de imprensa na segunda-feira, 17 de março, com autoridades do Ministério das Finanças e do Banco Popular da China:
 
-## Qual o papel de Trump nisso?
+<div style="background-color: #f5f6fa; padding: 15px; border-radius: 5px; margin: 20px 0;">
+    <h3 style="color: #2c3e50; margin-top: 0;">Estratégias para Reativar o Consumo</h3>
+    <ul style="line-height: 1.6;">
+        <li><strong>Aumento Salarial:</strong> Promover um <span class="highlight">"crescimento razoável" dos salários</span> e criar um mecanismo robusto para ajustar o salário mínimo.</li>
+        <li><strong>Subsídios Familiares:</strong> Estudar um sistema de subsídios para cuidados infantis e ajustar a pensão básica dos aposentados.</li>
+        <li><strong>Mercado Imobiliário:</strong> Reduzir taxas de juros dos empréstimos do fundo de previdência habitacional no momento adequado.</li>
+        <li><strong>Turismo e Comércio:</strong> Apoiar serviços turísticos, ampliar horários de atrações e incentivar lojas duty-free em cidades selecionadas.</li>
+        <li><strong>Inovação:</strong> Acelerar o desenvolvimento de tecnologias como dispositivos vestíveis inteligentes e direção autônoma.</li>
+    </ul>
+</div>
 
-Embora o nome de Donald Trump não apareça nos documentos oficiais do Congresso, suas políticas contra a China influenciam fortemente o evento. Desde que assumiu, ele impôs uma tarifa inicial de 10% sobre produtos chineses, elevando-a agora para 20%, restringiu investimentos chineses em setores estratégicos dos EUA, como tecnologia e energia, e pressionou o México a taxar importações chinesas.
+<div style="width: 100%; max-width: 750px; margin: 10px 0; font-family: Arial, sans-serif;">
+    <h3 style="text-align: center; color: #2c3e50;">Projeção de Crescimento das Vendas no Varejo (%)</h3>
+    <p style="text-align: center; font-size: 14px; color: #555;">Estimativas com implementação das medidas</p>
+    <div style="background-color: #f5f6fa; padding: 10px; border-radius: 5px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; height: 200px;">
+            <div style="text-align: center; flex: 1;">
+                <div style="background-color:rgb(20, 165, 32); height: 20px; width: 30px; margin: 0 auto;"></div>
+                <p style="font-size: 12px; margin: 5px 0;">2024<br>1,2%</p>
+            </div>
+            <div style="text-align: center; flex: 1;">
+                <div style="background-color: rgb(20, 165, 32); height: 50px; width: 30px; margin: 0 auto;"></div>
+                <p style="font-size: 12px; margin: 5px 0;">2025 (Pré)<br>0,8%</p>
+            </div>
+            <div style="text-align: center; flex: 1;">
+                <div style="background-color: rgb(20, 165, 32); height: 90px; width: 30px; margin: 0 auto;"></div>
+                <p style="font-size: 12px; margin: 5px 0;">2025 (Pós)<br>2,5%</p>
+            </div>
+            <div style="text-align: center; flex: 1;">
+                <div style="background-color: rgb(20, 165, 32); height: 120px; width: 30px; margin: 0 auto;"></div>
+                <p style="font-size: 12px; margin: 5px 0;">2026<br>3,5%</p>
+            </div>
+        </div>
+    </div>
+    <p style="font-size: 10px; color: #777; text-align: right; margin-top: 5px;">Fonte: Estimativas baseadas em dados da Xinhua</p>
+</div>
 
-Em resposta às tarifas americanas anunciadas em 4 de março, a China retaliou com tarifas de até 15% sobre produtos agrícolas dos EUA e proibiu exportações para algumas empresas de defesa americanas. Esse ambiente comercial hostil ameaça as exportações chinesas, tradicionalmente um motor de crescimento. Com a demanda interna ainda fraca e Pequim evitando o modelo antigo de crescimento baseado em dívidas, o governo agora prioriza o fortalecimento do consumo doméstico.
+## Reação dos Mercados
 
-O primeiro-ministro Li Qiang destacou recentemente a necessidade de reforçar o consumo como principal impulsionador do crescimento, usando o termo “circulação interna” para indicar que a demanda doméstica será o foco. Essa expressão, que surgiu durante a pandemia de Covid-19 para enfatizar a autossuficiência, ressurge agora como um sinal de que Pequim se prepara para um confronto econômico mais profundo com os EUA.
+A notícia gerou otimismo nos mercados financeiros. Na sexta-feira, 14 de março, as ações chinesas registraram o maior ganho em dois meses, com o índice CSI 300 subindo <span class="highlight">3,8%</span>, após o Conselho de Estado revelar a coletiva de imprensa para detalhar o pacote de estímulo. Investidores veem as medidas como um sinal de comprometimento de Pequim em reverter o ciclo de baixa demanda.
 
-## O que mais acontece nesta semana?
+## Outras Ações do Plano
 
-O Congresso Nacional do Povo ocorre em paralelo à Conferência Consultiva Política do Povo Chinês, um órgão consultivo formado por delegados do partido e representantes das artes, negócios e setor jurídico. Juntas, essas reuniões são chamadas de _lianghui_, ou “Duas Sessões”.
+Além das iniciativas principais, o governo planeja:
 
-Após a plenária de abertura, legisladores e conselheiros se dividirão em grupos para analisar os relatórios de Li Qiang, do Ministério das Finanças e da agência nacional de planejamento. Durante a semana, o Supremo Tribunal e a Procuradoria-Geral também apresentarão seus relatórios anuais ao parlamento.
+- Expandir a oferta de títulos voltados para investidores individuais, diversificando produtos financeiros.
+- Adotar estratégias para aumentar a renda agrícola, como subsídios e incentivos à produção.
+- Ampliar a assistência financeira a estudantes de baixa renda.
+- Garantir a entrega pontual e integral dos benefícios de desemprego.
+- Reduzir gradualmente as barreiras regulatórias ao consumo.
+- Promover programas de troca de bens de consumo, como eletrodomésticos e veículos.
 
-Um momento aguardado é a coletiva de imprensa anual do ministro das Relações Exteriores, Wang Yi. Suas declarações serão examinadas em busca de pistas sobre a estratégia de Pequim para lidar com o segundo mandato de Trump, o papel da China no fim da guerra na Ucrânia e a parceria de Xi Jinping com Vladimir Putin — especialmente após Trump romper com a política tradicional dos EUA ao iniciar negociações diretas com Moscou para encerrar o conflito ucraniano, excluindo Kiev e os aliados europeus.
+### Setor Imobiliário e Tecnologia
 
-Notavelmente, a China encerrou uma tradição de três décadas ao cancelar a coletiva de imprensa do primeiro-ministro no último dia do Congresso, eliminando uma rara chance de interação pública com um líder de alto escalão.
+O mercado imobiliário, que responde por cerca de 25% do PIB chinês, receberá atenção especial com a redução das taxas de juros dos empréstimos habitacionais, uma medida para aliviar a crise de liquidez das incorporadoras e estimular a compra de imóveis. Paralelamente, o foco em tecnologias emergentes — como dispositivos vestíveis e direção autônoma — visa criar novos mercados de consumo e posicionar a China como líder em inovação.
 
-## Haverá surpresas?
+## Contexto e Desafios
 
-Provavelmente não. Por décadas, o encontro anual dos legisladores oferecia aos investidores uma janela para as personalidades e ideias dos líderes da segunda maior economia do mundo. Nos últimos anos, porém, o evento tornou-se altamente roteirizado, com pouco espaço para improvisos ou propostas inesperadas que antes geravam debates, mesmo em um ambiente tão controlado.
+A deflação e o consumo fraco são reflexos de uma recuperação desigual após a pandemia. O setor imobiliário, abalado por dívidas de gigantes como a Evergrande, e a cautela das famílias diante de incertezas globais — como a guerra comercial com os EUA — dificultam o crescimento. O plano do Conselho de Estado é uma tentativa de romper esse ciclo, mas analistas alertam que o sucesso dependerá da rapidez e da escala da implementação.
 
-Os delegados devem se ater a “temas seguros” que reforcem uma narrativa positiva. Um destaque provável será a inteligência artificial, impulsionada pelo sucesso da DeepSeek, que acelerou sua adoção em todos os níveis do governo. Autoridades locais já integram IA em áreas como segurança pública, processos judiciais, previsões meteorológicas e serviços públicos. As discussões devem abordar os benefícios e desafios da IA, enquanto os líderes buscam exibir seu papel no futuro da China.
+> "A China está apostando em um renascimento do consumo interno para evitar uma estagnação prolongada", disse um economista consultado pela Xinhua.
 
-## O setor privado receberá mais apoio?
+## Próximos Passos
 
-Há indícios de que sim. Recentemente, o presidente Xi Jinping reuniu-se com grandes empresários chineses, incluindo Jack Ma, cofundador do Alibaba, em um gesto significativo quatro anos após uma repressão regulatória que abalou o setor de tecnologia e a confiança do setor privado. Esse encontro reconheceu que a China precisa das empresas privadas, não apenas das estatais, para impulsionar o crescimento e estabilizar a economia em dificuldades. Com a tecnologia sendo essencial na competição com os EUA, o apoio ao setor privado é vital.
-
-Xi prometeu facilitar o acesso a financiamentos para empresas privadas e reduzir multas e penalidades excessivas. Diversos ministérios já se comprometeram a implementar essas diretrizes.
+A coletiva de imprensa de segunda-feira será crucial para esclarecer os detalhes operacionais e o cronograma das medidas. Enquanto isso, o mundo observa se a China conseguirá reacender sua economia e evitar uma crise deflacionária que poderia ter impactos globais.
 
 ---
 
 <style>
-h1, h2 {
+.highlight {
+    padding: 2px 5px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+h1, h2, h3 {
     color: #2c3e50;
     padding-bottom: 5px;
+}
+blockquote {
+    background-color: #f5f6fa;
+    padding: 10px;
+    margin: 10px 0;
+    font-style: italic;
+}
+img {
+    max-width: 100%;
 }
 </style>
