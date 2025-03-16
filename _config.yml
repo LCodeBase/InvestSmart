@@ -35,3 +35,11 @@ defaults:
     values:
       layout: "noticia"
       image: /images/default-post-image.png
+
+# Adicione estas configurações ao seu _config.yml existente
+paginate: 9
+paginate_path: "/noticias/pagina/:num/"
+
+# Plugins necessários
+plugins:
+  - jekyll-paginate

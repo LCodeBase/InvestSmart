@@ -84,32 +84,74 @@ title: "Noticias da economia no mundo - InvestSmart"
         <button class="tab-btn" data-tab="educacao">Educação Financeira</button>
       </div>
 
-      <!-- ... in the news list section ... -->
       <!-- News tab content -->
-      <ul class="news-list" id="noticias-tab">
-        {% for post in site.posts %} {% if post.categories contains 'notícias'
-        %}
-        <li class="news-item">
-          <a href="{{ site.baseurl }}{{ post.url }}" class="news-link">
-            <img
-              src="{{ site.baseurl }}{{ post.image }}"
-              alt="{{ post.title }}"
-              class="news-image"
-            />
-            <div class="news-content">
-              <h3 class="news-title">{{ post.title }}</h3>
-              <p class="news-description">{{ post.excerpt }}</p>
-              <div
-                class="news-time"
-                data-post-time="{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}"
-              >
-                Carregando...
+      <div class="news-container">
+        <ul class="news-list" id="noticias-tab">
+          {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+          {% assign news_posts = sorted_posts | where: 'categories', 'notícias' %}
+          {% assign recent_posts = news_posts | slice: 0, 10 %}
+          {% for post in recent_posts %}
+          <li class="news-item">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="news-link">
+              <img
+                src="{{ site.baseurl }}{{ post.image }}"
+                alt="{{ post.title }}"
+                class="news-image"
+              />
+              <div class="news-content">
+                <h3 class="news-title">{{ post.title }}</h3>
+                <p class="news-description">{{ post.excerpt }}</p>
+                <div
+                  class="news-time"
+                  data-post-time="{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}"
+                >
+                  Carregando...
+                </div>
               </div>
-            </div>
-          </a>
-        </li>
-        {% endif %} {% endfor %}
-      </ul>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        {% if news_posts.size > 10 %}
+        <div class="news-archive">
+          <button id="loadMoreNews" class="load-more-btn">Ver Notícias Anteriores</button>
+        </div>
+        {% endif %}
+
+        <!-- Education tab content -->
+        <ul class="news-list" id="educacao-tab" style="display: none">
+          {% assign edu_posts = sorted_posts | where: 'categories', 'educacao' %}
+          {% assign recent_edu = edu_posts | slice: 0, 10 %}
+          {% for post in recent_edu %}
+          <li class="news-item">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="news-link">
+              <img
+                src="{{ site.baseurl }}{{ post.image }}"
+                alt="{{ post.title }}"
+                class="news-image"
+              />
+              <div class="news-content">
+                <h3 class="news-title">{{ post.title }}</h3>
+                <p class="news-description">{{ post.excerpt }}</p>
+                <div
+                  class="news-time"
+                  data-post-time="{{ post.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}"
+                >
+                  Carregando...
+                </div>
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        {% if edu_posts.size > 10 %}
+        <div class="news-archive">
+          <button id="loadMoreEdu" class="load-more-btn">Ver Mais Conteúdo Educacional</button>
+        </div>
+        {% endif %}
+      </div>
       <!-- Education tab content -->
       <ul class="news-list" id="educacao-tab" style="display: none">
         {% for post in site.posts %} {% if post.categories contains 'educacao'
@@ -248,12 +290,17 @@ title: "Noticias da economia no mundo - InvestSmart"
   <script src="{{ site.baseurl }}/script/js-universal.js"></script>
   <script src="{{ site.baseurl }}/script/contact.js"></script>
   <script src="{{ site.baseurl }}/script/script.js"></script>
+  <script src="{{ site.baseurl }}/script/news-pagination.js"></script>
 
   <script src="/script/notice-time.js"></script>
   <script src="/script/js-universal.js"></script>
+  <script src="/script/contact.js"></script>
+  <script src="/script/script.js"></script>
+  <script src="/script/news-pagination.js"></script>
   <script
-    src="https://kit.fontawesome.com/65f22fe718.js"
+    src="https://kit.fontawesome.com/e1063b7707.js"
     crossorigin="anonymous"
+    async
   ></script>
   <script src="/script/contact.js"></script>
   <script src="/script/script.js"></script>

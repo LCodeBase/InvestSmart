@@ -1,0 +1,14 @@
+---
+layout: noticia
+title: "Título da sua notícia aqui"
+date: 2024-06-15 10:00:00 -0300
+author: "Nome do Autor"
+author_link: "/sobre.html"
+image: "/images/noticias/imagem-noticia.jpg"
+alt_image: "Descrição da imagem para acessibilidade"
+categories: [economia, investimentos]
+featured: true
+excerpt: "Um breve resumo da notícia que aparecerá na página principal"
+---
+
+Conteúdo completo da notícia aqui...
