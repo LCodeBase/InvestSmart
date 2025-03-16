@@ -1,0 +1,228 @@
+/* Styles for Financial Education Center Page */
+
+/* Main container */
+.education-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.education-container h1 {
+    color: #118a5f;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 50px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+    border-bottom: 2px solid #118a5f;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Learning paths section */
+.path-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.path-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.path-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.path-card i {
+    font-size: 40px;
+    color: #118a5f;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.path-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.path-card ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.path-card li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.start-path {
+    background-color: #118a5f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.start-path:hover {
+    background-color: #0c6e48;
+}
+
+/* Interactive content section */
+.content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.content-card {
+    flex: 1 1 200px;
+    max-width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+}
+
+.content-card i {
+    font-size: 35px;
+    color: #118a5f;
+    margin-bottom: 15px;
+}
+
+.content-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.content-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Financial dictionary section */
+.dictionary-search {
+    display: flex;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dictionary-search input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px 0 0 6px;
+    font-size: 16px;
+}
+
+.dictionary-search button {
+    background-color: #118a5f;
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dictionary-search button:hover {
+    background-color: #0c6e48;
+}
+
+.popular-terms h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.terms-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.term-card {
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.term-card:hover {
+    background-color: #118a5f;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .education-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .path-card, .content-card {
+        max-width: 100%;
+    }
+
+    .dictionary-search {
+        flex-direction: column;
+    }
+
+    .dictionary-search input {
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+
+    .dictionary-search button {
+        border-radius: 6px;
+        padding: 10px;
+    }
+}

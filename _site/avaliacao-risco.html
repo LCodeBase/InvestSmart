@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvestSmart - Avaliação de Risco</title>
+    <style></style>
+    <link rel="stylesheet" href="css/style-servicos.css">
+    <link rel="stylesheet" href="css/universal-css.css" />
+    <link rel="stylesheet" href="css/style-avaliacao-risco.css" />
+    <link rel="shortcut icon" href="images/Camada 1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container-LOGO">
+        <img src="images/Camada 1.png" alt="Logo InvestSmart" />
+        <div class="logo">InvestSmart</div>
+      </div>
+
+      <div class="menu-toggle" alt="Botão-Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li id="comment-header"><a href="index.html">Home</a></li>
+          <li id="comment-header"><a href="sobre.html">Sobre Nós</a></li>
+          <li id="comment-header"><a href="blogs-main.html">Blogs</a></li>
+          <li>
+            <button class="button-header" onclick="window.location.href='servicos.html'">
+              Serviços
+              <i class="fa-solid fa-arrow-right" id="seta"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="risk-assessment-container">
+      <h1>Avaliação de Perfil de Risco</h1>
+      <div class="assessment-form">
+        <form id="riskForm">
+          <div class="question-group">
+            <h3>1. Qual é o seu objetivo principal de investimento?</h3>
+            <select name="investment-goal" required>
+              <option value="">Selecione uma opção</option>
+              <option value="1">Preservar capital com baixo risco</option>
+              <option value="2">Renda regular com risco moderado</option>
+              <option value="3">Crescimento de longo prazo com risco maior</option>
+              <option value="4">Máximo retorno possível, aceitando alto risco</option>
+            </select>
+          </div>
+
+          <div class="question-group">
+            <h3>2. Por quanto tempo você pretende manter seus investimentos?</h3>
+            <select name="investment-horizon" required>
+              <option value="">Selecione uma opção</option>
+              <option value="1">Menos de 1 ano</option>
+              <option value="2">1-3 anos</option>
+              <option value="3">3-5 anos</option>
+              <option value="4">Mais de 5 anos</option>
+            </select>
+          </div>
+
+          <div class="question-group">
+            <h3>3. Como você reagiria se seu investimento perdesse 20% em um mês?</h3>
+            <select name="risk-reaction" required>
+              <option value="">Selecione uma opção</option>
+              <option value="1">Venderia tudo imediatamente</option>
+              <option value="2">Venderia parte do investimento</option>
+              <option value="3">Não faria nada</option>
+              <option value="4">Compraria mais aproveitando o preço baixo</option>
+            </select>
+          </div>
+
+          <div class="question-group">
+            <h3>4. Qual é sua experiência com investimentos?</h3>
+            <select name="investment-experience" required>
+              <option value="">Selecione uma opção</option>
+              <option value="1">Nenhuma experiência</option>
+              <option value="2">Alguma experiência com produtos básicos</option>
+              <option value="3">Experiência moderada com diversos produtos</option>
+              <option value="4">Ampla experiência com produtos complexos</option>
+            </select>
+          </div>
+
+          <button type="button" onclick="calculateRiskProfile()" class="calculate-btn">Avaliar Perfil</button>
+        </form>
+
+        <div id="results" class="results-container" style="display: none;">
+          <h2>Seu Perfil de Investidor</h2>
+          <div id="profile-result"></div>
+          <div id="recommendations"></div>
+          <div id="allocation-details"></div>
+          <div class="chart-container">
+            <canvas id="riskChart" width="400" height="200"></canvas>
+          </div>
+          <div class="chart-container">
+            <canvas id="allocationChart" width="400" height="200"></canvas>
+          </div>
+          <div class="pdf-export">
+            <button id="exportPDF" class="calculate-btn">Exportar PDF</button>
+          </div>
+        </div>
+      </div>
+    </main>
+      <footer>
+        <div class="container-footer">
+          <div class="row-footer">
+            <!-- footer col-->
+            <div class="footer-col">
+              <h4>Site</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs-main.html">Blogs</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+              </ul>
+            </div>
+            <!--end footer col-->
+            <!-- footer col-->
+            <div class="footer-col">
+              <h4>Redes Sociais</h4>
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instragram</a></li>
+                <li><a href="#">Tiktok</a></li>
+                <li><a href="#">Youtube</a></li>
+              </ul>
+            </div>
+            <!--end footer col-->
+            <!-- footer col-->
+            <div class="footer-col">
+              <h4>Serviços</h4>
+              <ul>
+                <li><a href="calculo-despesas.html">Calculos de Despesas</a></li>
+                <li><a href="recomendacaoinvestimento.html">Investimentos</a></li>
+              </ul>
+            </div>
+            <!--end footer col-->
+            <!-- footer col-->
+            <div class="footer-col">
+              <h4>Inscreva-se na Newsletter</h4>
+              <div class="form-sub">
+                <form id="newsletter-form" onsubmit="sendNewsletter(event)">
+                  <input type="email" id="newsletter-email" placeholder="Digite o seu e-mail" required />
+                  <button type="submit">Se inscrever</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script/newsletter.js"></script>
+    <script>
+      // Initialize jsPDF
+      const { jsPDF } = window.jspdf;
+
+      // Risk profile calculation
+      function calculateRiskProfile() {
+        const riskForm = document.getElementById('riskForm');
+
+        // Validate form
+        const selects = riskForm.querySelectorAll('select[required]');
+        let isValid = true;
+
+        selects.forEach(select => {
+          if (!select.value) {
+            isValid = false;
+            select.classList.add('invalid');
+          } else {
+            select.classList.remove('invalid');
+          }
+        });
+
+        if (!isValid) {
+          alert('Por favor, preencha todos os campos obrigatórios.');
+          return;
+        }
+
+        // Get values from form
+        const goal = parseInt(riskForm['investment-goal'].value);
+        const horizon = parseInt(riskForm['investment-horizon'].value);
+        const reaction = parseInt(riskForm['risk-reaction'].value);
+        const experience = parseInt(riskForm['investment-experience'].value);
+
+        // Calculate total score
+        const totalScore = goal + horizon + reaction + experience;
+
+        // Maximum possible score is 16 (4 questions with max value 4)
+        const scorePercentage = (totalScore / 16) * 100;
+
+        // Determine profile based on total score
+        let profile = '';
+        let profileDescription = '';
+        let recommendations = '';
+        let riskLevel = 0;
+        let allocationData = {};
+
+        if (totalScore <= 5) { // Up to 31% of max score
+          profile = 'Conservador';
+          profileDescription = 'Você prioriza a segurança e preservação do capital, com baixa tolerância a riscos e volatilidade.';
+          recommendations = '<ul>\n' +
+            '<li><strong>Tesouro Direto:</strong> Tesouro Selic, Tesouro IPCA+</li>\n' +
+            '<li><strong>Renda Fixa:</strong> CDBs de bancos de primeira linha, LCIs e LCAs</li>\n' +
+            '<li><strong>Fundos:</strong> Fundos DI, Fundos de Renda Fixa</li>\n' +
+            '</ul>\n' +
+            '<p>Mantenha pelo menos 70% do seu portfólio em investimentos de baixo risco. Diversifique entre diferentes emissores para reduzir o risco de crédito.</p>';
+          riskLevel = 25;
+          allocationData = {
+            labels: ['Renda Fixa', 'Fundos Conservadores', 'Ações', 'Internacional', 'Alternativos'],
+            data: [70, 20, 5, 3, 2],
+            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
+          };
+        } else if (totalScore <= 9) { // Up to 56% of max score
+          profile = 'Moderado';
+          profileDescription = 'Você busca um equilíbrio entre segurança e rentabilidade, aceitando alguma volatilidade para obter retornos melhores no médio prazo.';
+          recommendations = '<ul>\n' +
+            '<li><strong>Renda Fixa:</strong> Títulos públicos, CDBs, Debêntures de boas empresas</li>\n' +
+            '<li><strong>Fundos:</strong> Fundos multimercado, Fundos de ações com menor volatilidade</li>\n' +
+            '<li><strong>Ações:</strong> Empresas consolidadas, dividendos, ETFs de índices</li>\n' +
+            '<li><strong>Internacional:</strong> ETFs de mercados desenvolvidos</li>\n' +
+            '</ul>\n' +
+            '<p>Uma alocação equilibrada com 50-60% em renda fixa e o restante em ativos de maior risco pode ser adequada para seu perfil.</p>';
+          riskLevel = 50;
+          allocationData = {
+            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
+            data: [55, 20, 15, 7, 3],
+            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
+          };
+        } else if (totalScore <= 13) { // Up to 81% of max score
+          profile = 'Arrojado';
+          profileDescription = 'Você está disposto a assumir riscos moderados a altos em busca de retornos superiores no longo prazo.';
+          recommendations = '<ul>\n' +
+            '<li><strong>Ações:</strong> Carteira diversificada de ações, incluindo small caps com potencial de crescimento</li>\n' +
+            '<li><strong>Fundos:</strong> Fundos de ações, Fundos multimercado com maior risco</li>\n' +
+            '<li><strong>Internacional:</strong> ETFs de mercados emergentes, BDRs</li>\n' +
+            '<li><strong>Renda Fixa:</strong> Títulos de crédito privado, Debêntures incentivadas</li>\n' +
+            '</ul>\n' +
+            '<p>Considere manter 30-40% em renda fixa para estabilidade e o restante em ativos de maior risco e retorno potencial.</p>';
+          riskLevel = 75;
+          allocationData = {
+            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
+            data: [35, 20, 30, 10, 5],
+            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
+          };
+        } else { // Above 81% of max score
+          profile = 'Agressivo';
+          profileDescription = 'Você busca maximizar retornos e está disposto a aceitar alta volatilidade e riscos significativos.';
+          recommendations = '<ul>\n' +
+            '<li><strong>Ações:</strong> Ações de empresas de menor capitalização, setores de maior volatilidade</li>\n' +
+            '<li><strong>Derivativos:</strong> Opções, contratos futuros (com conhecimento adequado)</li>\n' +
+            '<li><strong>Internacional:</strong> Investimentos diretos em mercados internacionais, incluindo emergentes</li>\n' +
+            '<li><strong>Alternativos:</strong> Criptomoedas, startups, fundos imobiliários de maior risco</li>\n' +
+            '</ul>\n' +
+            '<p>Mantenha uma reserva de 15-25% em ativos mais seguros para oportunidades em momentos de queda do mercado.</p>';
+          riskLevel = 95;
+          allocationData = {
+            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
+            data: [20, 15, 40, 15, 10],
+            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
+          };
+        }
+
+        if (totalScore <= 12) { // Up to 33% of max score
+          profile = 'Conservador';
+          profileDescription = 'Você prioriza a segurança e preservação do capital, com baixa tolerância a riscos e volatilidade.';
+          recommendations = '<ul>\n' +
+            '<li><strong>Tesouro Direto:</strong> Tesouro Selic, Tesouro IPCA+</li>\n' +
+            '<li><strong>Renda Fixa:</strong> CDBs de bancos de primeira linha, LCIs e LCAs</li>\n' +
+            '<li><strong>Fundos:</strong> Fundos DI, Fundos de Renda Fixa</li>\n' +
+            '</ul>\n' +
+            '<p>Mantenha pelo menos 70% do seu portfólio em investimentos de baixo risco. Diversifique entre diferentes emissores para reduzir o risco de crédito.</p>';
+          riskLevel = 25;
+          allocationData = {
+            labels: ['Renda Fixa', 'Fundos Conservadores', 'Ações', 'Internacional', 'Alternativos'],
+            data: [70, 20, 5, 3, 2],
+            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
+          };
+        } else if (totalScore <= 20) { // Up to 55% of max score
+          profile = 'Moderado';
+          profileDescription = 'Você busca um equilíbrio entre segurança e rentabilidade, aceitando alguma volatilidade para obter retornos melhores no médio prazo.';
+          recommendations = '<ul>\n' +
+            '<li><strong>Renda Fixa:</strong> Títulos públicos, CDBs, Debêntures de boas empresas</li>\n' +
+            '<li><strong>Fundos:</strong> Fundos multimercado, Fundos de ações com menor volatilidade</li>\n' +
+            '<li><strong>Ações:</strong> Empresas consolidadas, dividendos, ETFs de índices</li>\n' +
+            '<li><strong>Internacional:</strong> ETFs de mercados desenvolvidos</li>\n' +
+            '</ul>\n' +
+            '<p>Uma alocação equilibrada com 50-60% em renda fixa e o restante em ativos de maior risco pode ser adequada para seu perfil.</p>';
+          riskLevel = 50;
+          allocationData = {
+            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
+            data: [55, 20, 15, 7, 3],
+            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
+          };
+        } else if (totalScore <= 28) { // Up to 77% of max score
+          profile = 'Arrojado';
+          profileDescription = 'Você está disposto a assumir riscos moderados a altos em busca de retornos superiores no longo prazo.';
+          recommendations = '<ul>\n' +
+            '<li><strong>Ações:</strong> Carteira diversificada de ações, incluindo small caps com potencial de crescimento</li>\n' +
+            '<li><strong>Fundos:</strong> Fundos de ações, Fundos multimercado com maior risco</li>\n' +
+            '<li><strong>Internacional:</strong> ETFs de mercados emergentes, BDRs</li>\n' +
+            '<li><strong>Renda Fixa:</strong> Títulos de crédito privado, Debêntures incentivadas</li>\n' +
+            '</ul>\n' +
+            '<p>Considere manter 30-40% em renda fixa para estabilidade e o restante em ativos de maior risco e retorno potencial.</p>';
+          riskLevel = 75;
+          allocationData = {
+            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
+            data: [35, 20, 30, 10, 5],
+            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
+          };
+        } else { // Above 77% of max score
+          profile = 'Agressivo';
+          profileDescription = 'Você busca maximizar retornos e está disposto a aceitar alta volatilidade e riscos significativos.';
+          recommendations = '<ul>\n' +
+            '<li><strong>Ações:</strong> Ações de empresas de menor capitalização, setores de maior volatilidade</li>\n' +
+            '<li><strong>Derivativos:</strong> Opções, contratos futuros (com conhecimento adequado)</li>\n' +
+            '<li><strong>Internacional:</strong> Investimentos diretos em mercados internacionais, incluindo emergentes</li>\n' +
+            '<li><strong>Alternativos:</strong> Criptomoedas, startups, fundos imobiliários de maior risco</li>\n' +
+            '</ul>\n' +
+            '<p>Mantenha uma reserva de 15-25% em ativos mais seguros para oportunidades em momentos de queda do mercado.</p>';
+          riskLevel = 95;
+          allocationData = {
+            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
+            data: [20, 15, 40, 15, 10],
+            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
+          };
+        }
+
+        // Display results
+        document.getElementById('profile-result').innerHTML = `
+          <h3>Perfil: ${profile}</h3>
+          <p class="profile-description">${profileDescription}</p>
+          <div class="risk-meter">
+            <div class="risk-label">Tolerância ao Risco</div>
+            <div class="risk-bar">
+              <div class="risk-indicator" style="width: ${riskLevel}%"></div>
+            </div>
+            <div class="risk-scale">
+              <span>Baixo</span>
+              <span>Médio</span>
+              <span>Alto</span>
+            </div>
+          </div>
+        `;
+
+        document.getElementById('recommendations').innerHTML = `
+          <h3>Recomendações de Investimento</h3>
+          <div class="recommendations-content">${recommendations}</div>
+        `;
+
+        // Generate allocation details
+        let allocationHTML = '<div class="allocation-details">';
+        allocationData.labels.forEach((label, index) => {
+          allocationHTML += `
+            <div class="allocation-item">
+              <div class="allocation-color" style="background-color: ${allocationData.colors[index]}"></div>
+              <div class="allocation-label">${label}</div>
+              <div class="allocation-percentage">${allocationData.data[index]}%</div>
+            </div>
+          `;
+        });
+        allocationHTML += '</div>';
+
+        document.getElementById('allocation-details').innerHTML = allocationHTML;
+
+        // Show results section
+        document.getElementById('results').style.display = 'block';
+
+        // Create risk profile chart
+        createRiskChart(profile, scorePercentage);
+
+        // Create allocation chart
+        createAllocationChart(allocationData);
+
+        // Setup PDF export
+        setupPDFExport(profile, profileDescription, recommendations, allocationData);
+
+        // Setup consultation scheduling
+        setupConsultationScheduling(profile);
+      }
+
+      // Create risk profile chart
+      function createRiskChart(profile, scorePercentage) {
+        const ctx = document.getElementById('riskChart').getContext('2d');
+        const riskChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Seu Perfil', ''],
+            datasets: [{
+              data: [scorePercentage, 100 - scorePercentage],
+              backgroundColor: ['#118a5f', '#e9ecef'],
+              borderWidth: 0
+            }]
+          },
+          options: {
+            cutout: '70%',
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false
+              },
+              tooltip: {
+                enabled: false
+              }
+            }
+          }
+        });
+
+        // Add center text
+        Chart.register({
+          id: 'centerText',
+          afterDraw: (chart) => {
+            const width = chart.width;
+            const height = chart.height;
+            const ctx = chart.ctx;
+            ctx.restore();
+            ctx.font = 'bold 16px Arial';
+            ctx.textBaseline = 'middle';
+            ctx.textAlign = 'center';
+            ctx.fillStyle = '#333';
+            ctx.fillText(profile, width / 2, height / 2);
+            ctx.save();
+          }
+        });
+      }
+
+      // Create allocation chart
+      function createAllocationChart(allocationData) {
+        const ctx = document.getElementById('allocationChart').getContext('2d');
+        const allocationChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: allocationData.labels,
+            datasets: [{
+              data: allocationData.data,
+              backgroundColor: allocationData.colors,
+              borderWidth: 1,
+              borderColor: '#fff'
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'right',
+                labels: {
+                  boxWidth: 15,
+                  padding: 15
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return `${context.label}: ${context.raw}%`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // Setup PDF export
+      function setupPDFExport(profile, profileDescription, recommendations, allocationData) {
+        document.getElementById('exportPDF').addEventListener('click', function() {
+          const doc = new jsPDF();
+          const pageWidth = doc.internal.pageSize.getWidth();
+          const margin = 20;
+          let yPos = 20;
+
+          // Add title
+          doc.setFontSize(18);
+          doc.setFont('helvetica', 'bold');
+          doc.text('Relatório de Perfil de Investidor - InvestSmart', pageWidth / 2, yPos, { align: 'center' });
+          yPos += 15;
+
+          // Add profile
+          doc.setFontSize(14);
+          doc.text(`Perfil: ${profile}`, margin, yPos);
+          yPos += 10;
+
+          // Add description
+          doc.setFontSize(12);
+          doc.setFont('helvetica', 'normal');
+          const descriptionLines = doc.splitTextToSize(profileDescription, pageWidth - (margin * 2));
+          doc.text(descriptionLines, margin, yPos);
+          yPos += (descriptionLines.length * 7) + 10;
+
+          // Add recommendations title
+          doc.setFontSize(14);
+          doc.setFont('helvetica', 'bold');
+          doc.text('Recomendações de Investimento', margin, yPos);
+          yPos += 10;
+
+          // Add recommendations (simplified for PDF)
+          doc.setFontSize(12);
+          doc.setFont('helvetica', 'normal');
+          doc.text('Alocação recomendada:', margin, yPos);
+          yPos += 7;
+
+          // Add allocation data
+          allocationData.labels.forEach((label, index) => {
+            doc.text(`• ${label}: ${allocationData.data[index]}%`, margin + 5, yPos);
+            yPos += 7;
+          });
+
+          // Add footer
+          yPos = doc.internal.pageSize.getHeight() - 20;
+          doc.setFontSize(10);
+          doc.text('Este relatório foi gerado pela InvestSmart e serve apenas como referência.', pageWidth / 2, yPos, { align: 'center' });
+          doc.text('Consulte um especialista antes de tomar decisões de investimento.', pageWidth / 2, yPos + 5, { align: 'center' });
+
+          // Save PDF
+          doc.save(`perfil-investidor-${profile.toLowerCase()}.pdf`);
+        });
+      }
+
+      // Setup consultation scheduling
+      function setupConsultationScheduling(profile) {
+        // Create consultation scheduling section if it doesn't exist
+        if (!document.getElementById('consultation-section')) {
+          const resultsContainer = document.getElementById('results');
+
+          // Create consultation section
+          const consultationSection = document.createElement('div');
+          consultationSection.id = 'consultation-section';
+          consultationSection.className = 'consultation-section';
+
+          // Add consultation content
+          consultationSection.innerHTML = `
+            <h3>Agende uma Consulta com Especialista</h3>
+            <p>Com base no seu perfil <strong>${profile}</strong>, recomendamos uma consulta personalizada com um de nossos especialistas para orientações detalhadas sobre sua estratégia de investimentos.</p>
+
+            <form id="consultationForm">
+              <div class="form-group">
+                <label for="name">Nome completo:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+
+              <div class="form-group">
+                <label for="date">Data preferencial:</label>
+                <input type="date" id="date" name="date" required min="${new Date().toISOString().split('T')[0]}">
+              </div>
+
+              <div class="form-group">
+                <label for="time">Horário preferencial:</label>
+                <select id="time" name="time" required>
+                  <option value="">Selecione um horário</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="comments">Comentários adicionais:</label>
+                <textarea id="comments" name="comments" rows="3"></textarea>
+              </div>
+
+              <button type="button" id="scheduleConsultation" class="calculate-btn">Agendar Consulta</button>
+            </form>
+
+            <div id="consultationConfirmation" style="display: none;" class="confirmation-message">
+              <i class="fas fa-check-circle"></i>
+              <h4>Solicitação Enviada!</h4>
+              <p>Recebemos sua solicitação de agendamento. Um de nossos especialistas entrará em contato em breve para confirmar sua consulta.</p>
+            </div>
+          `;
+
+          // Add consultation section to results container
+          resultsContainer.appendChild(consultationSection);
+
+          // Add event listener for consultation form submission
+          document.getElementById('scheduleConsultation').addEventListener('click', function() {
+            const consultationForm = document.getElementById('consultationForm');
+
+            // Basic form validation
+            const requiredFields = consultationForm.querySelectorAll('[required]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+              if (!field.value) {
+                isValid = false;
+                field.classList.add('invalid');
+              } else {
+                field.classList.remove('invalid');
+              }
+            });
+
+            if (!isValid) {
+              alert('Por favor, preencha todos os campos obrigatórios.');
+              return;
+            }
+
+            // Hide form and show confirmation message
+            consultationForm.style.display = 'none';
+            document.getElementById('consultationConfirmation').style.display = 'block';
+
+            // In a real application, you would send this data to a server
+            console.log('Consultation scheduled for profile:', profile);
+            console.log('Form data:', {
+              name: document.getElementById('name').value,
+              email: document.getElementById('email').value,
+              phone: document.getElementById('phone').value,
+              date: document.getElementById('date').value,
+              time: document.getElementById('time').value,
+              comments: document.getElementById('comments').value
+            });
+          });
+        }
+      }
+    </script>
+  </body>
+  </body>
+</html>

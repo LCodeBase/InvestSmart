@@ -1,0 +1,217 @@
+/* Styles for Risk Assessment Page */
+
+/* Main container */
+.risk-assessment-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.risk-assessment-container h1 {
+    color: #118a5f;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Form styles */
+.assessment-form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.question-group {
+    margin-bottom: 25px;
+}
+
+.question-group h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #118a5f;
+    outline: none;
+}
+
+select.invalid {
+    border-color: #ff6384;
+    background-color: #fff0f0;
+}
+
+.calculate-btn {
+    background-color: #118a5f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto 0;
+    width: 200px;
+}
+
+.calculate-btn:hover {
+    background-color: #0d7249;
+}
+
+/* Results container */
+.results-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results-container h2 {
+    color: #118a5f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Risk meter */
+.risk-meter {
+    margin: 25px 0;
+}
+
+.risk-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.risk-bar {
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.risk-indicator {
+    height: 100%;
+    background: linear-gradient(to right, #118a5f, #ffcd56, #ff6384);
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.risk-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Recommendations */
+.recommendations-content {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.recommendations-content ul {
+    padding-left: 20px;
+}
+
+.recommendations-content li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Allocation details */
+.allocation-details {
+    margin-top: 20px;
+}
+
+.allocation-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.allocation-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.allocation-label {
+    flex: 1;
+    color: #555;
+}
+
+.allocation-percentage {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Chart styles */
+.chart-container {
+    margin: 30px 0;
+    max-width: 100%;
+    height: 300px;
+}
+
+/* PDF export button */
+.pdf-export {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#exportPDF {
+    background-color: #ff6384;
+}
+
+#exportPDF:hover {
+    background-color: #e74c6f;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .risk-assessment-container {
+        max-width: 95%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .assessment-form {
+        padding: 15px;
+    }
+
+    .calculate-btn {
+        width: 100%;
+    }
+
+    .chart-container {
+        height: 250px;
+    }
+}
