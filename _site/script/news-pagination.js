@@ -8,23 +8,23 @@ document.addEventListener('DOMContentLoaded', function () {
   const newsTab = document.getElementById('noticias-tab')
   const eduTab = document.getElementById('educacao-tab')
 
-  // Tab switching functionality
-  const tabs = document.querySelectorAll('.tab-btn')
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      tabs.forEach((t) => t.classList.remove('active'))
-      tab.classList.add('active')
+  // Tab switching functionality - Comentado para evitar conflito com script.js
+  // const tabs = document.querySelectorAll('.tab-btn')
+  // tabs.forEach((tab) => {
+  //   tab.addEventListener('click', () => {
+  //     tabs.forEach((t) => t.classList.remove('active'))
+  //     tab.classList.add('active')
 
-      const tabId = tab.getAttribute('data-tab')
-      if (tabId === 'noticias') {
-        newsTab.style.display = 'block'
-        eduTab.style.display = 'none'
-      } else {
-        newsTab.style.display = 'none'
-        eduTab.style.display = 'block'
-      }
-    })
-  })
+  //     const tabId = tab.getAttribute('data-tab')
+  //     if (tabId === 'noticias') {
+  //       newsTab.style.display = 'block'
+  //       eduTab.style.display = 'none'
+  //     } else {
+  //       newsTab.style.display = 'none'
+  //       eduTab.style.display = 'block'
+  //     }
+  //   })
+  // })
 
   // Load more news posts
   if (loadMoreNewsBtn) {
@@ -177,5 +177,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // Função para garantir que a paginação seja aplicada após o sortNewsByDate
+  document.addEventListener('DOMContentLoaded', function () {
+    // Aguarda um pequeno tempo após o carregamento para garantir que o sortNewsByDate já foi executado
+    setTimeout(function () {
+      initializePostVisibility()
+    }, 100)
+  })
+
+  // Inicializa a visibilidade dos posts
   initializePostVisibility()
 })
