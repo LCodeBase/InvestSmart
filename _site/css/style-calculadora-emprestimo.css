@@ -264,20 +264,20 @@ body {
     padding: 20px;
     margin: 20px auto;
   }
-  
+
   .calculator-form {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .input-section, .results-section {
     min-width: 100%;
   }
-  
+
   .bank-card {
     min-width: 100%;
   }
-  
+
   .loan-type-selector {
     justify-content: center;
   }

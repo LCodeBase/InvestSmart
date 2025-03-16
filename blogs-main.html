@@ -3,7 +3,6 @@ title: "Noticias da economia no mundo - InvestSmart"
 ---
 
 <!DOCTYPE html>
-<!-- rest of your HTML code -->
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -89,7 +88,7 @@ title: "Noticias da economia no mundo - InvestSmart"
         <ul class="news-list" id="noticias-tab">
           {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
           {% assign news_posts = sorted_posts | where: 'categories', 'notícias' %}
-          {% assign recent_posts = news_posts | slice: 0, 10 %}
+          {% assign recent_posts = news_posts | slice: 0, 6 %}
           {% for post in recent_posts %}
           <li class="news-item">
             <a href="{{ site.baseurl }}{{ post.url }}" class="news-link">
@@ -113,16 +112,16 @@ title: "Noticias da economia no mundo - InvestSmart"
           {% endfor %}
         </ul>
 
-        {% if news_posts.size > 10 %}
+        {% if news_posts.size > 6 %}
         <div class="news-archive">
-          <button id="loadMoreNews" class="load-more-btn">Ver Notícias Anteriores</button>
+          <button id="loadMoreNews" class="load-more-btn">Ver Notícias Anteriores <i class="fas fa-chevron-down"></i></button>
         </div>
         {% endif %}
 
         <!-- Education tab content -->
         <ul class="news-list" id="educacao-tab" style="display: none">
           {% assign edu_posts = sorted_posts | where: 'categories', 'educacao' %}
-          {% assign recent_edu = edu_posts | slice: 0, 10 %}
+          {% assign recent_edu = edu_posts | slice: 0, 6 %}
           {% for post in recent_edu %}
           <li class="news-item">
             <a href="{{ site.baseurl }}{{ post.url }}" class="news-link">
@@ -146,9 +145,9 @@ title: "Noticias da economia no mundo - InvestSmart"
           {% endfor %}
         </ul>
 
-        {% if edu_posts.size > 10 %}
+        {% if edu_posts.size > 6 %}
         <div class="news-archive">
-          <button id="loadMoreEdu" class="load-more-btn">Ver Mais Conteúdo Educacional</button>
+          <button id="loadMoreEdu" class="load-more-btn">Ver Mais Conteúdo Educacional <i class="fas fa-chevron-down"></i></button>
         </div>
         {% endif %}
       </div>
