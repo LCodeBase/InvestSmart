@@ -1,11 +1,11 @@
 ---
 layout: noticia
 title: 'O Fed Está em Modo de Espera. Investidores Buscam Garantias de Ação, Se Necessário'
-date: '2025-03-16T18:21:00-03:00'
+date: '2025-03-17T18:21:00-03:00'
 categories: [notícias]
 image: /images/blog14.png
 excerpt: 'O Fed deve manter as taxas de juros em março, mas a guerra comercial de Trump pressiona os mercados, aumentando as expectativas de cortes em 2025, enquanto Powell busca equilibrar otimismo e prontidão para agir.'
-author: 'Bloomber'
+author: 'Bloomberg'
 author_link: 'https://www.Bloomber.com'
 alt_image: 'Imagem mostrando o presidente do banco central americano, mais conhecido como FED.'
 ---
