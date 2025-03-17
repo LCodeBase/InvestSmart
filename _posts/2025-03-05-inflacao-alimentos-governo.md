@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'Inflação dos Alimentos no Brasil: Governo e Setor Agro Buscam Soluções em Meio a Pressões Econômicas'
-date: '2025-03-11T19:30:00-03:00'
+date: '2025-03-16T19:30:00-03:00'
 categories: [notícias]
 image: /images/blog11.png
 excerpt: 'Inflação alimentar subiu consistentemente em 2024, encerrando o ano em 8%, à frente da inflação geral (IPCA em 4,8%).'

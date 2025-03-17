@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'Boletim Focus: projeções para o dólar em 2027 e 2028 recuam para R$ 5,90'
-date: '2025-03-05T19:05:00-03:00'
+date: '2025-03-16T19:05:00-03:00'
 categories: [notícias]
 image: /images/blog09.png
 excerpt: 'Confira as atualizações dos analistas para os principais indicadores econômicos'
