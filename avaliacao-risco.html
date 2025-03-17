@@ -95,10 +95,10 @@
           <div id="recommendations"></div>
           <div id="allocation-details"></div>
           <div class="chart-container">
-            <canvas id="riskChart" width="400" height="200"></canvas>
+            <canvas id="riskChart" width="280" height="280"></canvas>
           </div>
           <div class="chart-container">
-            <canvas id="allocationChart" width="400" height="200"></canvas>
+            <canvas id="allocationChart" width="400" height="300"></canvas>
           </div>
           <div class="pdf-export">
             <button id="exportPDF" class="calculate-btn">Exportar PDF</button>
@@ -318,73 +318,127 @@
       // Create risk profile chart
       function createRiskChart(profile, scorePercentage) {
         const ctx = document.getElementById('riskChart').getContext('2d');
-        const riskChart = new Chart(ctx, {
+
+        // Create gradient for risk indicator
+        const gradientColors = {
+          'Muito Conservador': '#118a5f',
+          'Conservador': '#36a2eb',
+          'Moderado': '#ffcd56',
+          'Agressivo': '#ff6384'
+        };
+
+        const profileColor = gradientColors[profile] || '#118a5f';
+
+        // Destroy existing chart if it exists
+        if (window.riskChartInstance) {
+          window.riskChartInstance.destroy();
+        }
+
+        window.riskChartInstance = new Chart(ctx, {
           type: 'doughnut',
           data: {
             labels: ['Seu Perfil', ''],
             datasets: [{
               data: [scorePercentage, 100 - scorePercentage],
-              backgroundColor: ['#118a5f', '#e9ecef'],
-              borderWidth: 0
+              backgroundColor: [profileColor, '#e9ecef'],
+              borderWidth: 0,
+              hoverOffset: 4
             }]
           },
           options: {
             cutout: '70%',
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
               legend: {
                 display: false
               },
               tooltip: {
-                enabled: false
+                enabled: true,
+                callbacks: {
+                  label: function(context) {
+                    return `${context.label}: ${context.raw}%`;
+                  }
+                }
               }
             }
-          }
-        });
-
-        // Add center text
-        Chart.register({
-          id: 'centerText',
-          afterDraw: (chart) => {
-            const width = chart.width;
-            const height = chart.height;
-            const ctx = chart.ctx;
-            ctx.restore();
-            ctx.font = 'bold 16px Arial';
-            ctx.textBaseline = 'middle';
-            ctx.textAlign = 'center';
-            ctx.fillStyle = '#333';
-            ctx.fillText(profile, width / 2, height / 2);
-            ctx.save();
-          }
+          },
+          plugins: [{
+            id: 'centerText',
+            afterDraw: (chart) => {
+              const width = chart.width;
+              const height = chart.height;
+              const ctx = chart.ctx;
+              ctx.restore();
+              ctx.font = 'bold 16px Arial';
+              ctx.textBaseline = 'middle';
+              ctx.textAlign = 'center';
+              ctx.fillStyle = '#333';
+              ctx.fillText(profile, width / 2, height / 2);
+              ctx.save();
+            }
+          }]
         });
       }
 
       // Create allocation chart
       function createAllocationChart(allocationData) {
         const ctx = document.getElementById('allocationChart').getContext('2d');
-        const allocationChart = new Chart(ctx, {
+
+        // Destroy existing chart if it exists
+        if (window.allocationChartInstance) {
+          window.allocationChartInstance.destroy();
+        }
+
+        window.allocationChartInstance = new Chart(ctx, {
           type: 'pie',
           data: {
             labels: allocationData.labels,
             datasets: [{
               data: allocationData.data,
               backgroundColor: allocationData.colors,
-              borderWidth: 1,
-              borderColor: '#fff'
+              borderWidth: 2,
+              borderColor: '#ffffff',
+              hoverBorderWidth: 3,
+              hoverBorderColor: '#f8f8f8',
+              hoverOffset: 10
             }]
           },
           options: {
             responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+              padding: {
+                top: 20,
+                right: 120,
+                bottom: 20,
+                left: 20
+              }
+            },
             plugins: {
               legend: {
                 position: 'right',
+                align: 'start',
                 labels: {
                   boxWidth: 15,
-                  padding: 15
+                  padding: 15,
+                  font: {
+                    size: 12,
+                    weight: 'bold'
+                  },
+                  usePointStyle: true,
+                  pointStyle: 'circle'
                 }
               },
               tooltip: {
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                titleColor: '#333',
+                bodyColor: '#666',
+                borderColor: '#ddd',
+                borderWidth: 1,
+                padding: 10,
+                cornerRadius: 6,
+                displayColors: true,
                 callbacks: {
                   label: function(context) {
                     return `${context.label}: ${context.raw}%`;

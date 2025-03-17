@@ -176,11 +176,41 @@ select.invalid {
 
 /* Chart styles */
 .chart-container {
-    margin: 30px 0;
+    margin: 30px auto;
     max-width: 100%;
-    height: 300px;
+    height: 350px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: all 0.3s ease;
+    overflow: visible;
 }
 
+.chart-container:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+#riskChart, #allocationChart {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.chart-container:first-of-type {
+    height: 320px;
+}
+
+#riskChart {
+    margin: 0 auto;
+    max-width: 280px;
+}
+
+#allocationChart {
+    margin: 0 auto;
+    max-width: 90%;
+}
 /* PDF export button */
 .pdf-export {
     margin-top: 30px;
