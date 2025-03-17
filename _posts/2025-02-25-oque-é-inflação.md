@@ -1,13 +1,13 @@
 ---
 layout: noticia
-title: "Como Começar a Investir: Guia para Iniciantes"
-date: "2025-02-25T20:28:00-03:00"
+title: 'Como Começar a Investir: Guia para Iniciantes'
+date: '2025-03-15T20:28:00-03:00'
 categories: [educacao]
 image: /images/edu01.png
-excerpt: "Aprenda os primeiros passos para começar sua jornada de investimentos de forma segura e consciente."
-author: "Leonardo F. Figueiredo"
-author_link: "https://www.linkedin.com/in/leonardo-f-figueiredo-4820a5230/"
-alt_image: "gráfico do mercado financeiro mostrado em um notebook e celular"
+excerpt: 'Aprenda os primeiros passos para começar sua jornada de investimentos de forma segura e consciente.'
+author: 'Leonardo F. Figueiredo'
+author_link: 'https://www.linkedin.com/in/leonardo-f-figueiredo-4820a5230/'
+alt_image: 'gráfico do mercado financeiro mostrado em um notebook e celular'
 ---
 
 Investir pode parecer um universo distante e complicado, mas, na verdade, é uma maneira prática de fazer seu dinheiro crescer e ajudar você a realizar seus sonhos. Este guia foi criado especialmente para quem está começando do zero e não sabe absolutamente nada sobre investimentos. Vamos descomplicar os conceitos e mostrar os primeiros passos de forma simples e direta.
