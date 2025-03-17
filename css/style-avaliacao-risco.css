@@ -195,6 +195,97 @@ select.invalid {
     background-color: #e74c6f;
 }
 
+/* Consultation section styles */
+.consultation-section {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #118a5f;
+}
+
+.consultation-section h3 {
+    color: #118a5f;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.consultation-section p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #118a5f;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(17, 138, 95, 0.1);
+}
+
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+    border-color: #ff6384;
+    background-color: #fff0f0;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Confirmation message */
+.confirmation-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f9f4;
+    border-radius: 8px;
+    border: 1px solid #118a5f;
+}
+
+.confirmation-message i {
+    font-size: 3rem;
+    color: #118a5f;
+    margin-bottom: 15px;
+}
+
+.confirmation-message h4 {
+    color: #118a5f;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.confirmation-message p {
+    color: #555;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .risk-assessment-container {
@@ -213,5 +304,9 @@ select.invalid {
 
     .chart-container {
         height: 250px;
+    }
+
+    .consultation-section {
+        padding: 15px;
     }
 }

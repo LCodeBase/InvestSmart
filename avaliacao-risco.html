@@ -195,61 +195,24 @@
         // Maximum possible score is 16 (4 questions with max value 4)
         const scorePercentage = (totalScore / 16) * 100;
 
-        // Determine profile based on total score
+        // Check for specific high-risk combinations
+        const isHighRiskGoal = goal === 4; // Maximum return with high risk
+        const isHighRiskReaction = reaction === 4; // Would buy more during market drop
+        const isHighRiskExperience = experience === 4; // Extensive experience with complex products
+
+        // Determine profile based on total score and specific answers
         let profile = '';
         let profileDescription = '';
         let recommendations = '';
         let riskLevel = 0;
-        let allocationData = {};
+        let allocationData = {
+          labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
+          colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
+        };
 
-        if (totalScore <= 5) { // Up to 31% of max score
-          profile = 'Conservador';
-          profileDescription = 'Você prioriza a segurança e preservação do capital, com baixa tolerância a riscos e volatilidade.';
-          recommendations = '<ul>\n' +
-            '<li><strong>Tesouro Direto:</strong> Tesouro Selic, Tesouro IPCA+</li>\n' +
-            '<li><strong>Renda Fixa:</strong> CDBs de bancos de primeira linha, LCIs e LCAs</li>\n' +
-            '<li><strong>Fundos:</strong> Fundos DI, Fundos de Renda Fixa</li>\n' +
-            '</ul>\n' +
-            '<p>Mantenha pelo menos 70% do seu portfólio em investimentos de baixo risco. Diversifique entre diferentes emissores para reduzir o risco de crédito.</p>';
-          riskLevel = 25;
-          allocationData = {
-            labels: ['Renda Fixa', 'Fundos Conservadores', 'Ações', 'Internacional', 'Alternativos'],
-            data: [70, 20, 5, 3, 2],
-            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
-          };
-        } else if (totalScore <= 9) { // Up to 56% of max score
-          profile = 'Moderado';
-          profileDescription = 'Você busca um equilíbrio entre segurança e rentabilidade, aceitando alguma volatilidade para obter retornos melhores no médio prazo.';
-          recommendations = '<ul>\n' +
-            '<li><strong>Renda Fixa:</strong> Títulos públicos, CDBs, Debêntures de boas empresas</li>\n' +
-            '<li><strong>Fundos:</strong> Fundos multimercado, Fundos de ações com menor volatilidade</li>\n' +
-            '<li><strong>Ações:</strong> Empresas consolidadas, dividendos, ETFs de índices</li>\n' +
-            '<li><strong>Internacional:</strong> ETFs de mercados desenvolvidos</li>\n' +
-            '</ul>\n' +
-            '<p>Uma alocação equilibrada com 50-60% em renda fixa e o restante em ativos de maior risco pode ser adequada para seu perfil.</p>';
-          riskLevel = 50;
-          allocationData = {
-            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
-            data: [55, 20, 15, 7, 3],
-            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
-          };
-        } else if (totalScore <= 13) { // Up to 81% of max score
-          profile = 'Arrojado';
-          profileDescription = 'Você está disposto a assumir riscos moderados a altos em busca de retornos superiores no longo prazo.';
-          recommendations = '<ul>\n' +
-            '<li><strong>Ações:</strong> Carteira diversificada de ações, incluindo small caps com potencial de crescimento</li>\n' +
-            '<li><strong>Fundos:</strong> Fundos de ações, Fundos multimercado com maior risco</li>\n' +
-            '<li><strong>Internacional:</strong> ETFs de mercados emergentes, BDRs</li>\n' +
-            '<li><strong>Renda Fixa:</strong> Títulos de crédito privado, Debêntures incentivadas</li>\n' +
-            '</ul>\n' +
-            '<p>Considere manter 30-40% em renda fixa para estabilidade e o restante em ativos de maior risco e retorno potencial.</p>';
-          riskLevel = 75;
-          allocationData = {
-            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
-            data: [35, 20, 30, 10, 5],
-            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
-          };
-        } else { // Above 81% of max score
+        // Determine profile based on score
+        if ((isHighRiskGoal && isHighRiskReaction) || (totalScore >= 13)) {
+          // Aggressive profile
           profile = 'Agressivo';
           profileDescription = 'Você busca maximizar retornos e está disposto a aceitar alta volatilidade e riscos significativos.';
           recommendations = '<ul>\n' +
@@ -260,76 +223,43 @@
             '</ul>\n' +
             '<p>Mantenha uma reserva de 15-25% em ativos mais seguros para oportunidades em momentos de queda do mercado.</p>';
           riskLevel = 95;
-          allocationData = {
-            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
-            data: [20, 15, 40, 15, 10],
-            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
-          };
-        }
-
-        if (totalScore <= 12) { // Up to 33% of max score
-          profile = 'Conservador';
-          profileDescription = 'Você prioriza a segurança e preservação do capital, com baixa tolerância a riscos e volatilidade.';
-          recommendations = '<ul>\n' +
-            '<li><strong>Tesouro Direto:</strong> Tesouro Selic, Tesouro IPCA+</li>\n' +
-            '<li><strong>Renda Fixa:</strong> CDBs de bancos de primeira linha, LCIs e LCAs</li>\n' +
-            '<li><strong>Fundos:</strong> Fundos DI, Fundos de Renda Fixa</li>\n' +
-            '</ul>\n' +
-            '<p>Mantenha pelo menos 70% do seu portfólio em investimentos de baixo risco. Diversifique entre diferentes emissores para reduzir o risco de crédito.</p>';
-          riskLevel = 25;
-          allocationData = {
-            labels: ['Renda Fixa', 'Fundos Conservadores', 'Ações', 'Internacional', 'Alternativos'],
-            data: [70, 20, 5, 3, 2],
-            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
-          };
-        } else if (totalScore <= 20) { // Up to 55% of max score
+          allocationData.data = [20, 15, 40, 15, 10];
+        } else if (totalScore >= 10) {
+          // Moderate profile
           profile = 'Moderado';
-          profileDescription = 'Você busca um equilíbrio entre segurança e rentabilidade, aceitando alguma volatilidade para obter retornos melhores no médio prazo.';
+          profileDescription = 'Você busca crescimento de capital a longo prazo e está disposto a aceitar alguma volatilidade para potencializar retornos.';
           recommendations = '<ul>\n' +
-            '<li><strong>Renda Fixa:</strong> Títulos públicos, CDBs, Debêntures de boas empresas</li>\n' +
-            '<li><strong>Fundos:</strong> Fundos multimercado, Fundos de ações com menor volatilidade</li>\n' +
-            '<li><strong>Ações:</strong> Empresas consolidadas, dividendos, ETFs de índices</li>\n' +
+            '<li><strong>Renda Fixa:</strong> Títulos públicos, CDBs, debêntures de empresas sólidas</li>\n' +
+            '<li><strong>Ações:</strong> Empresas de grande capitalização, dividendos consistentes</li>\n' +
+            '<li><strong>Fundos:</strong> Multimercados, fundos imobiliários de boa liquidez</li>\n' +
             '<li><strong>Internacional:</strong> ETFs de mercados desenvolvidos</li>\n' +
             '</ul>\n' +
-            '<p>Uma alocação equilibrada com 50-60% em renda fixa e o restante em ativos de maior risco pode ser adequada para seu perfil.</p>';
-          riskLevel = 50;
-          allocationData = {
-            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
-            data: [55, 20, 15, 7, 3],
-            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
-          };
-        } else if (totalScore <= 28) { // Up to 77% of max score
-          profile = 'Arrojado';
-          profileDescription = 'Você está disposto a assumir riscos moderados a altos em busca de retornos superiores no longo prazo.';
+            '<p>Mantenha uma estratégia de diversificação equilibrada entre segurança e crescimento.</p>';
+          riskLevel = 65;
+          allocationData.data = [40, 20, 25, 10, 5];
+        } else if (totalScore >= 6) {
+          // Conservative profile
+          profile = 'Conservador';
+          profileDescription = 'Você prioriza a preservação de capital e prefere investimentos de menor risco, mesmo com retornos potencialmente menores.';
           recommendations = '<ul>\n' +
-            '<li><strong>Ações:</strong> Carteira diversificada de ações, incluindo small caps com potencial de crescimento</li>\n' +
-            '<li><strong>Fundos:</strong> Fundos de ações, Fundos multimercado com maior risco</li>\n' +
-            '<li><strong>Internacional:</strong> ETFs de mercados emergentes, BDRs</li>\n' +
-            '<li><strong>Renda Fixa:</strong> Títulos de crédito privado, Debêntures incentivadas</li>\n' +
+            '<li><strong>Renda Fixa:</strong> Títulos do Tesouro, CDBs de bancos grandes, LCIs e LCAs</li>\n' +
+            '<li><strong>Fundos:</strong> Fundos DI, fundos de renda fixa</li>\n' +
+            '<li><strong>Ações:</strong> Pequena alocação em empresas de dividendos</li>\n' +
             '</ul>\n' +
-            '<p>Considere manter 30-40% em renda fixa para estabilidade e o restante em ativos de maior risco e retorno potencial.</p>';
-          riskLevel = 75;
-          allocationData = {
-            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
-            data: [35, 20, 30, 10, 5],
-            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
-          };
-        } else { // Above 77% of max score
-          profile = 'Agressivo';
-          profileDescription = 'Você busca maximizar retornos e está disposto a aceitar alta volatilidade e riscos significativos.';
+            '<p>Foque em investimentos de baixa volatilidade e boa previsibilidade.</p>';
+          riskLevel = 35;
+          allocationData.data = [70, 15, 10, 5, 0];
+        } else {
+          // Very conservative profile
+          profile = 'Muito Conservador';
+          profileDescription = 'Você busca máxima segurança e estabilidade, evitando riscos mesmo que isso signifique retornos limitados.';
           recommendations = '<ul>\n' +
-            '<li><strong>Ações:</strong> Ações de empresas de menor capitalização, setores de maior volatilidade</li>\n' +
-            '<li><strong>Derivativos:</strong> Opções, contratos futuros (com conhecimento adequado)</li>\n' +
-            '<li><strong>Internacional:</strong> Investimentos diretos em mercados internacionais, incluindo emergentes</li>\n' +
-            '<li><strong>Alternativos:</strong> Criptomoedas, startups, fundos imobiliários de maior risco</li>\n' +
+            '<li><strong>Renda Fixa:</strong> Títulos do Tesouro Selic, CDBs de grandes bancos com garantia FGC</li>\n' +
+            '<li><strong>Liquidez:</strong> Fundos DI, poupança para reserva de emergência</li>\n' +
             '</ul>\n' +
-            '<p>Mantenha uma reserva de 15-25% em ativos mais seguros para oportunidades em momentos de queda do mercado.</p>';
-          riskLevel = 95;
-          allocationData = {
-            labels: ['Renda Fixa', 'Fundos Multimercado', 'Ações', 'Internacional', 'Alternativos'],
-            data: [20, 15, 40, 15, 10],
-            colors: ['#118a5f', '#36a2eb', '#ffcd56', '#ff9f40', '#ff6384']
-          };
+            '<p>Priorize a segurança do capital e a liquidez dos investimentos.</p>';
+          riskLevel = 15;
+          allocationData.data = [90, 10, 0, 0, 0];
         }
 
         // Display results
