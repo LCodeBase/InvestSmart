@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'China Anuncia Medidas Ambiciosas para Reativar o Consumo e Combater a Deflação'
-date: '2025-03-16T18:40:00-03:00'
+date: '2025-03-17T19:40:00-03:00'
 categories: [notícias]
 image: /images/blog15.png
 excerpt: 'Outras ações incluem a estabilização dos mercados de ações e do setor imobiliário'
