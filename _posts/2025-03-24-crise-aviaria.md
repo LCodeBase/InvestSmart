@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'EUA Buscam Ovos do Brasil e Novas Fontes em Meio a Surto de Gripe Aviária'
-date: '2025-03-24T16:31:00-03:00'
+date: '2025-03-24T16:30:00-03:00'
 categories: [notícias]
 image: /images/blog004.png
 excerpt: 'A gripe aviária, que dizimou quase 170 milhões de aves desde 2022, mantém a pressão econômica nos EUA, levando o governo Trump a quase dobrar as importações de ovos do Brasil e avaliar flexibilizações regulatórias.'
@@ -18,7 +18,7 @@ Embora esses ovos importados e de frangos de corte não cheguem diretamente às 
 
 O surto transformou o mercado de ovos nos EUA. Os preços no atacado dispararam <span class="highlight">53,6%</span> em fevereiro de 2025, recuando ligeiramente em março, mas ainda pressionam a inflação alimentar, que já sofre com as disputas comerciais de Trump. Consumidores enfrentam prateleiras esvaziadas, enquanto restaurantes ajustam cardápios com aumentos de até 20% em itens como omeletes e panquecas, segundo a National Restaurant Association. A escassez agravou os custos em um momento em que cadeias de suprimentos globais estão sob tensão, com tarifas ameaçando elevar ainda mais os preços de produtos frescos.
 
-<div style="width: 100%; max-width: 600px; margin: 20px 0; font-family: Arial, sans-serif;">
+<div style="width: 100%; max-width: 800px; margin: 20px 0; font-family: Arial, sans-serif;">
     <h3 style="text-align: center; color: #2c3e50;">Aumento dos Preços dos Ovos (2022-2025)</h3>
     <p style="text-align: center; font-size: 14px; color: #555;">Impacto do surto de gripe aviária</p>
     <div style="background-color: #f5f6fa; padding: 10px; border-radius: 5px;">
@@ -52,8 +52,8 @@ Outra frente é a flexibilização regulatória. O Conselho Nacional do Frango (
 
 ## O Drama dos Ovos Descartados
 
-<div style="float: right; margin: 0 0 20px 20px;">
-    <img src="https://via.placeholder.com/300x200.png?text=Ovos+Descartados" alt="Ovos descartados" style="border-radius: 10px;">
+<div style="float: right; margin: 0 0 20px 20px; max-width: 300px; width: 40%;">
+   <img src="https://portal6.com.br/wp-content/uploads/2023/06/casca-de-ovo.jpg" alt="Ovos descartados" style="border-radius: 10px; width: 100%;" />
     <p style="font-size: 12px; color: #555; text-align: center;">Milhões de ovos desperdiçados</p>
 </div>
 

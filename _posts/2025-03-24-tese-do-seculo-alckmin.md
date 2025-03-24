@@ -71,14 +71,12 @@ Analistas veem na postura de Haddad uma tentativa de reforçar a credibilidade f
 
 <style>
 .highlight {
-    background-color: #ffeb3b;
     padding: 2px 5px;
     font-weight: bold;
     border-radius: 3px;
 }
 h1, h2, h3 {
     color: #2c3e50;
-    border-bottom: 2px solid #3498db;
     padding-bottom: 5px;
 }
 img {
