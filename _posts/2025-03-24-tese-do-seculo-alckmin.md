@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: '“Tese do Século” Inflou a Carga Tributária, Diz Haddad: “Meirelles Dormiu no Ponto”'
-date: '2025-03-24T14:09:00-03:00'
+date: '2025-03-24T14:30:00-03:00'
 categories: [notícias]
 image: /images/blog002.png
 excerpt: 'O ministro Fernando Haddad afirmou que o governo manterá a responsabilidade fiscal mesmo em 2026, ano eleitoral, enquanto critica o impacto bilionário da “tese do século” na carga tributária.'
