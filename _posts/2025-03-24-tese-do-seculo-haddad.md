@@ -5,7 +5,7 @@ date: '2025-03-24T14:30:00-03:00'
 categories: [notícias]
 image: /images/blog002.png
 excerpt: 'O ministro Fernando Haddad afirmou que o governo manterá a responsabilidade fiscal mesmo em 2026, ano eleitoral, enquanto critica o impacto bilionário da “tese do século” na carga tributária.'
-author: 'InfoMoney'
+author: 'InfoMoney & Leonardo'
 author_link: 'https://www.infomoney.com.br'
 alt_image: 'Imagem mostrando o ministro da fazenda, Fernando Haddad'
 ---
@@ -20,7 +20,7 @@ O ministro da Fazenda, Fernando Haddad, apontou nesta segunda-feira, 24 de març
 
 A decisão do STF foi um marco para o setor privado, que há décadas questionava a legalidade da inclusão do ICMS — um imposto estadual — na base do PIS e Cofins, contribuições federais destinadas à seguridade social. Estima-se que, desde 2001, as empresas pagaram cerca de R$ 250 bilhões a mais em tributos devido a essa prática. Quando o Supremo definiu a exclusão, em 2017, abriu-se um precedente para ressarcimentos, mas a retroatividade parcial decidida em 2021 gerou uma conta monumental para o governo federal.
 
-<div style="width: 100%; max-width: 600px; margin: 20px 0; font-family: Arial, sans-serif;">
+<div style="width: 100%; max-width: 800px; margin: 20px 0; font-family: Arial, sans-serif;">
     <h3 style="text-align: center; color: #2c3e50;">Impacto Fiscal da “Tese do Século” (R$ bilhões)</h3>
     <p style="text-align: center; font-size: 14px; color: #555;">Estimativas de compensações ao longo dos anos</p>
     <div style="background-color: #f5f6fa; padding: 10px; border-radius: 5px;">
@@ -54,8 +54,8 @@ Haddad também abordou a situação fiscal, defendendo o arcabouço fiscal imple
 
 O ministro destacou que o governo manterá a <span class="highlight">disciplina fiscal</span> em 2026, ano de eleições municipais, evitando repetir os gastos desenfreados de 2022, quando o governo Bolsonaro, em busca de reeleição, ampliou auxílios e deu calotes fiscais. “Não há motivo para abrir as burras como em 2022, com aquele carnaval de auxílios e promessas que não reverteram o quadro eleitoral”, criticou Haddad, referindo-se à derrota de Bolsonaro apesar das medidas populistas.
 
-<div style="float: right; margin: 0 0 20px 20px;">
-    <img src="https://via.placeholder.com/300x200.png?text=Responsabilidade+Fiscal" alt="Gráficos fiscais" style="border-radius: 10px;">
+<div style="float: right; margin: 0 0 20px 20px; max-width: 300px; width: 40%;">
+   <img src="https://deltacontabilidade.com.br/uploads/images/2017/05/0f99378e4223541b640713d3bd8f6980-jpg.jpg" alt="Ovos descartados" style="border-radius: 10px; width: 100%;" />
     <p style="font-size: 12px; color: #555; text-align: center;">Arcabouço fiscal como escudo em 2026</p>
 </div>
 
