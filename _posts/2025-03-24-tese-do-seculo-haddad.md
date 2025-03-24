@@ -1,13 +1,16 @@
 ---
 layout: noticia
-title: '“Tese do Século” Inflou a Carga Tributária, Diz Haddad: “Meirelles Dormiu no Ponto”'
+title: '"Tese do Século" Inflou a Carga Tributária, Diz Haddad: "Meirelles Dormiu no Ponto"'
 date: '2025-03-24T14:30:00-03:00'
 categories: [notícias]
 image: /images/blog002.png
-excerpt: 'O ministro Fernando Haddad afirmou que o governo manterá a responsabilidade fiscal mesmo em 2026, ano eleitoral, enquanto critica o impacto bilionário da “tese do século” na carga tributária.'
+excerpt: 'O ministro Fernando Haddad afirmou que o governo manterá a responsabilidade fiscal mesmo em 2026, ano eleitoral, enquanto critica o impacto bilionário da "tese do século" na carga tributária.'
 author: 'InfoMoney & Leonardo'
 author_link: 'https://www.infomoney.com.br'
 alt_image: 'Imagem mostrando o ministro da fazenda, Fernando Haddad'
+description: 'Entenda a crítica de Haddad sobre a "tese do século" e seu impacto de R$500 bilhões nas contas públicas. Análise completa sobre a exclusão do ICMS da base do PIS/Cofins e suas consequências para a economia brasileira.'
+keywords: 'tese do século, Haddad, Meirelles, ICMS, PIS/Cofins, carga tributária, STF, responsabilidade fiscal, economia brasileira'
+seo_title: 'Tese do Século: Como a Decisão do STF Impactou R$500 Bilhões nas Contas Públicas | InvestSmart'
 ---
 
 O ministro da Fazenda, Fernando Haddad, apontou nesta segunda-feira, 24 de março de 2025, os responsáveis pelo salto da carga tributária brasileira nas últimas duas décadas: os chamados “jabutis” — emendas oportunistas inseridas na legislação tributária — e a decisão do Supremo Tribunal Federal (STF) conhecida como <span class="highlight">“tese do século”</span>, que excluiu o ICMS da base de cálculo do PIS/Cofins. Durante o evento _Rumos 2025_, promovido pelo jornal _Valor Econômico_, Haddad não poupou críticas à gestão de Henrique Meirelles, ex-ministro da Fazenda no governo Temer (2016-2018), acusando-o de negligência diante do impacto fiscal dessa decisão judicial.

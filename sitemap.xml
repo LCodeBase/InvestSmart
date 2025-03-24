@@ -1,81 +1,24 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/blogs-main.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/servicos.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/conversor-moedas.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/sobre.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/calculo-despesas.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/recomendacaoinvestimento.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/politicas-economicas.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/aposentadoria.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/index.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/blog-post-1.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/blog-post-2.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/blog-post-3.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
+  {% for page in site.pages %}
+    {% if page.url != "/404.html" and page.url != "/sitemap.xml" and page.url != "/robots.txt" %}
+    <url>
+      <loc>{{ site.url }}{{ page.url }}</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    {% endif %}
+  {% endfor %}
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      <lastmod>{% if post.last_modified_at %}{{ post.last_modified_at | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  {% endfor %}
 </urlset>

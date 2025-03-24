@@ -1,45 +1,18 @@
-# Site settings
-title: InvestSmart
-description: "Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes para otimizar suas finanças."
-baseurl: "/InvestSmart"
-url: "https://lcodebase.github.io"
+# SEO Settings
+title: InvestSmart - Educação Financeira e Investimentos
+description: Plataforma de educação financeira e investimentos para ajudar você a tomar decisões financeiras inteligentes e construir um futuro próspero.
+url: https://lcodebase.github.io/InvestSmart/
+author: InvestSmart
+logo: /images/Camada 1.png
 
-# SEO settings
-lang: pt-BR
-author: LCodeBase
-twitter:
-  username: your-twitter-handle
-  card: summary_large_image
+# Social Media
 social:
-  name: InvestSmart
-  links:
-    - https://github.com/LcodeBase/InvestSmart
+  twitter: investsmart
+  facebook: investsmart
+  instagram: investsmart
+  linkedin: investsmart
 
-# Build settings
-markdown: kramdown
+# SEO Plugins
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /:categories/:year/:month/:day/:title.html
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "noticia"
-      image: /images/default-post-image.png
-
-# Adicione estas configurações ao seu _config.yml existente
-paginate: 9
-paginate_path: "/noticias/pagina/:num/"
-
-# Plugins necessários
-plugins:
-  - jekyll-paginate

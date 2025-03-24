@@ -8,6 +8,9 @@ excerpt: 'A gripe aviária, que dizimou quase 170 milhões de aves desde 2022, m
 author: 'InfoMoney'
 author_link: 'https://www.infomoney.com.br'
 alt_image: 'Imagem mostrando ovos de galinha e uma montagem sobre gripe aviária.'
+description: 'Análise da crise de abastecimento de ovos nos EUA causada pela gripe aviária e o aumento de 93% nas importações do Brasil. Entenda os impactos nos preços, na inflação alimentar e as medidas do governo Trump para conter a crise.'
+keywords: 'gripe aviária, crise ovos EUA, importação ovos Brasil, preços ovos, inflação alimentos, governo Trump, segurança alimentar, regulação FDA'
+seo_title: 'Crise da Gripe Aviária: Como o Brasil se Torna Fornecedor Chave de Ovos para os EUA | InvestSmart'
 ---
 
 Os Estados Unidos enfrentam uma crise sem precedentes no abastecimento de ovos, impulsionada por um surto devastador de gripe aviária que, desde janeiro de 2022, eliminou cerca de <span class="highlight">170 milhões</span> de galinhas, perus e outras aves. Em resposta, o governo do presidente Donald Trump intensificou as importações de ovos do Brasil — que subiram <span class="highlight">93%</span> em fevereiro de 2025 em relação ao ano anterior, segundo a Associação Brasileira de Proteína Animal (ABPA) — e agora considera flexibilizar normas para permitir o uso de ovos de frangos de corte em alimentos processados. Essas medidas visam conter os preços exorbitantes que afetam consumidores, restaurantes e a inflação alimentar.

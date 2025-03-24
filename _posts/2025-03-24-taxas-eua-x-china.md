@@ -1,6 +1,6 @@
 ---
 layout: noticia
-title: 'Taxas Bilionárias dos EUA sobre Navios Chineses Ameaçam um ‘Apocalipse Comercial’'
+title: 'Taxas Bilionárias dos EUA sobre Navios Chineses Ameaçam um 'Apocalipse Comercial''
 date: '2025-03-24T14:31:00-03:00'
 categories: [notícias]
 image: /images/blog001.png
@@ -8,6 +8,9 @@ excerpt: 'Críticos alertarão em uma audiência na segunda-feira que as taxas c
 author: 'Bloomberg'
 author_link: 'https://www.Bloomberg.com'
 alt_image: 'Imagem mostrando um navio em um porto.'
+description: 'Análise das novas taxas de US$1-3 milhões sobre navios chineses nos EUA e seus impactos no comércio global. Entenda como essa medida pode causar um "apocalipse comercial" e afetar preços e cadeias de suprimentos mundiais.'
+keywords: 'taxas navios chineses, guerra comercial EUA China, comércio global, tarifas Trump, construção naval, cadeia de suprimentos, economia internacional'
+seo_title: 'Guerra Comercial: Como as Taxas sobre Navios Chineses Podem Paralisar o Comércio Global | InvestSmart'
 ---
 
 O caos no comércio mundial desde a chegada de Donald Trump à Casa Branca tem um símbolo claro: 16 mil toneladas de tubos de aço empilhados em um armazém na Alemanha. Originalmente destinados a um projeto de energia na Louisiana, o carregamento está parado devido a uma proposta de Washington de impor taxas de <span class="highlight">US$ 1 milhão a US$ 3 milhões</span> por navio chinês que atracar nos EUA. "As negociações foram suspensas até termos mais clareza", disse Jose Severin, gerente da Mercury Group, responsável pela logística.

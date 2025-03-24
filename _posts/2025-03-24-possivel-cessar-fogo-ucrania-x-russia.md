@@ -8,6 +8,9 @@ excerpt: 'Nesta segunda-feira, 24 de março de 2025, representantes dos EUA e da
 author: 'Leonardo'
 author_link: 'https://www.github.com/lcodebase'
 alt_image: 'Imagem mostrando um navio em um porto.'
+description: 'Acompanhe as negociações em Riad para um possível cessar-fogo de 30 dias entre Ucrânia e Rússia. Análise dos impactos econômicos do conflito nos preços de energia e alimentos e as perspectivas para a estabilidade global.'
+keywords: 'guerra Ucrânia Rússia, cessar-fogo, negociações Riad, impacto econômico guerra, preços energia, preços alimentos, conflito Ucrânia, diplomacia internacional'
+seo_title: 'Cessar-Fogo Ucrânia-Rússia: Como as Negociações em Riad Podem Impactar a Economia Global | InvestSmart'
 ---
 
 Hoje, a capital saudita, Riad, torna-se o epicentro de uma das negociações mais aguardadas do século: o possível fim da guerra entre Ucrânia e Rússia, que desde fevereiro de 2022 devastou vidas, infraestruturas e mercados globais. A reunião entre delegações dos Estados Unidos e da Rússia, mediada pela Arábia Saudita, segue um encontro bem-sucedido no domingo, 23 de março, em Jeddah, onde a Ucrânia e os EUA alinharam uma proposta de cessar-fogo inicial de <span class="highlight">30 dias</span>. A escolha do território árabe como palco reflete sua neutralidade estratégica e suas relações equilibradas com as partes envolvidas, além de sua influência econômica via OPEP+.
