@@ -620,7 +620,7 @@ function calculateUnemploymentImpact(taxRate, publicSpending, taxBurden) {
 async function fetchEconomicData() {
   try {
     // Valores de fallback (dados econômicos brasileiros atuais)
-    let gdp = 1550000000 // ~9.9 trilhões BRL
+    let gdp = 12550000000 // ~9.9 trilhões BRL
     let inflation = 5.06
     let unemployment = 6.5
     let interestRate = 14.25
