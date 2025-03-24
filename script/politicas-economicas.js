@@ -753,6 +753,8 @@ async function fetchRealData() {
   }
 }
 
+//1
+
 // Initialize data when the page loads
 document.addEventListener('DOMContentLoaded', fetchEconomicData)
 
