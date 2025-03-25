@@ -51,8 +51,26 @@
       content="https://lcodebase.github.io/InvestSmart/images/og-image.png"
     />
 
-    <title>InvestSmart - Gestão Financeira Inteligente</title>
-
+    <!-- Adicione este código antes do fechamento do </head> -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "InvestSmart",
+      "url": "https://lcodebase.github.io/InvestSmart/",
+      "logo": "https://lcodebase.github.io/InvestSmart/images/Camada 1.png",
+      "sameAs": [
+        "https://facebook.com/investsmart",
+        "https://instagram.com/investsmart",
+        "https://youtube.com/investsmart"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "contato@investsmart.com.br"
+      }
+    }
+    </script>
     <title>InvestSmart - Melhorando a vida dos nossos clientes</title>
     <link rel="stylesheet" href="css/universal-css.css" />
     <link rel="stylesheet" href="css/style-main.css" />
@@ -76,7 +94,6 @@
       };
       firebase.initializeApp(firebaseConfig);
     </script>
-    <!-- ... existing head content ... -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
       (function () {

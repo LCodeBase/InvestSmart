@@ -1,18 +1,43 @@
-# SEO Settings
-title: InvestSmart - Educação Financeira e Investimentos
-description: Plataforma de educação financeira e investimentos para ajudar você a tomar decisões financeiras inteligentes e construir um futuro próspero.
-url: https://lcodebase.github.io/InvestSmart/
+# Configurações do Site
+title: InvestSmart - Gestão Financeira Inteligente
+description: Plataforma completa de educação financeira e investimentos com ferramentas de gestão financeira, recomendações personalizadas e conteúdo educacional atualizado.
+baseurl: "/InvestSmart"
+url: "https://lcodebase.github.io"
+lang: pt-BR
+
+# Configurações de SEO
 author: InvestSmart
 logo: /images/Camada 1.png
-
-# Social Media
 social:
-  twitter: investsmart
-  facebook: investsmart
-  instagram: investsmart
-  linkedin: investsmart
+  name: InvestSmart
+  links:
+    - https://facebook.com/investsmart
+    - https://instagram.com/investsmart
+    - https://youtube.com/investsmart
 
-# SEO Plugins
+# Configurações de Permalink
+permalink: /:categories/:year/:month/:day/:title/
+
+# Configurações de Coleções
+collections:
+  posts:
+    output: true
+
+# Configurações de Plugins
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Configurações de Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "noticia"
+      author: "InvestSmart"
+      
+# Configurações de Paginação
+paginate: 9
+paginate_path: "/blog/page:num/"

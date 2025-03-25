@@ -7,68 +7,51 @@ layout: noticia
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="InvestSmart - Sua plataforma de educação financeira e investimentos. Oferecemos ferramentas para gestão financeira, recomendações de investimentos e conteúdo educacional."
-    />
-    <meta
-      name="keywords"
-      content="investimentos, finanças pessoais, educação financeira, gestão financeira, investsmart, notícias, economia, mundo, estados unidos, alemanha, brasil, frança, brazil, eua, trump, bolsonaro, lula, agro, direita, esquerda, centro, blog"
-    />
-    <meta name="author" content="InvestSmart" />
+
+    <!-- SEO Meta Tags Dinâmicas -->
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% else %}
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
+    {% endif %}
+
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />
+    {% else %}
+    <meta name="keywords" content="investimentos, finanças pessoais, educação financeira, {{ page.categories | join: ', ' }}, {{ page.title | downcase }}" />
+    {% endif %}
+
+    <meta name="author" content="{{ page.author | default: 'InvestSmart' }}" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://lcodebase.github.io/InvestSmart/"
-    />
-    <meta
-      property="og:title"
-      content="InvestSmart - Gestão Financeira Inteligente"
-    />
-    <meta
-      property="og:description"
-      content="Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes."
-    />
-    <meta
-      property="og:image"
-      content="https://lcodebase.github.io/InvestSmart/images/og-image.png"
-    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <meta property="og:title" content="{{ page.title }} | InvestSmart" />
+    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://lcodebase.github.io/InvestSmart/"
-    />
-    <meta
-      property="twitter:title"
-      content="InvestSmart - Gestão Financeira Inteligente"
-    />
-    <meta
-      property="twitter:description"
-      content="Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes."
-    />
-    <meta
-      property="twitter:image"
-      content="https://lcodebase.github.io/InvestSmart/images/og-image.png"
-    />
-    <title>InvestSmart - Gestão Financeira Inteligente</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InvestSmart - {{ page.title }}</title>
+    <meta property="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <meta property="twitter:title" content="{{ page.title }} | InvestSmart" />
+    <meta property="twitter:description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
+    <meta property="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}" />
+
+    <!-- Título da página específico para cada notícia -->
+    <title>{{ page.title }} | InvestSmart</title>
+
+    <!-- Favicon para diferentes dispositivos e navegadores -->
+    <link rel="shortcut icon" href="{{ site.baseurl }}/images/Camada 1.png" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/apple-touch-icon.png" />
+    <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#118a5f" />
+    <meta name="theme-color" content="#118a5f" />
+
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style-noticia01.css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/universal-css.css" />
-    <link
-      rel="shortcut icon"
-      href="{{ site.baseurl }}/images/Camada 1.png"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
     <header>
@@ -238,3 +221,28 @@ layout: noticia
     async
   ></script>
 </html>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ page.title }}",
+  "image": [
+    "{{ site.url }}{{ site.baseurl }}{{ page.image }}"
+  ],
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | default: 'InvestSmart' }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "InvestSmart",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}{{ site.baseurl }}/images/Camada 1.png"
+    }
+  },
+  "description": "{{ page.excerpt | strip_html | truncate: 160 }}"
+}
+</script>
