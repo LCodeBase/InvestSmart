@@ -5,16 +5,18 @@
     <description>Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes para otimizar suas finanças.</description>
     <link>http://localhost:4000/InvestSmart/</link>
     <atom:link href="http://localhost:4000/InvestSmart/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Mar 2025 14:40:21 -0300</pubDate>
-    <lastBuildDate>Tue, 25 Mar 2025 14:40:21 -0300</lastBuildDate>
+    <pubDate>Tue, 25 Mar 2025 14:46:54 -0300</pubDate>
+    <lastBuildDate>Tue, 25 Mar 2025 14:46:54 -0300</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
-        <title></title>
-        <description></description>
-        <pubDate>Tue, 25 Mar 2025 14:40:21 -0300</pubDate>
-        <link>http://localhost:4000/InvestSmart/2025-03-24-taxas-eua-x-china/</link>
-        <guid isPermaLink="true">http://localhost:4000/InvestSmart/2025-03-24-taxas-eua-x-china/</guid>
+        <title>Taxas Bilionárias dos EUA sobre Navios Chineses Ameaçam um Apocalipse Comercial</title>
+        <description>Críticos alertarão em uma audiência na segunda-feira que as taxas contra navios comerciais chineses podem ser mais disruptivas para o comércio global do que as tarifas de Trump.</description>
+        <pubDate>Tue, 25 Mar 2025 14:31:00 -0300</pubDate>
+        <link>http://localhost:4000/InvestSmart/not%C3%ADcias/taxas-eua-x-china/</link>
+        <guid isPermaLink="true">http://localhost:4000/InvestSmart/not%C3%ADcias/taxas-eua-x-china/</guid>
+        
+        <category>notícias</category>
         
       </item>
     

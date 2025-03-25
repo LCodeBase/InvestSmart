@@ -1,7 +1,7 @@
 ---
 layout: noticia
-title: 'Taxas Bilionárias dos EUA sobre Navios Chineses Ameaçam um 'Apocalipse Comercial''
-date: '2025-03-24T14:31:00-03:00'
+title: 'Taxas Bilionárias dos EUA sobre Navios Chineses Ameaçam um Apocalipse Comercial'
+date: '2025-03-25T14:31:00-03:00'
 categories: [notícias]
 image: /images/blog001.png
 excerpt: 'Críticos alertarão em uma audiência na segunda-feira que as taxas contra navios comerciais chineses podem ser mais disruptivas para o comércio global do que as tarifas de Trump.'
