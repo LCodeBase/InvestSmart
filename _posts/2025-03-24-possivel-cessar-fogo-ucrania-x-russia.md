@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'Negociações em Riad Alimentam Esperança de Cessar-Fogo na Guerra Ucrânia-Rússia'
-date: '2025-03-24T16:20:00-03:00'
+date: '2025-03-24T22:20:00-03:00'
 categories: [notícias]
 image: /images/blog003.png
 excerpt: 'Nesta segunda-feira, 24 de março de 2025, representantes dos EUA e da Rússia reúnem-se em Riad, Arábia Saudita, para discutir um cessar-fogo na guerra entre Ucrânia e Rússia, com foco em impactos econômicos e estabilidade global. Após conversas "construtivas" com a Ucrânia no domingo, a proposta de uma trégua de 30 dias ganha força, mas a resposta de Moscou ainda é incerta.'

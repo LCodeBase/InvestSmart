@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'EUA Buscam Ovos do Brasil e Novas Fontes em Meio a Surto de Gripe Aviária'
-date: '2025-03-24T16:30:00-03:00'
+date: '2025-03-25T06:30:00-03:00'
 categories: [notícias]
 image: /images/blog004.png
 excerpt: 'A gripe aviária, que dizimou quase 170 milhões de aves desde 2022, mantém a pressão econômica nos EUA, levando o governo Trump a quase dobrar as importações de ovos do Brasil e avaliar flexibilizações regulatórias.'
