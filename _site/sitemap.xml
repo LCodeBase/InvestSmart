@@ -1,81 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/blogs-main.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/servicos.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/conversor-moedas.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/sobre.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/calculo-despesas.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/recomendacaoinvestimento.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/politicas-economicas.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/aposentadoria.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/index.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/blog-post-1.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/blog-post-2.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://lcodebase.github.io/InvestSmart/blog-post-3.html</loc>
-<lastmod>2024-06-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
+  
+    
+    <url>
+      <loc>http://localhost:4000/InvestSmart/blogs-main.html</loc>
+      <lastmod>2025-03-25T14:37:31-03:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    
+  
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/InvestSmart/noticias.html</loc>
+      <lastmod>2025-03-25T14:37:31-03:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    
+  
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/InvestSmart/search.html</loc>
+      <lastmod>2025-03-25T14:37:31-03:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    
+  
+    
+  
+  
+    <url>
+      <loc>http://localhost:4000/InvestSmart/2025-03-24-taxas-eua-x-china/</loc>
+      <lastmod>2025-03-25T14:37:31-03:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/InvestSmart/educacao/oque-%C3%A9-infla%C3%A7%C3%A3o/</loc>
+      <lastmod>2025-03-24T17:02:00-03:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/InvestSmart/not%C3%ADcias/crise-aviaria/</loc>
+      <lastmod>2025-03-24T16:30:00-03:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/InvestSmart/not%C3%ADcias/possivel-cessar-fogo-ucrania-x-russia/</loc>
+      <lastmod>2025-03-24T16:20:00-03:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/InvestSmart/not%C3%ADcias/tese-do-seculo-haddad/</loc>
+      <lastmod>2025-03-24T14:30:00-03:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/InvestSmart/educacao/como-investir-iniciantes/</loc>
+      <lastmod>2025-03-15T20:28:00-03:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
 </urlset>

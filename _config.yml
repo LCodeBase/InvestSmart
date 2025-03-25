@@ -1,53 +1,34 @@
-# Configurações do Site
+# Site settings
 title: InvestSmart - Gestão Financeira Inteligente
-description: Plataforma completa de educação financeira e investimentos com ferramentas de gestão financeira, recomendações personalizadas e conteúdo educacional atualizado.
-## Step 4: Update all other pages
-
-You'll need to update all other HTML files in your project that link to blogs-main.html. Make sure to use the absolute path with your repository name: `/InvestSmart/noticias.html` instead of the relative path `blogs-main.html`.
-
-## Step 5: Check your _config.yml file
-
-Make sure your _config.yml has the correct baseurl setting:
-```yaml
-# Add or update this line in your _config.yml
+email: invest.smart.sup.braslandia@gmail.com
+description: >-
+  Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes para otimizar suas finanças.
 baseurl: "/InvestSmart"
-```
 url: "https://lcodebase.github.io"
-lang: pt-BR
 
-# Configurações de SEO
-author: InvestSmart
-logo: /images/Camada 1.png
-social:
-  name: InvestSmart
-  links:
-    - https://facebook.com/investsmart
-    - https://instagram.com/investsmart
-    - https://youtube.com/investsmart
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
 
-# Configurações de Permalink
-permalink: /:categories/:year/:month/:day/:title/
+# Pagination settings
+paginate: 6
+paginate_path: "/blog/page:num/"
 
-# Configurações de Coleções
+# Collections
 collections:
   posts:
     output: true
+    permalink: /:categories/:title/
 
-# Configurações de Plugins
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
-
-# Configurações de Defaults
+# Default front matter
 defaults:
-  - scope:
+  -
+    scope:
       path: ""
       type: "posts"
     values:
-      layout: "noticia"
-      author: "InvestSmart"
-      
-# Configurações de Paginação
-paginate: 9
-paginate_path: "/blog/page:num/"
+      layout: "post"
+      author: "InvestSmart Team"
