@@ -1,7 +1,17 @@
 # Configurações do Site
 title: InvestSmart - Gestão Financeira Inteligente
 description: Plataforma completa de educação financeira e investimentos com ferramentas de gestão financeira, recomendações personalizadas e conteúdo educacional atualizado.
+## Step 4: Update all other pages
+
+You'll need to update all other HTML files in your project that link to blogs-main.html. Make sure to use the absolute path with your repository name: `/InvestSmart/noticias.html` instead of the relative path `blogs-main.html`.
+
+## Step 5: Check your _config.yml file
+
+Make sure your _config.yml has the correct baseurl setting:
+```yaml
+# Add or update this line in your _config.yml
 baseurl: "/InvestSmart"
+```
 url: "https://lcodebase.github.io"
 lang: pt-BR
 
