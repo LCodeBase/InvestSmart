@@ -56,7 +56,7 @@
       </div>
       <div class="footer">
         <p>Atenciosamente,</p>
-        <p>Equipe InvestSmart</p>
+        <p>Equipe InvestSavy</p>
         <p>Se não deseja mais receber nossos e-mails, <a href="#">clique aqui</a> para cancelar a inscrição.</p>
       </div>
     </div>
@@ -76,7 +76,7 @@
     const templateParams = {
       to_email: email,
       to_name: email.split("@")[0], // Use email username as name
-      from_name: "InvestSmart",
+      from_name: "InvestSavy",
       message: "Bem-vindo à nossa newsletter!",
     };
 

@@ -1,10 +1,10 @@
 # Site settings
-title: InvestSmart - Gestão Financeira Inteligente
+title: InvestSavy - Gestão Financeira Inteligente
 email: invest.smart.sup.braslandia@gmail.com
 description: >-
   Plataforma completa para gestão financeira pessoal que combina organização prática com insights inteligentes para otimizar suas finanças.
-baseurl: "/InvestSmart"
-url: "https://lcodebase.github.io"
+baseurl: '/InvestSmart'
+url: 'https://lcodebase.github.io'
 
 # Build settings
 markdown: kramdown
@@ -15,7 +15,7 @@ plugins:
 
 # Pagination settings
 paginate: 6
-paginate_path: "/blog/page:num/"
+paginate_path: '/blog/page:num/'
 
 # Collections
 collections:
@@ -25,10 +25,9 @@ collections:
 
 # Default front matter
 defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
+  - scope:
+      path: ''
+      type: 'posts'
     values:
-      layout: "post"
-      author: "InvestSmart Team"
+      layout: 'post'
+      author: 'InvestSavy Team'
