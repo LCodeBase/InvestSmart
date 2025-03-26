@@ -1,84 +1,84 @@
 [
   {
-    "title": "InvestSavy - Gestão Financeira Inteligente",
+    "title": "InvestSmart - Gestão Financeira Inteligente",
     "content": "Plataforma de educação financeira e gestão de investimentos para ajudar você a tomar decisões financeiras inteligentes. Aprenda sobre investimentos, planejamento financeiro e estratégias para alcançar seus objetivos financeiros.",
-    "url": "/InvestSavy/index.html",
+    "url": "/InvestSmart/index.html",
     "categories": ["Educação Financeira", "Investimentos", "Planejamento Financeiro"]
   },
   {
-    "title": "Educação Financeira | InvestSavy",
+    "title": "Educação Financeira | InvestSmart",
     "content": "Aprenda os fundamentos da educação financeira, desde orçamento pessoal até investimentos avançados. Conteúdo educativo para todos os níveis de conhecimento financeiro.",
-    "url": "/InvestSavy/educacao-financeira.html",
+    "url": "/InvestSmart/educacao-financeira.html",
     "categories": ["Educação Financeira", "Finanças Pessoais"]
   },
   {
-    "title": "Calculadora de Empréstimo | InvestSavy",
+    "title": "Calculadora de Empréstimo | InvestSmart",
     "content": "Calcule parcelas, juros e valor total de empréstimos com nossa calculadora interativa. Compare diferentes cenários para tomar a melhor decisão financeira.",
-    "url": "/InvestSavy/calculadora-emprestimo.html",
+    "url": "/InvestSmart/calculadora-emprestimo.html",
     "categories": ["Ferramentas", "Empréstimos", "Calculadoras"]
   },
   {
-    "title": "Cálculo de Despesas | InvestSavy",
+    "title": "Cálculo de Despesas | InvestSmart",
     "content": "Ferramenta para controle e análise de despesas pessoais. Organize suas finanças, categorize gastos e identifique oportunidades de economia.",
-    "url": "/InvestSavy/calculo-despesas.html",
+    "url": "/InvestSmart/calculo-despesas.html",
     "categories": ["Ferramentas", "Orçamento", "Finanças Pessoais"]
   },
   {
-    "title": "Conversor de Moedas | InvestSavy",
+    "title": "Conversor de Moedas | InvestSmart",
     "content": "Converta valores entre diferentes moedas com taxas atualizadas. Ferramenta essencial para viajantes e investidores internacionais.",
-    "url": "/InvestSavy/conversor-moedas.html",
+    "url": "/InvestSmart/conversor-moedas.html",
     "categories": ["Ferramentas", "Câmbio", "Internacional"]
   },
   {
-    "title": "Avaliação de Risco | InvestSavy",
+    "title": "Avaliação de Risco | InvestSmart",
     "content": "Descubra seu perfil de investidor e avalie o risco de diferentes investimentos. Ferramenta personalizada para ajudar na tomada de decisões financeiras alinhadas ao seu perfil.",
-    "url": "/InvestSavy/avaliacao-risco.html",
+    "url": "/InvestSmart/avaliacao-risco.html",
     "categories": ["Ferramentas", "Investimentos", "Análise de Risco"]
   },
   {
-    "title": "Planejamento de Aposentadoria | InvestSavy",
+    "title": "Planejamento de Aposentadoria | InvestSmart",
     "content": "Calcule quanto você precisa poupar para sua aposentadoria e crie um plano personalizado. Simulações e estratégias para garantir seu futuro financeiro.",
-    "url": "/InvestSavy/aposentadoria.html",
+    "url": "/InvestSmart/aposentadoria.html",
     "categories": ["Ferramentas", "Aposentadoria", "Planejamento Financeiro"]
   },
   {
-    "title": "Políticas Econômicas e Seus Impactos | InvestSavy",
+    "title": "Políticas Econômicas e Seus Impactos | InvestSmart",
     "content": "Entenda como as políticas econômicas do governo afetam seus investimentos e finanças pessoais. Análises sobre taxa de juros, inflação, PIB e desemprego.",
-    "url": "/InvestSavy/politicas-economicas.html",
+    "url": "/InvestSmart/politicas-economicas.html",
     "categories": ["Educação Financeira", "Economia", "Políticas Públicas"]
   },
   {
-    "title": "Como Começar a Investir | InvestSavy",
+    "title": "Como Começar a Investir | InvestSmart",
     "content": "Guia completo para iniciantes no mundo dos investimentos. Aprenda sobre os diferentes tipos de investimentos, riscos, retornos e estratégias para começar com segurança.",
-    "url": "/InvestSavy/blog-edu01.html",
+    "url": "/InvestSmart/blog-edu01.html",
     "date": "2023-05-15",
     "categories": ["Blog", "Investimentos", "Iniciantes"]
   },
   {
-    "title": "Orçamento Pessoal: O Primeiro Passo para a Liberdade Financeira | InvestSavy",
+    "title": "Orçamento Pessoal: O Primeiro Passo para a Liberdade Financeira | InvestSmart",
     "content": "Aprenda a criar e manter um orçamento pessoal eficiente. Dicas práticas para controlar gastos, aumentar a poupança e alcançar seus objetivos financeiros.",
-    "url": "/InvestSavy/blog-edu02.html",
+    "url": "/InvestSmart/blog-edu02.html",
     "date": "2023-06-10",
     "categories": ["Blog", "Orçamento", "Finanças Pessoais"]
   },
   {
-    "title": "Investimentos de Renda Fixa vs. Renda Variável | InvestSavy",
+    "title": "Investimentos de Renda Fixa vs. Renda Variável | InvestSmart",
     "content": "Conheça as diferenças entre investimentos de renda fixa e variável, vantagens, desvantagens e como montar uma carteira equilibrada de acordo com seu perfil.",
-    "url": "/InvestSavy/blog-edu03.html",
+    "url": "/InvestSmart/blog-edu03.html",
     "date": "2023-07-05",
     "categories": ["Blog", "Investimentos", "Análise de Risco"]
   },
   {
-    "title": "Banco Central Anuncia Nova Taxa de Juros | InvestSavy",
+    "title": "Banco Central Anuncia Nova Taxa de Juros | InvestSmart",
     "content": "Análise sobre o impacto da recente decisão do Banco Central na economia e nos investimentos. Entenda como a mudança na taxa Selic afeta seus investimentos e empréstimos.",
-    "url": "/InvestSavy/noticia01.html",
+    "url": "/InvestSmart/noticia01.html",
     "date": "2023-08-02",
     "categories": ["Notícias", "Economia", "Taxa de Juros"]
   },
   {
-    "title": "Novas Regras para Investimentos em Renda Fixa | InvestSavy",
+    "title": "Novas Regras para Investimentos em Renda Fixa | InvestSmart",
     "content": "Conheça as mudanças recentes na regulamentação de investimentos em renda fixa e como elas podem afetar sua estratégia de investimentos.",
-    "url": "/InvestSavy/noticia02.html",
+    "url": "/InvestSmart/noticia02.html",
     "date": "2023-08-15",
     "categories": ["Notícias", "Investimentos", "Regulamentação"]
   }
