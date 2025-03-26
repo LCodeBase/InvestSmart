@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lcodebase.github.io/InvestSmart/sitemap.xml
+Sitemap: https://lcodebase.github.io/InvestSavy/sitemap.xml
