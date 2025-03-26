@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root"; // usuário padrão do XAMPP
 $password = ""; // senha padrão do XAMPP (vazia)
-$dbname = "investsmart";
+$dbname = "investsavy";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
